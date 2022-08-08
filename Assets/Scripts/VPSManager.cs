@@ -53,6 +53,7 @@ public class VPSManager : MonoBehaviour
 
     private void PlaceObjects()
     {
+
         if(earthManager.EarthTrackingState == TrackingState.Tracking)
         {
             var geospatialPose = earthManager.CameraGeospatialPose;
