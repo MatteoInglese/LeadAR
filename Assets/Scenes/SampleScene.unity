@@ -205,7 +205,7 @@ MonoBehaviour:
   earthManager: {fileID: 436293897}
   aRAnchorManager: {fileID: 1229778219}
   geospatialObjects:
-  - ObjectPrefab: {fileID: 919132149155446097, guid: 80e6b8e812f5ea64db42af83e50dbf0a, type: 3}
+  - ObjectPrefab: {fileID: 100096, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 3}
     EarthPosition:
       Latitude: 41.928766
       Longitude: 15.88178
