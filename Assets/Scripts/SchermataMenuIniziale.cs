@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TastoEsplora : MonoBehaviour
+public class SchermataMenuIniziale : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,5 +15,15 @@ public class TastoEsplora : MonoBehaviour
     public void ApriEsplorazione()
     {
         SceneManager.LoadScene("SampleScene");
+    }
+
+    public void ApriSceltaDestinazione()
+    {
+        SceneManager.LoadScene("SceltaDestinazione");
+    }
+
+    public void ApriImpostazioni()
+    {
+        SceneManager.LoadScene("Impostazioni");
     }
 }

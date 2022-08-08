@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ModalitaPercorso : MonoBehaviour
+public class SchermataImpostazioni : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -12,8 +12,8 @@ public class ModalitaPercorso : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void ApriPercorso()
+    public void TornaMenu()
     {
-        SceneManager.LoadScene("SceltaDestinazione");
+        SceneManager.LoadScene("MenuIniziale");
     }
 }
