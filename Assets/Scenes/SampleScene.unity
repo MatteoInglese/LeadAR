@@ -207,9 +207,9 @@ MonoBehaviour:
   geospatialObjects:
   - ObjectPrefab: {fileID: 100096, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 3}
     EarthPosition:
-      Latitude: 41.928783
-      Longitude: 15.881757
-      Altitude: 102.7306
+      Latitude: 41.928821
+      Longitude: 15.881693
+      Altitude: 105.7306
 --- !u!4 &436293896
 Transform:
   m_ObjectHideFlags: 0

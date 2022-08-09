@@ -99,8 +99,6 @@ struct IKCtrlRightHand_tDBAC6A4D9C68491E308974E6969FB742E75FEF56;
 struct IdleChanger_t48C4F7F2BFE997F9A1BC8E290B2112EB2454E594;
 // System.Reflection.MemberFilter
 struct MemberFilter_tF644F1AE82F611B677CE1964D5A3277DDA21D553;
-// ModalitaPercorso
-struct ModalitaPercorso_t9EE7813DFE787EBEC1A1BE78D676476C7BEBC34D;
 // UnityEngine.MonoBehaviour
 struct MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71;
 // System.NotSupportedException
@@ -113,6 +111,10 @@ struct RandomWind_t82E37B7A3B0D246A04893F8F19037ED8FF960E76;
 struct Rigidbody_t268697F5A994213ED97393309870968BC1C7393C;
 // System.Runtime.Serialization.SafeSerializationManager
 struct SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6;
+// SchermataImpostazioni
+struct SchermataImpostazioni_tE951BB5745FEFAA4CFCE7596FCBEF484F727A9B3;
+// SchermataMenuIniziale
+struct SchermataMenuIniziale_t90BBF9081A793620359653DC3D436069E9CACF7B;
 // UnityEngine.SkinnedMeshRenderer
 struct SkinnedMeshRenderer_t020C4E8648EA1C4C6BA5C41502919B387E7E1C2E;
 // UnityChan.SplashScreen
@@ -125,8 +127,6 @@ struct SpringCollider_tBA598174A8A1599C12D1DE98A7F072BFEEC28868;
 struct SpringManager_tC0A916EC38C8B2A411B2C69BA01CD8D1DB4715E5;
 // System.String
 struct String_t;
-// TastoEsplora
-struct TastoEsplora_t57EBA71E5F5F0CA5DE6F628EAFEDC4AD161A7247;
 // UnityChan.ThirdPersonCamera
 struct ThirdPersonCamera_tF9A1D21761B8A0EDC9E52F16D32E91867FB5026C;
 // UnityEngine.Transform
@@ -169,6 +169,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral018F915A2366D42EA5F0DB0E9D19E7136B08B37B
 IL2CPP_EXTERN_C String_t* _stringLiteral04EC4F81AD07B2B6F76B2D7A56FC33E5558850A6;
 IL2CPP_EXTERN_C String_t* _stringLiteral0F660DC5B9C69D4A4082CBA7BCC2360B2E3958E6;
 IL2CPP_EXTERN_C String_t* _stringLiteral0FE2959F6EBB514FAE4E483E6BFA520D29AAACDC;
+IL2CPP_EXTERN_C String_t* _stringLiteral123C18A438A1BA71B1324593B0EF1C4AABC80E2A;
 IL2CPP_EXTERN_C String_t* _stringLiteral14F93B18F4A27E31C8383B5199FB110A2DEEB66F;
 IL2CPP_EXTERN_C String_t* _stringLiteral1B22F82E513C1BB368DFDBFDFB5FB8C1178CA305;
 IL2CPP_EXTERN_C String_t* _stringLiteral1BED2DC0EC7095284E4DD921DFE0B428EF30564B;
@@ -201,6 +202,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralAAC72435C50E2C88247E4FAE4A4F3CA3BE5418D4
 IL2CPP_EXTERN_C String_t* _stringLiteralADC179AF2B0468826DB85E74578463666CF4700F;
 IL2CPP_EXTERN_C String_t* _stringLiteralAE4B715AAAA58DCCE03CE0702B58CE77A631DE43;
 IL2CPP_EXTERN_C String_t* _stringLiteralAF8E649A3EF1AB74A43C9F88015FA68AC719215A;
+IL2CPP_EXTERN_C String_t* _stringLiteralB0AB1F009442AF716476C48E57740C9BE9980544;
 IL2CPP_EXTERN_C String_t* _stringLiteralB0F3EFB34B5BB26A1D0A3D4032611129C4ECC85C;
 IL2CPP_EXTERN_C String_t* _stringLiteralBB61CD73B87847118A72F96FE50B72C6B8712F56;
 IL2CPP_EXTERN_C String_t* _stringLiteralC473046B41946A22C532AEFD1B4D486A028D183C;
@@ -1068,11 +1070,6 @@ struct IdleChanger_t48C4F7F2BFE997F9A1BC8E290B2112EB2454E594  : public MonoBehav
 	float ____interval_9;
 };
 
-// ModalitaPercorso
-struct ModalitaPercorso_t9EE7813DFE787EBEC1A1BE78D676476C7BEBC34D  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
-{
-};
-
 // UnityChan.RandomWind
 struct RandomWind_t82E37B7A3B0D246A04893F8F19037ED8FF960E76  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -1080,6 +1077,16 @@ struct RandomWind_t82E37B7A3B0D246A04893F8F19037ED8FF960E76  : public MonoBehavi
 	SpringBoneU5BU5D_tADB9EFDE4F73D7652850C5D2E8EE6771DF2C1F88* ___springBones_4;
 	// System.Boolean UnityChan.RandomWind::isWindActive
 	bool ___isWindActive_5;
+};
+
+// SchermataImpostazioni
+struct SchermataImpostazioni_tE951BB5745FEFAA4CFCE7596FCBEF484F727A9B3  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+};
+
+// SchermataMenuIniziale
+struct SchermataMenuIniziale_t90BBF9081A793620359653DC3D436069E9CACF7B  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
 };
 
 // UnityChan.SplashScreen
@@ -1148,11 +1155,6 @@ struct SpringManager_tC0A916EC38C8B2A411B2C69BA01CD8D1DB4715E5  : public MonoBeh
 	AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* ___dragCurve_8;
 	// UnityChan.SpringBone[] UnityChan.SpringManager::springBones
 	SpringBoneU5BU5D_tADB9EFDE4F73D7652850C5D2E8EE6771DF2C1F88* ___springBones_9;
-};
-
-// TastoEsplora
-struct TastoEsplora_t57EBA71E5F5F0CA5DE6F628EAFEDC4AD161A7247  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
-{
 };
 
 // UnityChan.ThirdPersonCamera
@@ -1865,34 +1867,34 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Magnitude_m21652D95
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// System.Void ModalitaPercorso::Start()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ModalitaPercorso_Start_m758F3B8F350000C8E7449B28181AF856B0B43814 (ModalitaPercorso_t9EE7813DFE787EBEC1A1BE78D676476C7BEBC34D* __this, const RuntimeMethod* method) 
+// System.Void SchermataImpostazioni::Start()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SchermataImpostazioni_Start_mF90C618A9B0DA8E4B2C94C5B7EE62B4E6C68D1C5 (SchermataImpostazioni_tE951BB5745FEFAA4CFCE7596FCBEF484F727A9B3* __this, const RuntimeMethod* method) 
 {
 	{
 		// }
 		return;
 	}
 }
-// System.Void ModalitaPercorso::ApriPercorso()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ModalitaPercorso_ApriPercorso_mCE1D56E2336029B2C47B6CE0BABF0CEE830B880E (ModalitaPercorso_t9EE7813DFE787EBEC1A1BE78D676476C7BEBC34D* __this, const RuntimeMethod* method) 
+// System.Void SchermataImpostazioni::TornaMenu()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SchermataImpostazioni_TornaMenu_m939B8A8AF7CE385D2D0B0BD1E325E5AB72A9894C (SchermataImpostazioni_tE951BB5745FEFAA4CFCE7596FCBEF484F727A9B3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral86F29772E4D2278C1EA3AC5AAB1B1C43136C922E);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralB0AB1F009442AF716476C48E57740C9BE9980544);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// SceneManager.LoadScene("SceltaDestinazione");
+		// SceneManager.LoadScene("MenuIniziale");
 		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
-		SceneManager_LoadScene_mBB3DBC1601A21F8F4E8A5D68FED30EA9412F218E(_stringLiteral86F29772E4D2278C1EA3AC5AAB1B1C43136C922E, NULL);
+		SceneManager_LoadScene_mBB3DBC1601A21F8F4E8A5D68FED30EA9412F218E(_stringLiteralB0AB1F009442AF716476C48E57740C9BE9980544, NULL);
 		// }
 		return;
 	}
 }
-// System.Void ModalitaPercorso::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ModalitaPercorso__ctor_m39FC9AA5D7224692873024EAD77EF240AC3A75CC (ModalitaPercorso_t9EE7813DFE787EBEC1A1BE78D676476C7BEBC34D* __this, const RuntimeMethod* method) 
+// System.Void SchermataImpostazioni::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SchermataImpostazioni__ctor_m7BE9067FB17ABD7FE6AA508316E59136BE3B8986 (SchermataImpostazioni_tE951BB5745FEFAA4CFCE7596FCBEF484F727A9B3* __this, const RuntimeMethod* method) 
 {
 	{
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
@@ -1907,16 +1909,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ModalitaPercorso__ctor_m39FC9AA5D7224692
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// System.Void TastoEsplora::Start()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TastoEsplora_Start_m8651F05F7E4DE19D6D8E851D414C8B93D2C6B295 (TastoEsplora_t57EBA71E5F5F0CA5DE6F628EAFEDC4AD161A7247* __this, const RuntimeMethod* method) 
+// System.Void SchermataMenuIniziale::Start()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SchermataMenuIniziale_Start_m3939F7341A11F6791FEEFEEC36E2953F5D4AA5D0 (SchermataMenuIniziale_t90BBF9081A793620359653DC3D436069E9CACF7B* __this, const RuntimeMethod* method) 
 {
 	{
 		// }
 		return;
 	}
 }
-// System.Void TastoEsplora::ApriEsplorazione()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TastoEsplora_ApriEsplorazione_m8267F4FA0E87BDCA82592990C701E0448DA965DE (TastoEsplora_t57EBA71E5F5F0CA5DE6F628EAFEDC4AD161A7247* __this, const RuntimeMethod* method) 
+// System.Void SchermataMenuIniziale::ApriEsplorazione()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SchermataMenuIniziale_ApriEsplorazione_m7E4AC9717F198FFE3BA64A8F957136345D9B03BD (SchermataMenuIniziale_t90BBF9081A793620359653DC3D436069E9CACF7B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -1933,8 +1935,44 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TastoEsplora_ApriEsplorazione_m8267F4FA0
 		return;
 	}
 }
-// System.Void TastoEsplora::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TastoEsplora__ctor_m47A62B89710C3DDD147D583D2C68ABA59402B00B (TastoEsplora_t57EBA71E5F5F0CA5DE6F628EAFEDC4AD161A7247* __this, const RuntimeMethod* method) 
+// System.Void SchermataMenuIniziale::ApriSceltaDestinazione()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SchermataMenuIniziale_ApriSceltaDestinazione_m8D6AA72BB5DE93BAAE69168BBFD8DFDC75A4EE79 (SchermataMenuIniziale_t90BBF9081A793620359653DC3D436069E9CACF7B* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral86F29772E4D2278C1EA3AC5AAB1B1C43136C922E);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// SceneManager.LoadScene("SceltaDestinazione");
+		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
+		SceneManager_LoadScene_mBB3DBC1601A21F8F4E8A5D68FED30EA9412F218E(_stringLiteral86F29772E4D2278C1EA3AC5AAB1B1C43136C922E, NULL);
+		// }
+		return;
+	}
+}
+// System.Void SchermataMenuIniziale::ApriImpostazioni()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SchermataMenuIniziale_ApriImpostazioni_m205D38DD4D7F2E00A2A6E47D04DBC3F01332F5E0 (SchermataMenuIniziale_t90BBF9081A793620359653DC3D436069E9CACF7B* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral123C18A438A1BA71B1324593B0EF1C4AABC80E2A);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// SceneManager.LoadScene("Impostazioni");
+		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
+		SceneManager_LoadScene_mBB3DBC1601A21F8F4E8A5D68FED30EA9412F218E(_stringLiteral123C18A438A1BA71B1324593B0EF1C4AABC80E2A, NULL);
+		// }
+		return;
+	}
+}
+// System.Void SchermataMenuIniziale::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SchermataMenuIniziale__ctor_mF9E6A3152531AD663CAD73239A62B52107A51EAE (SchermataMenuIniziale_t90BBF9081A793620359653DC3D436069E9CACF7B* __this, const RuntimeMethod* method) 
 {
 	{
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);

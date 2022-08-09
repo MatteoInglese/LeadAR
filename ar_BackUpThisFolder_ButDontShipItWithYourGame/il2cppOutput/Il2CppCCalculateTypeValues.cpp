@@ -50753,11 +50753,6 @@ struct MissingMethodException_t3D861B41F6520C32A7994A884343802925703155  : publi
 {
 };
 
-// ModalitaPercorso
-struct ModalitaPercorso_t9EE7813DFE787EBEC1A1BE78D676476C7BEBC34D  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
-{
-};
-
 // System.MonoType
 struct MonoType_t  : public RuntimeType_tB1A69257E7A00D07AB0CABD8D5BA7D83E0DC9EC1
 {
@@ -50850,6 +50845,16 @@ struct RuntimePanel_t2ED2270758B54860F1289847C0C78A7D31565346_StaticFields
 	EventDispatcher_t9BC38CC96E93EAD1D818EE751260FE4687B0D398* ___s_EventDispatcher_58;
 };
 
+// SchermataImpostazioni
+struct SchermataImpostazioni_tE951BB5745FEFAA4CFCE7596FCBEF484F727A9B3  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+};
+
+// SchermataMenuIniziale
+struct SchermataMenuIniziale_t90BBF9081A793620359653DC3D436069E9CACF7B  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+};
+
 // System.Reflection.SignatureArrayType
 struct SignatureArrayType_t2363B762F8C412C7C4054B75639099E0DFA8B915  : public SignatureHasElementType_tC6C59A556ADF4EB9434B45D01D20812CA818906E
 {
@@ -50935,11 +50940,6 @@ struct SpringManager_tC0A916EC38C8B2A411B2C69BA01CD8D1DB4715E5  : public MonoBeh
 	AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* ___dragCurve_8;
 	// UnityChan.SpringBone[] UnityChan.SpringManager::springBones
 	SpringBoneU5BU5D_tADB9EFDE4F73D7652850C5D2E8EE6771DF2C1F88* ___springBones_9;
-};
-
-// TastoEsplora
-struct TastoEsplora_t57EBA71E5F5F0CA5DE6F628EAFEDC4AD161A7247  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
-{
 };
 
 // UnityChan.ThirdPersonCamera
@@ -60302,9 +60302,9 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize3711 = { sizeof(GlyphPairAdj
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3712;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize3712 = { sizeof(U3CModuleU3E_tBB65183F1134474D09FF49B95625D25472B9BA8B), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3713;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3713 = { sizeof(ModalitaPercorso_t9EE7813DFE787EBEC1A1BE78D676476C7BEBC34D), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3713 = { sizeof(SchermataImpostazioni_tE951BB5745FEFAA4CFCE7596FCBEF484F727A9B3), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3714;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3714 = { sizeof(TastoEsplora_t57EBA71E5F5F0CA5DE6F628EAFEDC4AD161A7247), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3714 = { sizeof(SchermataMenuIniziale_t90BBF9081A793620359653DC3D436069E9CACF7B), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3715;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize3715 = { sizeof(GeospatialObject_tBF3C4BE5329E10219F314951625D5C19B323A637)+ sizeof(RuntimeObject), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3716;
