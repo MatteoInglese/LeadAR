@@ -465,6 +465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   earthManager: {fileID: 436293897}
   aRAnchorManager: {fileID: 1229778219}
+  geo: {fileID: 0}
   geospatialObjects: []
 --- !u!4 &436293896
 Transform:
@@ -1032,8 +1033,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -872.7293}
-  m_SizeDelta: {x: 100, y: 56.8476}
+  m_AnchoredPosition: {x: 0, y: -931.6671}
+  m_SizeDelta: {x: 100, y: 67.8705}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2076613626
 MonoBehaviour:

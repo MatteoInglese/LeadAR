@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class EarthPosition
 {
-    [SerializeField] public double Latitude;
-    [SerializeField] public double Longitude;
-    [SerializeField] public double Altitude;
+    [SerializeField] public double Latitude { get; set; }
+    [SerializeField] public double Longitude { get; set; }
+    [SerializeField] public double Altitude { get; set; }
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +28,7 @@ public class EarthPosition
         Altitude = alt;
     }
 
-    //getters
+/*    //getters
     public double getLat()
     {
         return Latitude;
@@ -58,5 +58,5 @@ public class EarthPosition
     public void setAlt(double alt)
     {
         Altitude = alt;
-    }
+    }*/
 }
