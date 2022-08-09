@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
+[Serializable]
 public class EarthPosition
 {
     [SerializeField] public double Latitude { get; set; }

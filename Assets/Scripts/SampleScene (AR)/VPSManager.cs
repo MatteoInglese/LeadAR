@@ -21,6 +21,7 @@ public class VPSManager : MonoBehaviour
     [SerializeField] private ARAnchorManager aRAnchorManager;
 
     [SerializeField] private EarthPosition pos = new EarthPosition(41.928821, 15.881693, 105.7306);
+   /* [SerializeField] private EarthPosition pos;*/
     [SerializeField] private GeospatialObject geo;
 
     [SerializeField] private List<GeospatialObject> geospatialObjects = new List<GeospatialObject>();
@@ -45,11 +46,9 @@ public class VPSManager : MonoBehaviour
 
     private void VerifyGeospatialSupport()
     {
-      //  GameObject objPrefab = Resources.Load<GameObject>("unity-chan!/Unity-chan! Model/Prefabs/unitychan") as GameObject;
-
-        /*        GeospatialObject geo;
-                geo.EarthPosition = pos;
-                geo.ObjectPrefab = objPrefab;*/
+/*        TextAsset jsonString = Resources.Load<TextAsset>("JSON/EarthPosition") as TextAsset;
+        pos = JsonUtility.FromJson<EarthPosition>(jsonString.ToString());
+        Debug.Log(pos.Latitude.ToString());*/
 
         var result = earthManager.IsGeospatialModeSupported(GeospatialMode.Enabled);
         switch (result)
