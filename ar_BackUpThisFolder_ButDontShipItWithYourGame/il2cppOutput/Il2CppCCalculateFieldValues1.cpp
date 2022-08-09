@@ -244,6 +244,8 @@ struct List_1_tFED0F30EE65D995591571D3CD2C10F22439CB317;
 struct List_1_t55B85B981AC5FD6A5358491F90FE354F78BB97DE;
 // System.Collections.Generic.List`1<UnityEngine.GUILayoutEntry>
 struct List_1_tA5BCD116CC751A5F35C7D3D7B96DC3A5D22B9C82;
+// System.Collections.Generic.List`1<GeospatialObject>
+struct List_1_tE0C87873805AA426F20564FC518E05B58339737D;
 // System.Collections.Generic.List`1<UnityEngine.TextCore.Glyph>
 struct List_1_t95DB74B8EE315F8F92B7B96D93C901C8C3F6FE2C;
 // System.Collections.Generic.List`1<UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord>
@@ -382,8 +384,6 @@ struct List_1_tA1547550E5FBA50050B20DA74245C38434654EE8;
 struct List_1_t8A06DB5554CD76CE072807DE6EF4198109D84E53;
 // System.Collections.Generic.List`1<UnityEngine.SpatialTracking.TrackedPoseDriverDataDescription/PoseData>
 struct List_1_tA8C10B8A593896280D68A4B006217C43F236DE0D;
-// System.Collections.Generic.List`1<VPSManager/GeospatialObject>
-struct List_1_t1ECEF1F7BE606E8266FD9BA9D2D32CF66AD0D05F;
 // UnityEngine.XR.ARSubsystems.Promise`1<UnityEngine.XR.ARSubsystems.SessionAvailability>
 struct Promise_1_t7BC5F1754A27CF06571C0C51E5893AE44146B274;
 // UnityEngine.XR.ARSubsystems.Promise`1<UnityEngine.XR.ARSubsystems.SessionInstallationStatus>
@@ -544,6 +544,8 @@ struct Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3;
 struct ConfigurationChooser_t4DFAB6BE3767C3C5DA0E43FA16CD067009A487C2;
 // UnityEngine.Networking.DownloadHandler
 struct DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB;
+// EarthPosition
+struct EarthPosition_tC712E0561D35EBC3E87812B8B164F207A188348E;
 // UnityEngine.Font
 struct Font_tC95270EA3198038970422D78B74A7F2E218A96B6;
 // UnityEngine.TextCore.Text.FontAsset
@@ -568,6 +570,8 @@ struct GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95;
 struct GameObject_t76FEDD663AB33C991A9C9A23129337651094216F;
 // UnityEngineInternal.GenericStack
 struct GenericStack_t1FB49AB7D847C97ABAA97AB232CA416CABD24C49;
+// GeospatialObject
+struct GeospatialObject_t9E2E5CBBC2D16DA6871C2A30381F1986F8D8A75B;
 // UnityEngine.GlobalJavaObjectRef
 struct GlobalJavaObjectRef_t20D8E5AAFC2EB2518FCABBF40465855E797FF0D8;
 // UnityEngine.TextCore.Glyph
@@ -960,6 +964,17 @@ struct DependentModulesManager_t92BC4C2E0D381F7F4AE98C7A9401FD3FD9E7EC66_StaticF
 {
 	// System.Collections.Generic.List`1<Google.XR.ARCoreExtensions.Internal.IDependentModule> Google.XR.ARCoreExtensions.Internal.DependentModulesManager::_modules
 	List_1_t54955D954398D6C34C95F0A09188E388BD45008A* ____modules_0;
+};
+
+// EarthPosition
+struct EarthPosition_tC712E0561D35EBC3E87812B8B164F207A188348E  : public RuntimeObject
+{
+	// System.Double EarthPosition::Latitude
+	double ___Latitude_0;
+	// System.Double EarthPosition::Longitude
+	double ___Longitude_1;
+	// System.Double EarthPosition::Altitude
+	double ___Altitude_2;
 };
 
 // UnityEngine.TextCore.Text.FontAssetUtilities
@@ -4955,17 +4970,6 @@ struct PoseData_t67ECD1DA6257206C1935CCD030E1E1EF57E1443A_marshaled_com
 	List_1_t8A06DB5554CD76CE072807DE6EF4198109D84E53* ___Poses_1;
 };
 
-// VPSManager/EarthPosition
-struct EarthPosition_tB7DF483467C7EF5BDD34A03FBB833A80460B4BE4 
-{
-	// System.Double VPSManager/EarthPosition::Latitude
-	double ___Latitude_0;
-	// System.Double VPSManager/EarthPosition::Longitude
-	double ___Longitude_1;
-	// System.Double VPSManager/EarthPosition::Altitude
-	double ___Altitude_2;
-};
-
 // UnityEngine.XR.ARSubsystems.XRAnchorSubsystemDescriptor/Cinfo
 struct Cinfo_t935E3721D062C7CF3DB741A91D425DFE99290384 
 {
@@ -8040,27 +8044,6 @@ struct Particle_tF16C89682A98AB276CCBE4DA0A6E82F98500F79D
 	float ___m_EmitAccumulator1_15;
 	// System.UInt32 UnityEngine.ParticleSystem/Particle::m_Flags
 	uint32_t ___m_Flags_16;
-};
-
-// VPSManager/GeospatialObject
-struct GeospatialObject_tBF3C4BE5329E10219F314951625D5C19B323A637 
-{
-	// UnityEngine.GameObject VPSManager/GeospatialObject::ObjectPrefab
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ObjectPrefab_0;
-	// VPSManager/EarthPosition VPSManager/GeospatialObject::EarthPosition
-	EarthPosition_tB7DF483467C7EF5BDD34A03FBB833A80460B4BE4 ___EarthPosition_1;
-};
-// Native definition for P/Invoke marshalling of VPSManager/GeospatialObject
-struct GeospatialObject_tBF3C4BE5329E10219F314951625D5C19B323A637_marshaled_pinvoke
-{
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ObjectPrefab_0;
-	EarthPosition_tB7DF483467C7EF5BDD34A03FBB833A80460B4BE4 ___EarthPosition_1;
-};
-// Native definition for COM marshalling of VPSManager/GeospatialObject
-struct GeospatialObject_tBF3C4BE5329E10219F314951625D5C19B323A637_marshaled_com
-{
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ObjectPrefab_0;
-	EarthPosition_tB7DF483467C7EF5BDD34A03FBB833A80460B4BE4 ___EarthPosition_1;
 };
 
 // UnityEngine.XR.ARSubsystems.XRCameraSubsystem/Provider
@@ -11573,6 +11556,15 @@ struct FaceUpdate_t39A1A34B90E5D9A98A7E88515E02D32B46B4755E  : public MonoBehavi
 	float ___current_8;
 };
 
+// GeospatialObject
+struct GeospatialObject_t9E2E5CBBC2D16DA6871C2A30381F1986F8D8A75B  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	// UnityEngine.GameObject GeospatialObject::ObjectPrefab
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ObjectPrefab_4;
+	// EarthPosition GeospatialObject::EarthPosition
+	EarthPosition_tC712E0561D35EBC3E87812B8B164F207A188348E* ___EarthPosition_5;
+};
+
 // UnityChan.IKCtrlRightHand
 struct IKCtrlRightHand_tDBAC6A4D9C68491E308974E6969FB742E75FEF56  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -11765,8 +11757,12 @@ struct VPSManager_tD11BA77BA140C85F80DD3131483141FACA139841  : public MonoBehavi
 	AREarthManager_tAC32FF06F084622687D9FB4837506A704301D0F0* ___earthManager_4;
 	// UnityEngine.XR.ARFoundation.ARAnchorManager VPSManager::aRAnchorManager
 	ARAnchorManager_tF68C46300BD6F2E83E3360BF9297C3C50F5D6B3E* ___aRAnchorManager_5;
-	// System.Collections.Generic.List`1<VPSManager/GeospatialObject> VPSManager::geospatialObjects
-	List_1_t1ECEF1F7BE606E8266FD9BA9D2D32CF66AD0D05F* ___geospatialObjects_6;
+	// EarthPosition VPSManager::pos
+	EarthPosition_tC712E0561D35EBC3E87812B8B164F207A188348E* ___pos_6;
+	// GeospatialObject VPSManager::geo
+	GeospatialObject_t9E2E5CBBC2D16DA6871C2A30381F1986F8D8A75B* ___geo_7;
+	// System.Collections.Generic.List`1<GeospatialObject> VPSManager::geospatialObjects
+	List_1_tE0C87873805AA426F20564FC518E05B58339737D* ___geospatialObjects_8;
 };
 
 // UnityEngine.XR.ARFoundation.ARTrackableManager`5<UnityEngine.XR.ARSubsystems.XRAnchorSubsystem,UnityEngine.XR.ARSubsystems.XRAnchorSubsystemDescriptor,UnityEngine.XR.ARSubsystems.XRAnchorSubsystem/Provider,UnityEngine.XR.ARSubsystems.XRAnchor,UnityEngine.XR.ARFoundation.ARAnchor>
@@ -13956,15 +13952,15 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3710[2] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3711[3] = 
 {
 	static_cast<int32_t>(offsetof(GlyphPairAdjustmentRecord_t6E4295094D349DBF22BC59116FBC8F22EA55420E, ___m_FirstAdjustmentRecord_0)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(GlyphPairAdjustmentRecord_t6E4295094D349DBF22BC59116FBC8F22EA55420E, ___m_SecondAdjustmentRecord_1)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(GlyphPairAdjustmentRecord_t6E4295094D349DBF22BC59116FBC8F22EA55420E, ___m_FeatureLookupFlags_2)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3715[2] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3713[3] = 
 {
-	static_cast<int32_t>(offsetof(GeospatialObject_tBF3C4BE5329E10219F314951625D5C19B323A637, ___ObjectPrefab_0)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(GeospatialObject_tBF3C4BE5329E10219F314951625D5C19B323A637, ___EarthPosition_1)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3716[3] = 
+	static_cast<int32_t>(offsetof(EarthPosition_tC712E0561D35EBC3E87812B8B164F207A188348E, ___Latitude_0)),static_cast<int32_t>(offsetof(EarthPosition_tC712E0561D35EBC3E87812B8B164F207A188348E, ___Longitude_1)),static_cast<int32_t>(offsetof(EarthPosition_tC712E0561D35EBC3E87812B8B164F207A188348E, ___Altitude_2)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3714[2] = 
 {
-	static_cast<int32_t>(offsetof(EarthPosition_tB7DF483467C7EF5BDD34A03FBB833A80460B4BE4, ___Latitude_0)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(EarthPosition_tB7DF483467C7EF5BDD34A03FBB833A80460B4BE4, ___Longitude_1)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(EarthPosition_tB7DF483467C7EF5BDD34A03FBB833A80460B4BE4, ___Altitude_2)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3717[3] = 
+	static_cast<int32_t>(offsetof(GeospatialObject_t9E2E5CBBC2D16DA6871C2A30381F1986F8D8A75B, ___ObjectPrefab_4)),static_cast<int32_t>(offsetof(GeospatialObject_t9E2E5CBBC2D16DA6871C2A30381F1986F8D8A75B, ___EarthPosition_5)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3715[5] = 
 {
-	static_cast<int32_t>(offsetof(VPSManager_tD11BA77BA140C85F80DD3131483141FACA139841, ___earthManager_4)),static_cast<int32_t>(offsetof(VPSManager_tD11BA77BA140C85F80DD3131483141FACA139841, ___aRAnchorManager_5)),static_cast<int32_t>(offsetof(VPSManager_tD11BA77BA140C85F80DD3131483141FACA139841, ___geospatialObjects_6)),};
+	static_cast<int32_t>(offsetof(VPSManager_tD11BA77BA140C85F80DD3131483141FACA139841, ___earthManager_4)),static_cast<int32_t>(offsetof(VPSManager_tD11BA77BA140C85F80DD3131483141FACA139841, ___aRAnchorManager_5)),static_cast<int32_t>(offsetof(VPSManager_tD11BA77BA140C85F80DD3131483141FACA139841, ___pos_6)),static_cast<int32_t>(offsetof(VPSManager_tD11BA77BA140C85F80DD3131483141FACA139841, ___geo_7)),static_cast<int32_t>(offsetof(VPSManager_tD11BA77BA140C85F80DD3131483141FACA139841, ___geospatialObjects_8)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3718[4] = 
 {
 	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,0,};
