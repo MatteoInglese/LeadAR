@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using Google.XR.ARCoreExtensions;
@@ -30,10 +31,30 @@ public class VPSManager : MonoBehaviour
     void Start()
     {
         VerifyGeospatialSupport();
+
+        Text lat = GameObject.Find("Canvas/Latitude").GetComponent<Text>();
+        lat.text = "Latitude: " + geospatialObjects[0].EarthPosition.Latitude.ToString();
+
+        Text lon = GameObject.Find("Canvas/Longitude").GetComponent<Text>();
+        lon.text = "Longitude: " + geospatialObjects[0].EarthPosition.Longitude.ToString();
+
+        Text alt = GameObject.Find("Canvas/Altitude").GetComponent<Text>();
+        alt.text = "Altitude: " + geospatialObjects[0].EarthPosition.Altitude.ToString();
     }
 
     private void VerifyGeospatialSupport()
     {
+        EarthPosition pos;
+        pos.Latitude = 41.928821;
+        pos.Longitude = 15.881693;
+        pos.Altitude = 105.7306;
+
+        GeospatialObject geo;
+        geo.EarthPosition = pos;
+        geo.ObjectPrefab = null;
+
+        geospatialObjects.Add(geo);
+
         var result = earthManager.IsGeospatialModeSupported(GeospatialMode.Enabled);
         switch(result)
         {
@@ -54,7 +75,7 @@ public class VPSManager : MonoBehaviour
     private void PlaceObjects()
     {
 
-        if(earthManager.EarthTrackingState == TrackingState.Tracking)
+        if (earthManager.EarthTrackingState == TrackingState.Tracking)
         {
             var geospatialPose = earthManager.CameraGeospatialPose;
 
