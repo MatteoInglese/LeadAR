@@ -13,20 +13,24 @@ public class VPSManager : MonoBehaviour
     [SerializeField] private AREarthManager earthManager;
     [SerializeField] private ARAnchorManager aRAnchorManager;
 
-    [SerializeField] private EarthPosition pos;
-    [SerializeField] private GeospatialObject geo;
+    /*    [SerializeField] private EarthPosition pos;
+        [SerializeField] private GeospatialObject geo;*/
 
+    [SerializeField] private List<EarthPosition> positions = new List<EarthPosition>();
     [SerializeField] private List<GeospatialObject> geospatialObjects = new List<GeospatialObject>();
 
 
     // Start is called before the first frame update
     void Start()
     {
-        pos = JsonConvert.DeserializeObject<EarthPosition>(Resources.Load<TextAsset>("JSON/EarthPosition").ToString());
+        positions = JsonConvert.DeserializeObject<List<EarthPosition>>(Resources.Load<TextAsset>("JSON/EarthPosition").ToString());
 
-        geo = new GeospatialObject(pos);
-        geo.ObjectPrefab = Resources.Load<GameObject>("arrow") as GameObject;
-        geospatialObjects.Add(geo);
+        foreach (var position in positions)
+        {
+            GeospatialObject geo = new GeospatialObject(position);
+            geo.ObjectPrefab = Resources.Load<GameObject>("arrow") as GameObject;
+            geospatialObjects.Add(geo);
+        }
 
         VerifyGeospatialSupport();
 

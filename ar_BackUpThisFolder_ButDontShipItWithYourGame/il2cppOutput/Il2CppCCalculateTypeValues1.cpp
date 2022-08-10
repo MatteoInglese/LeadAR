@@ -322,6 +322,8 @@ struct List_1_t2CDCA768E7F493F5EDEBC75AEB200FD621354E35;
 struct List_1_tFED0F30EE65D995591571D3CD2C10F22439CB317;
 // System.Collections.Generic.List`1<UnityEngine.Color32>
 struct List_1_t3517D52AE25CA3B19051E691E9C06ED03A3AB9B8;
+// System.Collections.Generic.List`1<EarthPosition>
+struct List_1_t171D5B76E652A6877E6FD4CC22A2E730584B13D9;
 // System.Collections.Generic.List`1<UnityEngine.EventSystems.EventSystem>
 struct List_1_tF2FE88545EFEC788CAAE6C74EC2F78E937FCCAC3;
 // System.Collections.Generic.List`1<UnityEngine.TextCore.Text.FontAsset>
@@ -796,8 +798,6 @@ struct GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95;
 struct GameObject_t76FEDD663AB33C991A9C9A23129337651094216F;
 // UnityEngineInternal.GenericStack
 struct GenericStack_t1FB49AB7D847C97ABAA97AB232CA416CABD24C49;
-// GeospatialObject
-struct GeospatialObject_t9E2E5CBBC2D16DA6871C2A30381F1986F8D8A75B;
 // UnityEngine.GlobalJavaObjectRef
 struct GlobalJavaObjectRef_t20D8E5AAFC2EB2518FCABBF40465855E797FF0D8;
 // UnityEngine.TextCore.Glyph
@@ -20358,12 +20358,10 @@ struct VPSManager_tD11BA77BA140C85F80DD3131483141FACA139841  : public MonoBehavi
 	AREarthManager_tAC32FF06F084622687D9FB4837506A704301D0F0* ___earthManager_4;
 	// UnityEngine.XR.ARFoundation.ARAnchorManager VPSManager::aRAnchorManager
 	ARAnchorManager_tF68C46300BD6F2E83E3360BF9297C3C50F5D6B3E* ___aRAnchorManager_5;
-	// EarthPosition VPSManager::pos
-	EarthPosition_tC712E0561D35EBC3E87812B8B164F207A188348E* ___pos_6;
-	// GeospatialObject VPSManager::geo
-	GeospatialObject_t9E2E5CBBC2D16DA6871C2A30381F1986F8D8A75B* ___geo_7;
+	// System.Collections.Generic.List`1<EarthPosition> VPSManager::positions
+	List_1_t171D5B76E652A6877E6FD4CC22A2E730584B13D9* ___positions_6;
 	// System.Collections.Generic.List`1<GeospatialObject> VPSManager::geospatialObjects
-	List_1_tE0C87873805AA426F20564FC518E05B58339737D* ___geospatialObjects_8;
+	List_1_tE0C87873805AA426F20564FC518E05B58339737D* ___geospatialObjects_7;
 };
 
 // UnityEngine.UI.Dropdown/DropdownItem
