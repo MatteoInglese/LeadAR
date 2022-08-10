@@ -22,8 +22,4 @@ public class SchermataMenuIniziale : MonoBehaviour
         SceneManager.LoadScene("SceltaDestinazione");
     }
 
-    public void ApriImpostazioni()
-    {
-        SceneManager.LoadScene("Impostazioni");
-    }
 }

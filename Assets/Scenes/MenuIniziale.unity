@@ -374,7 +374,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 268121019}
-        m_TargetAssemblyTypeName: SchermataMenuIniziale, Assembly-CSharp
+        m_TargetAssemblyTypeName: SchermataImpostazioni, Assembly-CSharp
         m_MethodName: ApriImpostazioni
         m_Mode: 1
         m_Arguments:
@@ -432,7 +432,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 268121014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51c1778427d3ac34fb731e93e9fa060b, type: 3}
+  m_Script: {fileID: 11500000, guid: 94fedd8ec86543045b038d9e64a2d11b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &284300964
@@ -912,7 +912,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2007897470754049777, guid: 7f2ec6e3ae3aef047a54f11bce3f003a, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1420
+      value: 1418
       objectReference: {fileID: 0}
     - target: {fileID: 2007897470754049777, guid: 7f2ec6e3ae3aef047a54f11bce3f003a, type: 3}
       propertyPath: m_LocalPosition.x

@@ -20,7 +20,7 @@ public class VPSManager : MonoBehaviour
 
     [SerializeField] private ARAnchorManager aRAnchorManager;
 
-    [SerializeField] private EarthPosition pos = new EarthPosition(41.928821, 15.881693, 105.7306);
+    [SerializeField] private EarthPosition pos = new EarthPosition(40.367049, 16.697561, 143.385);
    /* [SerializeField] private EarthPosition pos;*/
     [SerializeField] private GeospatialObject geo;
 
