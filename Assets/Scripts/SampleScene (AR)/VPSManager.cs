@@ -6,30 +6,26 @@ using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using Google.XR.ARCoreExtensions;
 using System;
+using Newtonsoft.Json;
 
 public class VPSManager : MonoBehaviour
 {
     [SerializeField] private AREarthManager earthManager;
-
-/*    [Serializable]
-    public struct GeospatialObject
-    {
-        public GameObject ObjectPrefab;
-        public EarthPosition EarthPosition;
-    }*/
-
     [SerializeField] private ARAnchorManager aRAnchorManager;
 
-    [SerializeField] private EarthPosition pos = new EarthPosition(40.367049, 16.697561, 143.385);
-   /* [SerializeField] private EarthPosition pos;*/
+    [SerializeField] private EarthPosition pos;
     [SerializeField] private GeospatialObject geo;
 
     [SerializeField] private List<GeospatialObject> geospatialObjects = new List<GeospatialObject>();
+
+
     // Start is called before the first frame update
     void Start()
     {
+        pos = JsonConvert.DeserializeObject<EarthPosition>(Resources.Load<TextAsset>("JSON/EarthPosition").ToString());
+
         geo = new GeospatialObject(pos);
-        geo.ObjectPrefab = Resources.Load<GameObject>("unity-chan!/Unity-chan! Model/Prefabs/unitychan") as GameObject;
+        geo.ObjectPrefab = Resources.Load<GameObject>("arrow") as GameObject;
         geospatialObjects.Add(geo);
 
         VerifyGeospatialSupport();
@@ -46,10 +42,6 @@ public class VPSManager : MonoBehaviour
 
     private void VerifyGeospatialSupport()
     {
-/*        TextAsset jsonString = Resources.Load<TextAsset>("JSON/EarthPosition") as TextAsset;
-        pos = JsonUtility.FromJson<EarthPosition>(jsonString.ToString());
-        Debug.Log(pos.Latitude.ToString());*/
-
         var result = earthManager.IsGeospatialModeSupported(GeospatialMode.Enabled);
         switch (result)
         {
@@ -69,7 +61,6 @@ public class VPSManager : MonoBehaviour
 
     private void PlaceObjects()
     {
-
         if (earthManager.EarthTrackingState == TrackingState.Tracking)
         {
             var geospatialPose = earthManager.CameraGeospatialPose;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GeospatialObject : MonoBehaviour
+public class GeospatialObject
 {
     [SerializeField] public GameObject ObjectPrefab;
     [SerializeField] public EarthPosition EarthPosition;
