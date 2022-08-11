@@ -13,9 +13,6 @@ public class VPSManager : MonoBehaviour
     [SerializeField] private AREarthManager earthManager;
     [SerializeField] private ARAnchorManager aRAnchorManager;
 
-    /*    [SerializeField] private EarthPosition pos;
-        [SerializeField] private GeospatialObject geo;*/
-
     [SerializeField] private List<EarthPosition> positions = new List<EarthPosition>();
     [SerializeField] private List<GeospatialObject> geospatialObjects = new List<GeospatialObject>();
 
@@ -31,6 +28,25 @@ public class VPSManager : MonoBehaviour
             geo.ObjectPrefab = Resources.Load<GameObject>("arrow") as GameObject;
             geospatialObjects.Add(geo);
         }
+
+/*        Transform a = Instantiate(geospatialObjects[0].ObjectPrefab, new Vector3(10.0f, 5.0f, 0.0f), Quaternion.identity).transform;
+        Transform b = Instantiate(geospatialObjects[1].ObjectPrefab, new Vector3(3.0f, 0.0f, 3.0f), Quaternion.identity).transform;
+        Transform c = Instantiate(geospatialObjects[2].ObjectPrefab, new Vector3(0.0f, 10.0f, 0.0f), Quaternion.identity).transform;
+
+        List<Transform> path = new List<Transform>();
+        path.Add(a);
+        path.Add(b);
+        path.Add(c);
+
+        path.Reverse();
+        for (int i = 0; i < path.Count; i++)
+        {
+            if (path[i] != path[path.Count - 1])
+            {
+                path[i + 1].LookAt(path[i]);
+                path[i + 1].Rotate(0.0f, -90.0f, 0.0f, Space.Self);
+            }
+        }*/
 
         VerifyGeospatialSupport();
 
@@ -69,11 +85,23 @@ public class VPSManager : MonoBehaviour
         {
             var geospatialPose = earthManager.CameraGeospatialPose;
 
+            List<Transform> path = new List<Transform>();
+
             foreach (var obj in geospatialObjects)
             {
                 var earthPosition = obj.EarthPosition;
                 var objAnchor = ARAnchorManagerExtensions.AddAnchor(aRAnchorManager, earthPosition.Latitude, earthPosition.Longitude, earthPosition.Altitude, Quaternion.identity);
-                Instantiate(obj.ObjectPrefab, objAnchor.transform);
+                path.Add(Instantiate(obj.ObjectPrefab, objAnchor.transform).transform);
+            }
+
+            path.Reverse();
+            for (int i = 0; i < path.Count; i++)
+            {
+                if (path[i] != path[path.Count - 1])
+                {
+                    path[i + 1].LookAt(path[i]);
+                    path[i + 1].Rotate(0.0f, -90.0f, 0.0f, Space.Self);
+                }
             }
         }
 
