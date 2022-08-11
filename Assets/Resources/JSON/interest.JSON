@@ -1,0 +1,34 @@
+[
+    {
+        "Latitude": 0,
+        "Longitude": 0,
+        "Altitude": 0,
+        "Nome":"Università degli studi di Bari - Dipartimento di Informatica",
+        "Text": "Testo del punto di interesse",
+        "HasPath": true
+    },
+    {
+        "Latitude": 0,
+        "Longitude": 0,
+        "Altitude": 0,
+        "Nome":"Gura",
+        "Text": "Testo del punto di interesse",
+        "HasPath": false
+    },
+    {
+        "Latitude": 0,
+        "Longitude": 0,
+        "Altitude": 0,
+        "Nome":"Ina",
+        "Text": "Testo del punto di interesse",
+        "HasPath": false
+    },
+    {
+        "Latitude": 0,
+        "Longitude": 0,
+        "Altitude": 0,
+        "Nome":"Ellie",
+        "Text": "Testo del punto di interesse",
+        "HasPath": false
+    }
+]
