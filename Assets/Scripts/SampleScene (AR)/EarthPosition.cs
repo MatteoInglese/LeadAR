@@ -10,18 +10,6 @@ public class EarthPosition
     [SerializeField] public double Longitude { get; set; }
     [SerializeField] public double Altitude { get; set; }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     //constructors
     public EarthPosition(double lat, double lon, double alt)
     {
@@ -29,36 +17,42 @@ public class EarthPosition
         Longitude = lon;
         Altitude = alt;
     }
-
-/*    //getters
-    public double getLat()
+    public EarthPosition()
     {
-        return Latitude;
+        Latitude = 0;
+        Longitude = 0;
+        Altitude = 0;
     }
 
-    public double getLon()
-    {
-        return Longitude;
-    }
+    /*    //getters
+        public double getLat()
+        {
+            return Latitude;
+        }
 
-    public double getAlt()
-    {
-        return Altitude;
-    }
+        public double getLon()
+        {
+            return Longitude;
+        }
 
-    //setters
-    public void setLat(double lat)
-    {
-        Latitude = lat;
-    }
+        public double getAlt()
+        {
+            return Altitude;
+        }
 
-    public void setLon(double lon)
-    {
-        Longitude = lon;
-    }
+        //setters
+        public void setLat(double lat)
+        {
+            Latitude = lat;
+        }
 
-    public void setAlt(double alt)
-    {
-        Altitude = alt;
-    }*/
+        public void setLon(double lon)
+        {
+            Longitude = lon;
+        }
+
+        public void setAlt(double alt)
+        {
+            Altitude = alt;
+        }*/
 }
