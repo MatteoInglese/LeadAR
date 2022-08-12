@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SchermataImpostazioni : MonoBehaviour
 {
 
-    static int SceneIndex;
+    public static int SceneIndex;
 
     // Start is called before the first frame update
     void Start()

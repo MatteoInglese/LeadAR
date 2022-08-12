@@ -14,7 +14,7 @@ public class VPSManager : MonoBehaviour
     [SerializeField] private ARAnchorManager aRAnchorManager;
 
     [SerializeField] private List<EarthPosition> positions = new List<EarthPosition>();
-    [SerializeField] public static List<Interest> interests = new List<Interest>();
+    //[SerializeField] public static List<Interest> interests = new List<Interest>();
     [SerializeField] private List<GeospatialObject> geospatialObjects = new List<GeospatialObject>();
 
 
@@ -22,7 +22,7 @@ public class VPSManager : MonoBehaviour
     void Start()
     {
         positions = JsonConvert.DeserializeObject<List<EarthPosition>>(Resources.Load<TextAsset>("JSON/EarthPosition").ToString());
-        interests = JsonConvert.DeserializeObject<List<Interest>>(Resources.Load<TextAsset>("JSON/Interest").ToString());
+        //interests = JsonConvert.DeserializeObject<List<Interest>>(Resources.Load<TextAsset>("JSON/Interest").ToString());
 
         foreach (var position in positions)
         {

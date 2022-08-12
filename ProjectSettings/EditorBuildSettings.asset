@@ -12,11 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/SceltaDestinazione.unity
     guid: 1f9d08758c5327b48b7acb39a0d6e18a
   - enabled: 1
-    path: Assets/Scenes/Impostazioni.unity
-    guid: 85e00546e389d9341820786b3337048a
-  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Impostazioni.unity
+    guid: 85e00546e389d9341820786b3337048a
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 57f4d27ad3ba49c4e81c50ce640294f6, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 8aaa06d1b881a1148ab12de2814d19cd, type: 2}
