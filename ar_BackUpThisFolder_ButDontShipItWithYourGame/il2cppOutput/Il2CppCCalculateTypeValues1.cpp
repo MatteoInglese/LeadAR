@@ -2399,18 +2399,14 @@ struct InputTracking_tA4F34D4D5EC8E560B56ED295177C040D9C9815F1_StaticFields
 // Interest
 struct Interest_tF8A8128B3099735B39C5C9293708883957A3CC45  : public RuntimeObject
 {
-	// System.Double Interest::<Latitude>k__BackingField
-	double ___U3CLatitudeU3Ek__BackingField_0;
-	// System.Double Interest::<Longitude>k__BackingField
-	double ___U3CLongitudeU3Ek__BackingField_1;
-	// System.Double Interest::<Altitude>k__BackingField
-	double ___U3CAltitudeU3Ek__BackingField_2;
+	// EarthPosition Interest::<position>k__BackingField
+	EarthPosition_tC712E0561D35EBC3E87812B8B164F207A188348E* ___U3CpositionU3Ek__BackingField_0;
 	// System.String Interest::<Nome>k__BackingField
-	String_t* ___U3CNomeU3Ek__BackingField_3;
+	String_t* ___U3CNomeU3Ek__BackingField_1;
 	// System.String Interest::<Text>k__BackingField
-	String_t* ___U3CTextU3Ek__BackingField_4;
+	String_t* ___U3CTextU3Ek__BackingField_2;
 	// System.Boolean Interest::<HasPath>k__BackingField
-	bool ___U3CHasPathU3Ek__BackingField_5;
+	bool ___U3CHasPathU3Ek__BackingField_3;
 };
 
 // UnityEngine.Internal_SubsystemDescriptors

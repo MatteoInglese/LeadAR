@@ -94,14 +94,22 @@ public class VPSManager : MonoBehaviour
             geospatialObjects.Add(geo);
         }
 
-/*        Transform a = Instantiate(geospatialObjects[0].ObjectPrefab, new Vector3(10.0f, 5.0f, 0.0f), Quaternion.identity).transform;
-        Transform b = Instantiate(geospatialObjects[1].ObjectPrefab, new Vector3(3.0f, 0.0f, 3.0f), Quaternion.identity).transform;
-        Transform c = Instantiate(geospatialObjects[2].ObjectPrefab, new Vector3(0.0f, 10.0f, 0.0f), Quaternion.identity).transform;
 
+/*        //TEST LOCALE
         List<Transform> path = new List<Transform>();
-        path.Add(a);
-        path.Add(b);
-        path.Add(c);
+
+        float lat = latToZ(53.178469);
+        float lon = lonToX(6.503091);
+        float alt = 0;
+
+        foreach (var geo in geospatialObjects)
+        {
+            lat += 3;
+            lon += 2;
+            alt += 4;
+
+            path.Add(Instantiate(geo.ObjectPrefab, new Vector3(lon, alt, lat), Quaternion.identity).transform);
+        }
 
         path.Reverse();
         for (int i = 0; i < path.Count; i++)
@@ -113,7 +121,25 @@ public class VPSManager : MonoBehaviour
             }
         }*/
 
-        VerifyGeospatialSupport();
+            VerifyGeospatialSupport();
+    }
+
+    float latToZ(double lat)
+    {
+
+        lat = (lat - 53.178469) / 0.00001 * 0.12179047095976932582726898256213;
+        double z = lat;
+
+        return (float)z;
+    }
+
+    float lonToX(double lon)
+    {
+
+        lon = (lon - 6.503091) / 0.000001 * 0.00728553580298947812081345114627;
+        double x = lon;
+
+        return (float)x;
     }
 
     private void VerifyGeospatialSupport()
@@ -143,11 +169,42 @@ public class VPSManager : MonoBehaviour
 
             List<Transform> path = new List<Transform>();
 
+            /*        //TEST LOCALE
+        List<Transform> path = new List<Transform>();
+
+        float lat = latToZ(53.178469);
+        float lon = lonToX(6.503091);
+        float alt = 0;
+
+        foreach (var geo in geospatialObjects)
+        {
+            lat += 3;
+            lon += 2;
+            alt += 4;
+
+            path.Add(Instantiate(geo.ObjectPrefab, new Vector3(lon, alt, lat), Quaternion.identity).transform);
+        }
+
+        path.Reverse();
+        for (int i = 0; i < path.Count; i++)
+        {
+            if (path[i] != path[path.Count - 1])
+            {
+                path[i + 1].LookAt(path[i]);
+                path[i + 1].Rotate(0.0f, -90.0f, 0.0f, Space.Self);
+            }
+        }*/
+
             foreach (var obj in geospatialObjects)
             {
                 var earthPosition = obj.EarthPosition;
                 var objAnchor = ARAnchorManagerExtensions.AddAnchor(aRAnchorManager, earthPosition.Latitude, earthPosition.Longitude, earthPosition.Altitude, Quaternion.identity);
-                path.Add(Instantiate(obj.ObjectPrefab, objAnchor.transform).transform);
+                
+                float lat = latToZ(obj.EarthPosition.Latitude);
+                float lon = lonToX(obj.EarthPosition.Longitude);
+                float alt = (float)obj.EarthPosition.Altitude;
+
+                path.Add(Instantiate(obj.ObjectPrefab, new Vector3(lon, alt, lat), Quaternion.identity).transform);
             }
 
             path.Reverse();

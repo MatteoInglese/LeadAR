@@ -23,11 +23,21 @@ public class Interest
         
     }
 
-    public Interest(double lat, double lon, double alt, string name, string txt, bool hasPath)
+/*    public Interest(double lat, double lon, double alt, string name, string txt, bool hasPath)
     {
         position.Latitude = lat;
         position.Longitude = lon;
         position.Altitude = alt;
+        Nome = name;
+        Text = txt;
+        HasPath = hasPath;
+    }*/
+
+    public Interest(EarthPosition pos, string name, string txt, bool hasPath)
+    {
+        position.Latitude = pos.Latitude;
+        position.Longitude = pos.Longitude;
+        position.Altitude = pos.Altitude;
         Nome = name;
         Text = txt;
         HasPath = hasPath;
