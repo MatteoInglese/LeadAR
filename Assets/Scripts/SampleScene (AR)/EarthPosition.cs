@@ -24,35 +24,29 @@ public class EarthPosition
         Altitude = 0;
     }
 
-    /*    //getters
-        public double getLat()
-        {
-            return Latitude;
-        }
+    public double Distance(EarthPosition e1, EarthPosition e2)
+    {
+        double lat1 = e1.Latitude;
+        double lon1 = e1.Longitude;
 
-        public double getLon()
-        {
-            return Longitude;
-        }
+        double lat2 = e2.Latitude;
+        double lon2 = e2.Longitude;
 
-        public double getAlt()
-        {
-            return Altitude;
-        }
+        var R = 6376.5000; //Km
+        lat1 = ToRad(lat1);
+        lat2 = ToRad(lat2);
+        lon1 = ToRad(lon1);
+        lon2 = ToRad(lon2);
+        var dLat = lat2 - lat1;
+        var dLon = lon2 - lon1;
+        var a = Math.Pow(Math.Sin(dLat / 2), 2) + (Math.Pow(Math.Sin(dLon / 2), 2) * Math.Cos(lat1) * Math.Cos(lat2));
+        var c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+        double distance = R * c * 1000;
+        return Math.Truncate(distance);
+    }
 
-        //setters
-        public void setLat(double lat)
-        {
-            Latitude = lat;
-        }
-
-        public void setLon(double lon)
-        {
-            Longitude = lon;
-        }
-
-        public void setAlt(double alt)
-        {
-            Altitude = alt;
-        }*/
+    public double ToRad(double degs)
+    {
+        return degs * (Math.PI / 180.0);
+    }
 }

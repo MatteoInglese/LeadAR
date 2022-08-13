@@ -72,7 +72,8 @@ public class VPSManager : MonoBehaviour
             lat.text = "Latitude: " + userPosition.Latitude.ToString();
 
             Text lon = GameObject.Find("Canvas/Longitude").GetComponent<Text>();
-            lon.text = "Longitude: " + userPosition.Longitude.ToString();
+            /*lon.text = "Longitude: " + userPosition.Longitude.ToString();*/
+            lon.text = "Distance: " + userPosition.Distance(userPosition, geospatialObjects[0].EarthPosition) + "m";
         }
 
         // Stop service if there is no need to query location updates continuously
