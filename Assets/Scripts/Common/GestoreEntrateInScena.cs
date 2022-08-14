@@ -46,7 +46,13 @@ public class GestoreEntrateInScena : MonoBehaviour
     {
         ExitManager.i = ExitManager.i + 1;
         ExitManager.SceneIndex.Add(SceneManager.GetActiveScene().buildIndex);
-        //ExitImpostazioni = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene("Impostazioni");
+    }
+
+    public void ApriRicerca()
+    {
+        ExitManager.i = ExitManager.i + 1;
+        ExitManager.SceneIndex.Add(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("cercadestinazione");
     }
 }

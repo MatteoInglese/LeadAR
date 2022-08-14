@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Impostazioni.unity
     guid: 85e00546e389d9341820786b3337048a
+  - enabled: 1
+    path: Assets/Scenes/cercadestinazione.unity
+    guid: a9f52c01f287b974b8ff6b2701c6d3a4
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 57f4d27ad3ba49c4e81c50ce640294f6, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 8aaa06d1b881a1148ab12de2814d19cd, type: 2}
