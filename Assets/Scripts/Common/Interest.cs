@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Interest
 {
-    [SerializeField] public EarthPosition position { get; set; }
-    /*[SerializeField] public double Latitude { get; set; }
+//    [SerializeField] public EarthPosition position { get; set; }
+    [SerializeField] public double Latitude { get; set; }
     [SerializeField] public double Longitude { get; set; }
-    [SerializeField] public double Altitude { get; set; }*/
+    [SerializeField] public double Altitude { get; set; }
     [SerializeField] public string Nome { get; set; }
     [SerializeField] public string Text { get; set; }
     [SerializeField] public bool HasPath { get; set; }
@@ -23,21 +23,11 @@ public class Interest
         
     }
 
-/*    public Interest(double lat, double lon, double alt, string name, string txt, bool hasPath)
+    public Interest(double lat, double lon, double alt, string name, string txt, bool hasPath)
     {
-        position.Latitude = lat;
-        position.Longitude = lon;
-        position.Altitude = alt;
-        Nome = name;
-        Text = txt;
-        HasPath = hasPath;
-    }*/
-
-    public Interest(EarthPosition pos, string name, string txt, bool hasPath)
-    {
-        position.Latitude = pos.Latitude;
-        position.Longitude = pos.Longitude;
-        position.Altitude = pos.Altitude;
+        Latitude = lat;
+        Longitude = lon;
+        Altitude = alt;
         Nome = name;
         Text = txt;
         HasPath = hasPath;

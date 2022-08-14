@@ -5,22 +5,41 @@ using UnityEngine.SceneManagement;
 
 public class ExitManager : MonoBehaviour
 {
-    int sceneIndex;
+    public static List<int> SceneIndex = new List<int>();
+    public static int i = 0;
+
     // Start is called before the first frame update
     void Start()
     {
-        sceneIndex = SceneManager.GetActiveScene().buildIndex;
+ 
+
     }
 
     // Update is called once per frame
-    void Update()
+/*    void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (SceneManager.GetActiveScene().buildIndex == 0)
-                Application.Quit();
-            else
-                SceneManager.LoadScene(sceneIndex - 1);
+            if (SceneIndex.Count > 0)
+            {
+
+                SceneManager.LoadScene(SceneIndex[i - 1]);
+                SceneIndex.Remove(i);
+                i--;
+                prova.uscite++;
             }
         }
+    }*/
+
+    public void FrecciaIndietro()
+    {
+        if(SceneIndex.Count > 0)
+        {
+
+            SceneManager.LoadScene(SceneIndex[i-1]);
+            SceneIndex.Remove(i);
+            i--;
+        }
     }
+
+}

@@ -5,39 +5,71 @@ using UnityEngine.SceneManagement;
 
 public class SchermataImpostazioni : MonoBehaviour
 {
-
-    public static int SceneIndex;
+    public GameObject m100;
+    public GameObject m500;
+    public GameObject m1000;
+    public GameObject m5000;
+    public static int setting = 0;
 
     // Start is called before the first frame update
     void Start()
     {
+        if(setting == 1)
+        {
+            this.Set100();
+        }
+        else if(setting == 2) 
+        {
+            this.Set500();
+        }
+        else if (setting == 3)
+        {
+            this.Set1000();
+        }
+        else if (setting == 4)
+        {
+            this.Set5000();
+        }
+
 
     }
 
-    // Update is called once per frame
-    public void TornaMenu()
+
+
+    public void Set100()
     {
-        SceneManager.LoadScene("MenuIniziale");
-    }
-    
-    public void SetDistanceTrue(GameObject obj)
-    {
-        obj.SetActive(true);
+        setting = 1;
+        m100.SetActive(true);
+        m500.SetActive(false);
+        m1000.SetActive(false);
+        m5000.SetActive(false);
     }
 
-    public void SetDistanceFalse(GameObject obj)
+    public void Set500()
     {
-        obj.SetActive(false);
+        setting= 2;
+        m100.SetActive(false);
+        m500.SetActive(true);
+        m1000.SetActive(false);
+        m5000.SetActive(false);
     }
 
-    public void ApriImpostazioni()
+    public void Set1000()
     {
-        SceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene("Impostazioni");
+        setting = 3;
+        m100.SetActive(false);
+        m500.SetActive(false);
+        m1000.SetActive(true);
+        m5000.SetActive(false);
     }
 
-    public void TornaIndietro()
+    public void Set5000()
     {
-        SceneManager.LoadScene(SceneIndex);
+        setting = 4;
+        m100.SetActive(false);
+        m500.SetActive(false);
+        m1000.SetActive(false);
+        m5000.SetActive(true);
     }
+
 }
