@@ -9,24 +9,24 @@ public class SchermataImpostazioni : MonoBehaviour
     public GameObject m500;
     public GameObject m1000;
     public GameObject m5000;
-    public static int setting = 0;
+    public static int setting = 100;
 
     // Start is called before the first frame update
     void Start()
     {
-        if(setting == 1)
+        if(setting == 100)
         {
             this.Set100();
         }
-        else if(setting == 2) 
+        else if(setting == 500) 
         {
             this.Set500();
         }
-        else if (setting == 3)
+        else if (setting == 1000)
         {
             this.Set1000();
         }
-        else if (setting == 4)
+        else if (setting == 5000)
         {
             this.Set5000();
         }
@@ -38,7 +38,7 @@ public class SchermataImpostazioni : MonoBehaviour
 
     public void Set100()
     {
-        setting = 1;
+        setting = 100;
         m100.SetActive(true);
         m500.SetActive(false);
         m1000.SetActive(false);
@@ -47,7 +47,7 @@ public class SchermataImpostazioni : MonoBehaviour
 
     public void Set500()
     {
-        setting= 2;
+        setting= 500;
         m100.SetActive(false);
         m500.SetActive(true);
         m1000.SetActive(false);
@@ -56,7 +56,7 @@ public class SchermataImpostazioni : MonoBehaviour
 
     public void Set1000()
     {
-        setting = 3;
+        setting = 1000;
         m100.SetActive(false);
         m500.SetActive(false);
         m1000.SetActive(true);
@@ -65,7 +65,7 @@ public class SchermataImpostazioni : MonoBehaviour
 
     public void Set5000()
     {
-        setting = 4;
+        setting = 5000;
         m100.SetActive(false);
         m500.SetActive(false);
         m1000.SetActive(false);

@@ -8,6 +8,7 @@ public class GestoreEntrateInScena : MonoBehaviour
 {
     public static int ExitImpostazioni;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,4 +56,5 @@ public class GestoreEntrateInScena : MonoBehaviour
         ExitManager.SceneIndex.Add(SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene("cercadestinazione");
     }
+
 }

@@ -16,20 +16,10 @@ public class ExitManager : MonoBehaviour
     }
 
     // Update is called once per frame
-/*    void Update()
+    void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (SceneIndex.Count > 0)
-            {
 
-                SceneManager.LoadScene(SceneIndex[i - 1]);
-                SceneIndex.Remove(i);
-                i--;
-                prova.uscite++;
-            }
-        }
-    }*/
+    }
 
     public void FrecciaIndietro()
     {

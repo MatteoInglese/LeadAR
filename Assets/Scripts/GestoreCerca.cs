@@ -2,8 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Newtonsoft.Json;
+
 public class GestoreCerca : MonoBehaviour
 {
+
+    [SerializeField] public static List<Interest> GlobalInterests = new List<Interest>();
     public GameObject luogoPrefab;
     public GameObject guraPrefab;
     public Transform genitoreLuogo;
@@ -11,7 +15,7 @@ public class GestoreCerca : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GlobalInterests = JsonConvert.DeserializeObject<List<Interest>>(Resources.Load<TextAsset>("JSON/Interest").ToString());
     }
 
     // Update is called once per frame
@@ -28,29 +32,27 @@ public class GestoreCerca : MonoBehaviour
             Destroy(interest.gameObject);
         }
 
-        foreach (var interest in GestoreDestinazioni.interests)
+        foreach (var interest in GlobalInterests)
         {
-            if (interest.Nome == stringa)
+            if (interest.Nome.ToLower().Contains(stringa.ToLower()))
             {
                 if (interest.HasPath)
                 {
                     GameObject newGo = Instantiate(luogoPrefab, genitoreLuogo);
                     Text[] texts = newGo.GetComponentsInChildren<Text>();
-                    texts[0].text = Truncate(interest.Nome, 21);
+                    texts[0].text = GestoreDestinazioni.Truncate(interest.Nome, 21);
+                    texts[1].text = GestoreDestinazioni.Arrotonda(800);             //distanza
                 }
                 else
                 {
                     GameObject newGura = Instantiate(guraPrefab, genitoreLuogo);
                     Text[] texts = newGura.GetComponentsInChildren<Text>();
-                    texts[0].text = Truncate(interest.Nome, 21);
+                    texts[0].text = GestoreDestinazioni.Truncate(interest.Nome, 21);
+                    texts[1].text = GestoreDestinazioni.Arrotonda(800);             //distanza
                 }
             }
         }
     }
 
-    private static string Truncate(string value, int maxChars)
-    {
-        return value.Length <= maxChars ? value : value.Substring(0, maxChars) + "...";
-    }
 
 }

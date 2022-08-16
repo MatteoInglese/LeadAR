@@ -237,9 +237,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 142863159}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11aac9ab3566f7644b70a9de3beea97d, type: 3}
+  m_Script: {fileID: 11500000, guid: 760ce4676cc32644684607533d737aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oopsie: {fileID: 4533539239620420883, guid: 8f9342e9c4b6c6441b19e98c2f8629ff, type: 3}
   luogoPrefab: {fileID: 1119590749168514837, guid: eb9f2a35c936cbb49a8669ac9690c19d, type: 3}
   guraPrefab: {fileID: 2528599300792706777, guid: 9e805bf1746b2974894c9691dcb7a563, type: 3}
   genitoreLuogo: {fileID: 428231806}
@@ -1274,6 +1275,7 @@ GameObject:
   - component: {fileID: 984627790}
   - component: {fileID: 984627789}
   - component: {fileID: 984627788}
+  - component: {fileID: 984627791}
   m_Layer: 5
   m_Name: TastoEsplora
   m_TagString: Untagged
@@ -1345,7 +1347,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 984627791}
         m_TargetAssemblyTypeName: GestoreEntrateInScena, Assembly-CSharp
         m_MethodName: ApriEsplorazione
         m_Mode: 1
@@ -1395,6 +1397,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 984627786}
   m_CullTransparentMesh: 1
+--- !u!114 &984627791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984627786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82be874de04ae3f498fbd458fe988339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1388504629
 GameObject:
   m_ObjectHideFlags: 0
