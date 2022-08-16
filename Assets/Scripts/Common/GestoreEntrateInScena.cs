@@ -57,4 +57,15 @@ public class GestoreEntrateInScena : MonoBehaviour
         SceneManager.LoadScene("cercadestinazione");
     }
 
+    public void FrecciaIndietro()
+    {
+        if (ExitManager.SceneIndex.Count > 0)
+        {
+
+            SceneManager.LoadScene(ExitManager.SceneIndex[ExitManager.i - 1]);
+            ExitManager.SceneIndex.Remove(ExitManager.i);
+            ExitManager.i--;
+        }
+    }
+
 }

@@ -55,6 +55,7 @@ public class User : MonoBehaviour
             userPosition.Latitude = Input.location.lastData.latitude;
             userPosition.Longitude = Input.location.lastData.longitude;
             userPosition.Altitude = Input.location.lastData.altitude;
+
         }
 
         // Stop service if there is no need to query location updates continuously

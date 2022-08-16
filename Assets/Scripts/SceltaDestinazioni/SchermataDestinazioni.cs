@@ -14,11 +14,11 @@ public class SchermataDestinazioni : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        double distanza = 504;                  // variabile con assegnato un valore momentaneo (in teoria uno di default just in case)
+        double distanza = 69;                  // variabile con assegnato un valore momentaneo (in teoria uno di default, just in case)
         foreach (var interest in GestoreDestinazioni.interests)
         {
             EarthPosition position = new EarthPosition(interest.Latitude, interest.Longitude, interest.Altitude);
-            distanza = VPSManager.userPosition.Distance(VPSManager.userPosition, position);
+            distanza = MenuIniziale.userPosition.Distance(MenuIniziale.userPosition, position);
 
             if (distanza < SchermataImpostazioni.setting)
             {
@@ -43,7 +43,7 @@ public class SchermataDestinazioni : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        MenuIniziale.userPosition = User.GetUserPosition();
     }
 
 

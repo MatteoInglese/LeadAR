@@ -18,17 +18,17 @@ public class ExitManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    public void FrecciaIndietro()
-    {
-        if(SceneIndex.Count > 0)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
+            if (i > 0)
+            {
 
-            SceneManager.LoadScene(SceneIndex[i-1]);
-            SceneIndex.Remove(i);
-            i--;
+                SceneManager.LoadScene(SceneIndex[ - 1]);
+                SceneIndex.Remove(i);
+                i--;
+
+            }
+            else { Application.Quit(); }
         }
     }
 
