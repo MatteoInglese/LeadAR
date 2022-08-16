@@ -85,7 +85,6 @@ public class VPSManager : MonoBehaviour
     void Start()
     {
         positions = JsonConvert.DeserializeObject<List<EarthPosition>>(Resources.Load<TextAsset>("JSON/EarthPosition").ToString());
-        //interests = JsonConvert.DeserializeObject<List<Interest>>(Resources.Load<TextAsset>("JSON/Interest").ToString());
 
         foreach (var position in positions)
         {
@@ -112,7 +111,14 @@ public class VPSManager : MonoBehaviour
         }
 
         path.Reverse();
-        Vector3 dir = path[0].position - path[1].position;*/
+
+        Vector3 dir = path[1].position - path[0].position;
+        Debug.DrawRay(path[0].position, dir, Color.white, 100.0f, false);
+
+        geospatialObjects.Reverse();
+
+        path[0].Rotate(0.0f, -90.0f, 0.0f);
+        //Player.transform.rotation = Quaternion.Euler(view.x, view.y, view.z);*/
 
         VerifyGeospatialSupport();
     }
