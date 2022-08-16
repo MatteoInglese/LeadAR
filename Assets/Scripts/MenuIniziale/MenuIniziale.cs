@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class SceneManager : MonoBehaviour
+public class MenuIniziale : MonoBehaviour
 {
     public EarthPosition userPosition = new EarthPosition();
     // Start is called before the first frame update
@@ -19,3 +18,4 @@ public class SceneManager : MonoBehaviour
         userPosition = User.GetUserPosition();
     }
 }
+
