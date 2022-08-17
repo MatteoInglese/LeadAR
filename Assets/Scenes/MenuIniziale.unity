@@ -232,7 +232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5662851877198893007, guid: 7f2ec6e3ae3aef047a54f11bce3f003a, type: 3}
       propertyPath: m_Text
-      value: E qua va visto che scrivere
+      value: Scopri i luoghi interessanti intorno a te
       objectReference: {fileID: 0}
     - target: {fileID: 7144021606672821254, guid: 7f2ec6e3ae3aef047a54f11bce3f003a, type: 3}
       propertyPath: m_Colors.m_PressedColor.b

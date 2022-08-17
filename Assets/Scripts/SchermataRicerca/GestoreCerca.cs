@@ -26,6 +26,7 @@ public class GestoreCerca : MonoBehaviour
 
     public void Ricerca(string stringa)
     {
+        double distanza = 69;
 
         foreach (Transform interest in genitoreLuogo)
         {
@@ -34,6 +35,9 @@ public class GestoreCerca : MonoBehaviour
 
         foreach (var interest in GlobalInterests)
         {
+            EarthPosition position = new EarthPosition(interest.Latitude, interest.Longitude, interest.Altitude);
+            distanza = MenuIniziale.userPosition.Distance(MenuIniziale.userPosition, position);
+
             if (interest.Nome.ToLower().Contains(stringa.ToLower()))
             {
                 if (interest.HasPath)
@@ -41,14 +45,14 @@ public class GestoreCerca : MonoBehaviour
                     GameObject newGo = Instantiate(luogoPrefab, genitoreLuogo);
                     Text[] texts = newGo.GetComponentsInChildren<Text>();
                     texts[0].text = GestoreDestinazioni.Truncate(interest.Nome, 21);
-                    texts[1].text = GestoreDestinazioni.Arrotonda(800);             //distanza
+                    texts[1].text = GestoreDestinazioni.Arrotonda(distanza);             
                 }
                 else
                 {
                     GameObject newGura = Instantiate(guraPrefab, genitoreLuogo);
                     Text[] texts = newGura.GetComponentsInChildren<Text>();
                     texts[0].text = GestoreDestinazioni.Truncate(interest.Nome, 21);
-                    texts[1].text = GestoreDestinazioni.Arrotonda(800);             //distanza
+                    texts[1].text = GestoreDestinazioni.Arrotonda(distanza);             
                 }
             }
         }

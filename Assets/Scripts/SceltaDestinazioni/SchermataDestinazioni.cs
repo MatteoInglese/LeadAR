@@ -43,7 +43,7 @@ public class SchermataDestinazioni : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MenuIniziale.userPosition = User.GetUserPosition();
+
     }
 
 

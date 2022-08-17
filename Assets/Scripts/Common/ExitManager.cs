@@ -23,7 +23,7 @@ public class ExitManager : MonoBehaviour
             if (i > 0)
             {
 
-                SceneManager.LoadScene(SceneIndex[ - 1]);
+                SceneManager.LoadScene(SceneIndex[i - 1]);
                 SceneIndex.Remove(i);
                 i--;
 
