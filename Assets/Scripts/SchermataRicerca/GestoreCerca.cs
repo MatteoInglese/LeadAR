@@ -26,7 +26,7 @@ public class GestoreCerca : MonoBehaviour
 
     public void Ricerca(string stringa)
     {
-        double distanza = 69;
+        double distanza = 0;
 
         foreach (Transform interest in genitoreLuogo)
         {

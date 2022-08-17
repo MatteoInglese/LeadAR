@@ -113,12 +113,11 @@ public class VPSManager : MonoBehaviour
         path.Reverse();
 
         Vector3 dir = path[1].position - path[0].position;
+        Quaternion rot = Quaternion.LookRotation(dir);
         Debug.DrawRay(path[0].position, dir, Color.white, 100.0f, false);
-
-        geospatialObjects.Reverse();
-
-        path[0].Rotate(0.0f, -90.0f, 0.0f);
-        //Player.transform.rotation = Quaternion.Euler(view.x, view.y, view.z);*/
+        
+        path[0].rotation = rot;
+        path[0].Rotate(0.0f, -90.0f, 0.0f);*/
 
         VerifyGeospatialSupport();
     }
@@ -157,6 +156,12 @@ public class VPSManager : MonoBehaviour
 
                 path.Add(Instantiate(obj.ObjectPrefab, objAnchor.transform).transform);
             }
+
+            Vector3 dir = path[1].position - path[0].position;
+            Quaternion rot = Quaternion.LookRotation(dir);
+            
+            path[0].rotation = rot;
+            path[0].Rotate(0.0f, -90.0f, 0.0f);
         }
 
         else if (earthManager.EarthTrackingState == TrackingState.None)

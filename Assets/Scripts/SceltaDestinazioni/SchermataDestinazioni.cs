@@ -14,7 +14,7 @@ public class SchermataDestinazioni : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        double distanza = 69;                  // variabile con assegnato un valore momentaneo (in teoria uno di default, just in case)
+        double distanza = 0;                  // variabile con assegnato un valore momentaneo (in teoria uno di default, just in case)
         foreach (var interest in GestoreDestinazioni.interests)
         {
             EarthPosition position = new EarthPosition(interest.Latitude, interest.Longitude, interest.Altitude);
