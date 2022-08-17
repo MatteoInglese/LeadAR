@@ -7,7 +7,6 @@ using Newtonsoft.Json;
 public class GestoreCerca : MonoBehaviour
 {
 
-    [SerializeField] public static List<Interest> GlobalInterests = new List<Interest>();
     public GameObject luogoPrefab;
     public GameObject guraPrefab;
     public Transform genitoreLuogo;
@@ -15,7 +14,7 @@ public class GestoreCerca : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GlobalInterests = JsonConvert.DeserializeObject<List<Interest>>(Resources.Load<TextAsset>("JSON/Interest").ToString());
+        MenuIniziale.userPosition = User.GetUserPosition();
     }
 
     // Update is called once per frame
@@ -33,7 +32,7 @@ public class GestoreCerca : MonoBehaviour
             Destroy(interest.gameObject);
         }
 
-        foreach (var interest in GlobalInterests)
+        foreach (var interest in GestoreDestinazioni.interests)
         {
             EarthPosition position = new EarthPosition(interest.Latitude, interest.Longitude, interest.Altitude);
             distanza = MenuIniziale.userPosition.Distance(MenuIniziale.userPosition, position);

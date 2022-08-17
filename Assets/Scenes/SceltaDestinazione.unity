@@ -260,6 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   caricamento: {fileID: 763127799}
+  iconarotante: {fileID: 324796755}
 --- !u!114 &142863167
 MonoBehaviour:
   m_ObjectHideFlags: 0

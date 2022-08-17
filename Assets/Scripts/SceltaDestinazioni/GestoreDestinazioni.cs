@@ -39,12 +39,12 @@ public class GestoreDestinazioni : MonoBehaviour
                 num = "500m";
                 break;
 
-            case >= 750 and < 2000:
+            case >= 750 and < 2500:
                 num = "1000m";
                 break;
 
-            case >= 2000:
-                num = "+ 2 km";
+            case >= 2500:
+                num = "5 km";
                 break;
         }
         return num;
