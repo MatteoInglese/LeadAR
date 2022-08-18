@@ -14,83 +14,41 @@ public class VPSManager : MonoBehaviour
     [SerializeField] private AREarthManager earthManager;
     [SerializeField] private ARAnchorManager aRAnchorManager;
 
-    [SerializeField] private List<EarthPosition> positions = new List<EarthPosition>();
-    [SerializeField] private List<GeospatialObject> geospatialObjects = new List<GeospatialObject>();
+    [SerializeField] private List<EarthPosition> arrowsPositions = new List<EarthPosition>();
+    [SerializeField] private List<GeospatialObject> arrows = new List<GeospatialObject>();
+
+    [SerializeField] private List<Interest> interestsPositions = new List<Interest>();
+    [SerializeField] private List<GeospatialObject> interests = new List<GeospatialObject>();
 
     [SerializeField] public static EarthPosition userPosition = new EarthPosition();
-    private bool isUpdating;
+    /*[SerializeField] public static bool displayPath = false;*/
 
 
-    private void Update()
+    void Update()
     {
-        if (!isUpdating)
-        {
-            StartCoroutine(GetLocation());
-            isUpdating = !isUpdating;
-        }
-    }
-    IEnumerator GetLocation()
-    {
-        if (!Permission.HasUserAuthorizedPermission(Permission.FineLocation))
-        {
-            Permission.RequestUserPermission(Permission.FineLocation);
-            Permission.RequestUserPermission(Permission.CoarseLocation);
-        }
-        // First, check if user has location service enabled
-        if (!Input.location.isEnabledByUser)
-            yield return new WaitForSeconds(10);
-
-        // Start service before querying location
-        Input.location.Start();
-
-        // Wait until service initializes
-        int maxWait = 10;
-        while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0)
-        {
-            yield return new WaitForSeconds(1);
-            maxWait--;
-        }
-
-        // Service didn't initialize in 20 seconds
-        if (maxWait < 1)
-        {
-            yield break;
-        }
-
-        // Connection has failed
-        if (Input.location.status == LocationServiceStatus.Failed)
-        {
-            yield break;
-        }
-        else
-        {
-            userPosition.Latitude = Input.location.lastData.latitude;
-            userPosition.Longitude = Input.location.lastData.longitude;
-            userPosition.Altitude = Input.location.lastData.altitude;
-
-            Text lat = GameObject.Find("Canvas/Latitude").GetComponent<Text>();
-            lat.text = "Latitude: " + userPosition.Latitude.ToString();
-
-            Text lon = GameObject.Find("Canvas/Longitude").GetComponent<Text>();
-            /*lon.text = "Longitude: " + userPosition.Longitude.ToString();*/
-            lon.text = "Distance: " + userPosition.Distance(userPosition, geospatialObjects[0].EarthPosition) + "m";
-        }
-
-        // Stop service if there is no need to query location updates continuously
-        isUpdating = !isUpdating;
-        Input.location.Stop();
+        userPosition = User.GetUserPosition();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        positions = JsonConvert.DeserializeObject<List<EarthPosition>>(Resources.Load<TextAsset>("JSON/EarthPosition").ToString());
+        userPosition = MenuIniziale.userPosition;
 
-        foreach (var position in positions)
+        arrowsPositions = JsonConvert.DeserializeObject<List<EarthPosition>>(Resources.Load<TextAsset>("JSON/interest").ToString());
+        interestsPositions = JsonConvert.DeserializeObject<List<Interest>>(Resources.Load<TextAsset>("JSON/EarthPosition").ToString());
+
+        foreach (var position in interestsPositions)
+        {
+            GeospatialObject geo = new GeospatialObject(new EarthPosition(position.Latitude, position.Longitude, position.Altitude));
+            geo.ObjectPrefab = Resources.Load<GameObject>("arrow") as GameObject;
+            interests.Add(geo);
+        }
+
+        foreach (var position in arrowsPositions)
         {
             GeospatialObject geo = new GeospatialObject(position);
-            geo.ObjectPrefab = Resources.Load<GameObject>("arrow") as GameObject;
-            geospatialObjects.Add(geo);
+            geo.ObjectPrefab = Resources.Load<GameObject>("puntointeresse") as GameObject;
+            arrows.Add(geo);
         }
 
 
@@ -101,7 +59,7 @@ public class VPSManager : MonoBehaviour
         float lon = 0;
         float alt = 0;
 
-        foreach (var geo in geospatialObjects)
+        foreach (var geo in arrows)
         {
             lat += 3;
             lon += 2;
@@ -114,9 +72,24 @@ public class VPSManager : MonoBehaviour
 
         Vector3 dir = path[1].position - path[0].position;
         Quaternion rot = Quaternion.LookRotation(dir);
+*//*        Vector3 x = path[0].position + new Vector3(90.0f, 0.0f, 0.0f) * Mathf.Rad2Deg;
+        Vector3 y = path[0].position + new Vector3(0.0f, 90.0f, 0.0f) * Mathf.Rad2Deg;
+        Vector3 z = path[0].position + new Vector3(0.0f, 0.0f, 90.0f) * Mathf.Rad2Deg;
+
+        float xAngle = (180.0f * Mathf.Rad2Deg) + Vector3.Angle(dir, x);
+        float yAngle = (180.0f * Mathf.Rad2Deg) + Vector3.Angle(dir, y);
+        float zAngle = (180.0f * Mathf.Rad2Deg) + Vector3.Angle(dir, z);
+
         Debug.DrawRay(path[0].position, dir, Color.white, 100.0f, false);
-        
+        Debug.DrawRay(path[0].position, path[0].position, Color.red, 100.0f, false);
+
+        Debug.DrawRay(path[0].position, x, Color.green, 100.0f, false);
+        Debug.DrawRay(path[0].position, y, Color.green, 100.0f, false);
+        Debug.DrawRay(path[0].position, z, Color.green, 100.0f, false);*//*
+
         path[0].rotation = rot;
+        //path[0].Rotate(xAngle, yAngle, zAngle);
+        //path[0].LookAt(path[1]);
         path[0].Rotate(0.0f, -90.0f, 0.0f);*/
 
         VerifyGeospatialSupport();
@@ -129,7 +102,8 @@ public class VPSManager : MonoBehaviour
         {
             case FeatureSupported.Supported:
                 Debug.Log("Ready to use VPS");
-                PlaceObjects();
+                PlaceInterests();
+                PlacePath();
                 break;
             case FeatureSupported.Unknown:
                 Debug.Log("Unknown...");
@@ -141,27 +115,19 @@ public class VPSManager : MonoBehaviour
         }
     }
 
-    private void PlaceObjects()
+    private void PlaceInterests()
     {
         if (earthManager.EarthTrackingState == TrackingState.Tracking)
         {
             var geospatialPose = earthManager.CameraGeospatialPose;
 
-            List<Transform> path = new List<Transform>();
-
-            foreach (var obj in geospatialObjects)
+            foreach (var obj in interests)
             {
                 var earthPosition = obj.EarthPosition;
                 var objAnchor = ARAnchorManagerExtensions.AddAnchor(aRAnchorManager, earthPosition.Latitude, earthPosition.Longitude, earthPosition.Altitude, Quaternion.identity);
 
-                path.Add(Instantiate(obj.ObjectPrefab, objAnchor.transform).transform);
+                Instantiate(obj.ObjectPrefab, objAnchor.transform);
             }
-
-            Vector3 dir = path[1].position - path[0].position;
-            Quaternion rot = Quaternion.LookRotation(dir);
-            
-            path[0].rotation = rot;
-            path[0].Rotate(0.0f, -90.0f, 0.0f);
         }
 
         else if (earthManager.EarthTrackingState == TrackingState.None)
@@ -169,4 +135,41 @@ public class VPSManager : MonoBehaviour
             Invoke("Place Objects", 5.0f);
         }
     }
+
+    private void PlacePath()
+    {
+        if (earthManager.EarthTrackingState == TrackingState.Tracking)
+        {
+            List<Transform> path = new List<Transform>();
+
+            foreach (var obj in arrows)
+            {
+                var earthPosition = obj.EarthPosition;
+                var objAnchor = ARAnchorManagerExtensions.AddAnchor(aRAnchorManager, earthPosition.Latitude, earthPosition.Longitude, earthPosition.Altitude, Quaternion.identity);
+
+                path.Add(Instantiate(obj.ObjectPrefab, objAnchor.transform).transform);
+            }
+
+            /*
+            float lat0 = (float)arrows[0].EarthPosition.Latitude;
+            float lon0 = (float)arrows[0].EarthPosition.Longitude;
+            //Vector3 xyz_vector0 = Quaternion.AngleAxis(lat0, -Vector3.right) * new Vector3(0, (float)arrows[0].EarthPosition.Altitude;, 0) * Quaternion.AngleAxis(lon0, -Vector3.up);
+
+            Vector3 dir = path[1].position - path[0].position;
+            Quaternion rot = Quaternion.LookRotation(dir);
+            
+            path[0].rotation = rot;
+            path[0].Rotate(0.0f, -90.0f, 0.0f);*/
+        }
+
+        else if (earthManager.EarthTrackingState == TrackingState.None)
+        {
+            Invoke("Place Objects", 5.0f);
+        }
+    }
+
+   /* public static void setDisplayPath()
+    {
+        displayPath = !displayPath;
+    }*/
 }

@@ -1,5 +1,50 @@
 [
   {
+    "Latitude": 41.92877808237806,
+    "Longitude": 15.881702767053735,
+    "Altitude": 103.8826,
+
+    "Nome": "test",
+    "Text": "test",
+    "HasPath": true
+  },
+  {
+    "Latitude": 41.92826079237341,
+    "Longitude": 15.882000529319999,
+    "Altitude": 100.0,
+
+    "Nome": "Scuole elementari Rodi",
+    "Text": "Queste sono le scuole elementari di Rodi",
+    "HasPath": false
+  },
+  {
+    "Latitude": 41.928648412962325,
+    "Longitude": 15.88195542244733,
+    "Altitude": 100.0,
+
+    "Nome": "Centro riabilitazione Padre Pio",
+    "Text": "Centro riabilitativo. Orari di apertura: // - //",
+    "HasPath": true
+  },
+  {
+    "Latitude": 41.928190749179585,
+    "Longitude": 15.882679738705038,
+    "Altitude": 100.0,
+
+    "Nome": "Piazza Padre Pio",
+    "Text": "Piazza Padre Pio",
+    "HasPath": true
+  },
+  {
+    "Latitude": 41.93073039308028,
+    "Longitude": 15.886991834140513,
+    "Altitude": 100.0,
+
+    "Nome": "Porto turistico Rodi Garganico",
+    "Text": "Porto turistico Rodi Garganico",
+    "HasPath": false
+  },
+  {
     "Latitude": 40.366884,
     "Longitude": 16.697480,
     "Altitude": 142.8826,

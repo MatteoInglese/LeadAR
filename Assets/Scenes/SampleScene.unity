@@ -745,6 +745,7 @@ GameObject:
   - component: {fileID: 436293896}
   - component: {fileID: 436293895}
   - component: {fileID: 436293897}
+  - component: {fileID: 436293898}
   m_Layer: 0
   m_Name: VPSManager
   m_TagString: Untagged
@@ -792,6 +793,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04013b89158ee479c9d622e942e3b60b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &436293898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436293894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c9ed950d87a7654a96614ffb6ade979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &476370281

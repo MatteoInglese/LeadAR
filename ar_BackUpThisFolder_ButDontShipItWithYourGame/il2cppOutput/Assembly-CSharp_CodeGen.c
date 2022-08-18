@@ -164,59 +164,47 @@ extern void GestoreAudio_SetAudioOnOff_m7BA188B75113C99A58FC296067A6174587E4E2D4
 extern void GestoreAudio__ctor_m061F218CEFD24646F6FE3CEE166A9A0A245A7A0B (void);
 // 0x0000004C System.Void VPSManager::Update()
 extern void VPSManager_Update_m83394B2A173A0CB79276D600B0692DE7E1C30170 (void);
-// 0x0000004D System.Collections.IEnumerator VPSManager::GetLocation()
-extern void VPSManager_GetLocation_mFD95E5534F53DDDD840EF8BE4782780E360A8950 (void);
-// 0x0000004E System.Void VPSManager::Start()
+// 0x0000004D System.Void VPSManager::Start()
 extern void VPSManager_Start_m6CCB660B0D42CCA1B542D58D7E16820A94452B19 (void);
-// 0x0000004F System.Void VPSManager::VerifyGeospatialSupport()
+// 0x0000004E System.Void VPSManager::VerifyGeospatialSupport()
 extern void VPSManager_VerifyGeospatialSupport_mA56281D7ACF78DE56A51E70D2CEEB85FD7FBCEEA (void);
-// 0x00000050 System.Void VPSManager::PlaceObjects()
-extern void VPSManager_PlaceObjects_mFB0E40DED26CB62B627A90D88C934C5DCCB1CB91 (void);
+// 0x0000004F System.Void VPSManager::PlaceInterests()
+extern void VPSManager_PlaceInterests_m57BEB09BAAA7687288328EA4424E619FF541AE9A (void);
+// 0x00000050 System.Void VPSManager::PlacePath()
+extern void VPSManager_PlacePath_m24E290611A9BD26154C0375ADBC06F613F863BED (void);
 // 0x00000051 System.Void VPSManager::.ctor()
 extern void VPSManager__ctor_m4B2FDB926B57742D76BA2934AE0EFA5980B05334 (void);
 // 0x00000052 System.Void VPSManager::.cctor()
 extern void VPSManager__cctor_m9E360C068BFF299A09E5F19A65C000CBDF7758E9 (void);
-// 0x00000053 System.Void VPSManager/<GetLocation>d__7::.ctor(System.Int32)
-extern void U3CGetLocationU3Ed__7__ctor_mDD61D50E7DDB2E590A977DDED7E4C7B7B0A34426 (void);
-// 0x00000054 System.Void VPSManager/<GetLocation>d__7::System.IDisposable.Dispose()
-extern void U3CGetLocationU3Ed__7_System_IDisposable_Dispose_m3EF6827C56CCD0B8D2C13757461F574C09AD1D74 (void);
-// 0x00000055 System.Boolean VPSManager/<GetLocation>d__7::MoveNext()
-extern void U3CGetLocationU3Ed__7_MoveNext_mA1131F41132216DF84834A0508DE7A638DA21E97 (void);
-// 0x00000056 System.Object VPSManager/<GetLocation>d__7::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CGetLocationU3Ed__7_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m46CD133B5C83FBADD243C2FF8535046BB6EF5354 (void);
-// 0x00000057 System.Void VPSManager/<GetLocation>d__7::System.Collections.IEnumerator.Reset()
-extern void U3CGetLocationU3Ed__7_System_Collections_IEnumerator_Reset_m79D078089BC46B100954C57A42B49BEA359FA268 (void);
-// 0x00000058 System.Object VPSManager/<GetLocation>d__7::System.Collections.IEnumerator.get_Current()
-extern void U3CGetLocationU3Ed__7_System_Collections_IEnumerator_get_Current_m6968B3D991D1708DD0E7965E3A8A025CBC5D9432 (void);
-// 0x00000059 System.Void GestoreDestinazioni::Start()
+// 0x00000053 System.Void GestoreDestinazioni::Start()
 extern void GestoreDestinazioni_Start_m2BB783281C9F914B797FD2FD344DA31CCE1D2EB3 (void);
-// 0x0000005A System.String GestoreDestinazioni::Truncate(System.String,System.Int32)
+// 0x00000054 System.String GestoreDestinazioni::Truncate(System.String,System.Int32)
 extern void GestoreDestinazioni_Truncate_m5427157D0656A407BC2ABF1904424CF4B1F3CC03 (void);
-// 0x0000005B System.String GestoreDestinazioni::Arrotonda(System.Double)
+// 0x00000055 System.String GestoreDestinazioni::Arrotonda(System.Double)
 extern void GestoreDestinazioni_Arrotonda_m27761B704F6BBF68104E35AB852B6EFBE11F73EE (void);
-// 0x0000005C System.Void GestoreDestinazioni::.ctor()
+// 0x00000056 System.Void GestoreDestinazioni::.ctor()
 extern void GestoreDestinazioni__ctor_mBD84E20E8ED8E7ACFAF4DFE5CFCC3975956E9DF9 (void);
-// 0x0000005D System.Void GestoreDestinazioni::.cctor()
+// 0x00000057 System.Void GestoreDestinazioni::.cctor()
 extern void GestoreDestinazioni__cctor_m27C46BEEB2BC130CCFE0EB1DEFA4CE9594BEDBD0 (void);
-// 0x0000005E System.Void SchermataDestinazioni::Start()
+// 0x00000058 System.Void SchermataDestinazioni::Start()
 extern void SchermataDestinazioni_Start_m0C923D93195744E006E5D0871D483B2AF7360967 (void);
-// 0x0000005F System.Void SchermataDestinazioni::Update()
+// 0x00000059 System.Void SchermataDestinazioni::Update()
 extern void SchermataDestinazioni_Update_m6EF37D527E4F085261E61E685C40B9EBF9C3215E (void);
-// 0x00000060 System.Void SchermataDestinazioni::oopsieWoopsie()
+// 0x0000005A System.Void SchermataDestinazioni::oopsieWoopsie()
 extern void SchermataDestinazioni_oopsieWoopsie_mA8675076CD856417E225327F60E546FAFFBB56D9 (void);
-// 0x00000061 System.Void SchermataDestinazioni::.ctor()
+// 0x0000005B System.Void SchermataDestinazioni::.ctor()
 extern void SchermataDestinazioni__ctor_mC6FF612E2D1E79F6BAD746ADFEF058B9D720910F (void);
-// 0x00000062 System.Void GestoreCerca::Start()
+// 0x0000005C System.Void GestoreCerca::Start()
 extern void GestoreCerca_Start_mFF0DE926992FBD23E9A67AFA62F2830B4B2B9F41 (void);
-// 0x00000063 System.Void GestoreCerca::Update()
+// 0x0000005D System.Void GestoreCerca::Update()
 extern void GestoreCerca_Update_mDA65009A3405F6F1D01841D87794C24795114637 (void);
-// 0x00000064 System.Void GestoreCerca::Ricerca(System.String)
+// 0x0000005E System.Void GestoreCerca::Ricerca(System.String)
 extern void GestoreCerca_Ricerca_m39B1B513E6546BB3B777D55BEA193BAFC21698CC (void);
-// 0x00000065 System.Void GestoreCerca::.ctor()
+// 0x0000005F System.Void GestoreCerca::.ctor()
 extern void GestoreCerca__ctor_mEE880A538E2806599C1A744A309FA76F429E546A (void);
-// 0x00000066 System.Void GestoreCerca::.cctor()
+// 0x00000060 System.Void GestoreCerca::.cctor()
 extern void GestoreCerca__cctor_mFD1283436A6B6E0412CBCD52FE44E2E32C845AFC (void);
-static Il2CppMethodPointer s_methodPointers[102] = 
+static Il2CppMethodPointer s_methodPointers[96] = 
 {
 	Caricamento_Start_m1E6EA19D3A56F0434A66CB4EF5884C71249AD050,
 	Caricamento_Update_m177F6AB93AF4C7CC92E110F615498699753748A4,
@@ -294,18 +282,12 @@ static Il2CppMethodPointer s_methodPointers[102] =
 	GestoreAudio_SetAudioOnOff_m7BA188B75113C99A58FC296067A6174587E4E2D4,
 	GestoreAudio__ctor_m061F218CEFD24646F6FE3CEE166A9A0A245A7A0B,
 	VPSManager_Update_m83394B2A173A0CB79276D600B0692DE7E1C30170,
-	VPSManager_GetLocation_mFD95E5534F53DDDD840EF8BE4782780E360A8950,
 	VPSManager_Start_m6CCB660B0D42CCA1B542D58D7E16820A94452B19,
 	VPSManager_VerifyGeospatialSupport_mA56281D7ACF78DE56A51E70D2CEEB85FD7FBCEEA,
-	VPSManager_PlaceObjects_mFB0E40DED26CB62B627A90D88C934C5DCCB1CB91,
+	VPSManager_PlaceInterests_m57BEB09BAAA7687288328EA4424E619FF541AE9A,
+	VPSManager_PlacePath_m24E290611A9BD26154C0375ADBC06F613F863BED,
 	VPSManager__ctor_m4B2FDB926B57742D76BA2934AE0EFA5980B05334,
 	VPSManager__cctor_m9E360C068BFF299A09E5F19A65C000CBDF7758E9,
-	U3CGetLocationU3Ed__7__ctor_mDD61D50E7DDB2E590A977DDED7E4C7B7B0A34426,
-	U3CGetLocationU3Ed__7_System_IDisposable_Dispose_m3EF6827C56CCD0B8D2C13757461F574C09AD1D74,
-	U3CGetLocationU3Ed__7_MoveNext_mA1131F41132216DF84834A0508DE7A638DA21E97,
-	U3CGetLocationU3Ed__7_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m46CD133B5C83FBADD243C2FF8535046BB6EF5354,
-	U3CGetLocationU3Ed__7_System_Collections_IEnumerator_Reset_m79D078089BC46B100954C57A42B49BEA359FA268,
-	U3CGetLocationU3Ed__7_System_Collections_IEnumerator_get_Current_m6968B3D991D1708DD0E7965E3A8A025CBC5D9432,
 	GestoreDestinazioni_Start_m2BB783281C9F914B797FD2FD344DA31CCE1D2EB3,
 	GestoreDestinazioni_Truncate_m5427157D0656A407BC2ABF1904424CF4B1F3CC03,
 	GestoreDestinazioni_Arrotonda_m27761B704F6BBF68104E35AB852B6EFBE11F73EE,
@@ -321,116 +303,110 @@ static Il2CppMethodPointer s_methodPointers[102] =
 	GestoreCerca__ctor_mEE880A538E2806599C1A744A309FA76F429E546A,
 	GestoreCerca__cctor_mFD1283436A6B6E0412CBCD52FE44E2E32C845AFC,
 };
-static const int32_t s_InvokerIndices[102] = 
+static const int32_t s_InvokerIndices[96] = 
 {
-	5536,
-	5536,
-	5536,
-	5536,
-	5536,
-	5536,
-	5536,
-	8700,
-	5536,
-	5536,
-	5536,
-	5536,
-	5536,
-	5536,
-	5536,
-	5536,
-	5536,
-	5374,
-	4434,
-	5374,
-	4434,
-	5374,
-	4434,
-	5431,
-	4483,
-	5431,
-	4483,
-	5354,
-	4409,
-	5536,
-	5536,
+	5535,
+	5535,
+	5535,
+	5535,
+	5535,
+	5535,
+	5535,
+	8699,
+	5535,
+	5535,
+	5535,
+	5535,
+	5535,
+	5535,
+	5535,
+	5535,
+	5535,
+	5373,
+	4433,
+	5373,
+	4433,
+	5373,
+	4433,
+	5430,
+	4482,
+	5430,
+	4482,
+	5353,
+	4408,
+	5535,
+	5535,
 	239,
-	5536,
-	5536,
-	5536,
-	5536,
-	5536,
-	5431,
-	8671,
-	5536,
-	8700,
-	4458,
-	5536,
-	5354,
-	5431,
-	5536,
-	5431,
-	5536,
-	5536,
-	5536,
-	5536,
-	5536,
-	5536,
-	8700,
-	5536,
-	5536,
-	5536,
-	8700,
-	5374,
-	4434,
-	5374,
-	4434,
-	5374,
-	4434,
+	5535,
+	5535,
+	5535,
+	5535,
+	5535,
+	5430,
+	8670,
+	5535,
+	8699,
+	4457,
+	5535,
+	5353,
+	5430,
+	5535,
+	5430,
+	5535,
+	5535,
+	5535,
+	5535,
+	5535,
+	5535,
+	8699,
+	5535,
+	5535,
+	5535,
+	8699,
+	5373,
+	4433,
+	5373,
+	4433,
+	5373,
+	4433,
 	1276,
-	5536,
+	5535,
 	1679,
-	3484,
-	5536,
-	5536,
-	4483,
-	5536,
-	5536,
-	5536,
-	5536,
-	5536,
-	5431,
-	5536,
-	5536,
-	5536,
-	5536,
-	8700,
-	4458,
-	5536,
-	5354,
-	5431,
-	5536,
-	5431,
-	5536,
-	7602,
-	8305,
-	5536,
-	8700,
-	5536,
-	5536,
-	5536,
-	5536,
-	5536,
-	5536,
-	4483,
-	5536,
-	8700,
+	3483,
+	5535,
+	5535,
+	4482,
+	5535,
+	5535,
+	5535,
+	5535,
+	5535,
+	5535,
+	5535,
+	5535,
+	5535,
+	5535,
+	8699,
+	5535,
+	7601,
+	8304,
+	5535,
+	8699,
+	5535,
+	5535,
+	5535,
+	5535,
+	5535,
+	5535,
+	4482,
+	5535,
+	8699,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	102,
+	96,
 	s_methodPointers,
 	0,
 	NULL,
