@@ -21,7 +21,7 @@ public class VPSManager : MonoBehaviour
     [SerializeField] private List<GeospatialObject> interests = new List<GeospatialObject>();
 
     [SerializeField] public static EarthPosition userPosition = new EarthPosition();
-    /*[SerializeField] public static bool displayPath = false;*/
+    [SerializeField] public static bool displayPath = false;
 
 
     void Update()
@@ -40,14 +40,14 @@ public class VPSManager : MonoBehaviour
         foreach (var position in interestsPositions)
         {
             GeospatialObject geo = new GeospatialObject(new EarthPosition(position.Latitude, position.Longitude, position.Altitude));
-            geo.ObjectPrefab = Resources.Load<GameObject>("arrow") as GameObject;
+            geo.ObjectPrefab = Resources.Load<GameObject>("puntointeresse") as GameObject;
             interests.Add(geo);
         }
 
         foreach (var position in arrowsPositions)
         {
             GeospatialObject geo = new GeospatialObject(position);
-            geo.ObjectPrefab = Resources.Load<GameObject>("puntointeresse") as GameObject;
+            geo.ObjectPrefab = Resources.Load<GameObject>("arrow") as GameObject;
             arrows.Add(geo);
         }
 
@@ -168,8 +168,13 @@ public class VPSManager : MonoBehaviour
         }
     }
 
-   /* public static void setDisplayPath()
+    void OnDestroy()
+    {
+        setDisplayPath();
+    }
+
+    public static void setDisplayPath()
     {
         displayPath = !displayPath;
-    }*/
+    }
 }

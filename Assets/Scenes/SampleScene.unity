@@ -256,6 +256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   caricamento: {fileID: 383107075}
+  iconarotante: {fileID: 1915111517}
 --- !u!1 &130004421
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,7 +768,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   earthManager: {fileID: 436293897}
   aRAnchorManager: {fileID: 1229778219}
-  positions: []
+  arrowsPositions: []
 --- !u!4 &436293896
 Transform:
   m_ObjectHideFlags: 0
@@ -1095,6 +1096,7 @@ GameObject:
   - component: {fileID: 561039644}
   - component: {fileID: 561039643}
   - component: {fileID: 561039642}
+  - component: {fileID: 561039645}
   m_Layer: 5
   m_Name: TastoEsplora
   m_TagString: Untagged
@@ -1165,7 +1167,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 561039643}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 561039645}
+        m_TargetAssemblyTypeName: GestoreEntrateInScena, Assembly-CSharp
+        m_MethodName: ApriEsplorazione
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &561039643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1204,6 +1218,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561039639}
   m_CullTransparentMesh: 1
+--- !u!114 &561039645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561039639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82be874de04ae3f498fbd458fe988339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0

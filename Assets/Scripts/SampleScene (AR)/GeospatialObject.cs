@@ -20,8 +20,6 @@ public class GeospatialObject
 
     public GeospatialObject(EarthPosition pos)
     {
-        /*        GameObject objPrefab = Resources.Load<GameObject>(path) as GameObject;
-                ObjectPrefab = objPrefab;*/
         ObjectPrefab = null;
         EarthPosition = pos;
     }
