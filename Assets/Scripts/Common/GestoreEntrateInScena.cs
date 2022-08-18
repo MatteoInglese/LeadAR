@@ -63,7 +63,7 @@ public class GestoreEntrateInScena : MonoBehaviour
         {
 
             SceneManager.LoadScene(ExitManager.SceneIndex[ExitManager.i - 1]);
-            ExitManager.SceneIndex.Remove(ExitManager.i);
+            ExitManager.SceneIndex.Remove(ExitManager.i - 1);
             ExitManager.i--;
         }
     }

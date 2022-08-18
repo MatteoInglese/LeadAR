@@ -24,7 +24,7 @@ public class ExitManager : MonoBehaviour
             {
 
                 SceneManager.LoadScene(SceneIndex[i - 1]);
-                SceneIndex.Remove(i);
+                SceneIndex.Remove(i-1);
                 i--;
 
             }
