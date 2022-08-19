@@ -16,8 +16,8 @@ public class MenuIniziale : MonoBehaviour
     void Update()
     {
         userPosition = User.GetUserPosition();
-        Text[] texts = GameObject.Find("Canvas/ModPercorso").GetComponentsInChildren<Text>();
-        texts[0].text = "Latitude: " + userPosition.Latitude.ToString();
+        /*Text[] texts = GameObject.Find("Canvas/ModPercorso").GetComponentsInChildren<Text>();
+        texts[0].text = "Latitude: " + userPosition.Latitude.ToString();*/
     }
 }
 

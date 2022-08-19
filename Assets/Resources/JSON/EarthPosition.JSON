@@ -1,37 +1,22 @@
 [
 	{
-		"Latitude": 41.928804467801534,
-		"Longitude": 15.881589758076952,
+		"Latitude": 41.928799869939105,
+		"Longitude": 15.881590527483732,
 		"Altitude": 103.8826
 	},
 	{
-		"Latitude": 41.92876164421865,
-		"Longitude": 15.88175969646391,
+		"Latitude": 41.92885218702707,
+		"Longitude": 15.881681531306784,
+		"Altitude": 150.8826
+	},
+	{
+		"Latitude": 41.928751399389206,
+		"Longitude": 15.881787012605608,
 		"Altitude": 103.8826
 	},
 	{
-		"Latitude": 40.366691,
-		"Longitude": 16.697249,
-		"Altitude": 142.8826
-	},
-	{
-		"Latitude": 40.366781,
-		"Longitude": 16.697313,
-		"Altitude": 142.8826
-	},
-	{
-		"Latitude": 40.365149,
-		"Longitude": 16.698353,
-		"Altitude": 142.8826
-	},
-	{
-		"Latitude": 40.364005,
-		"Longitude": 16.699083,
-		"Altitude": 142.8826
-	},
-	{
-		"Latitude": 40.366579,
-		"Longitude": 16.697399,
-		"Altitude": 142.8826
+		"Latitude": 41.92858968059352,
+		"Longitude": 15.881708473980009,
+		"Altitude": 103.8826
 	}
 ]

@@ -35,21 +35,12 @@ public class GestoreEntrateInScena : MonoBehaviour
         SceneManager.LoadScene("SampleScene");
     }
 
-    public void ApriPercorso()
-    {
-        VPSManager.setDisplayPath();
-        ExitManager.i = ExitManager.i + 1;
-        ExitManager.SceneIndex.Add(SceneManager.GetActiveScene().buildIndex);
-        SceneManager.LoadScene("SampleScene");
-    }
-
     public void ApriMenu()
     {
         ExitManager.i = ExitManager.i + 1;
         ExitManager.SceneIndex.Add(SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene("MenuIniziale");
     }
-
 
     public void ApriImpostazioni()
     {

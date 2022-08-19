@@ -22,13 +22,6 @@ public class ExitManager : MonoBehaviour
         {
             if (i > 0)
             {
-                if(SceneManager.GetActiveScene().buildIndex == 2)
-                {
-                    VPSManager.setDisplayPath();
-                    SceneManager.LoadScene(SceneIndex[i - 1]);
-                    SceneIndex.Remove(i - 1);
-                    i--;
-                }
                 SceneManager.LoadScene(SceneIndex[i - 1]);
                 SceneIndex.Remove(i-1);
                 i--;

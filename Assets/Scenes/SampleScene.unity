@@ -478,7 +478,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &271544522
 RectTransform:
   m_ObjectHideFlags: 0
@@ -769,6 +769,8 @@ MonoBehaviour:
   earthManager: {fileID: 436293897}
   aRAnchorManager: {fileID: 1229778219}
   arrowsPositions: []
+  path: []
+  goals: []
 --- !u!4 &436293896
 Transform:
   m_ObjectHideFlags: 0
@@ -1943,7 +1945,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1461619281
 RectTransform:
   m_ObjectHideFlags: 0

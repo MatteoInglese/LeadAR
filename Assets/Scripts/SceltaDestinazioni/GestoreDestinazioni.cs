@@ -27,24 +27,27 @@ public class GestoreDestinazioni : MonoBehaviour
         string num = "";
         switch (distanza)
         {
-            case < 50 :
-                num = "-50m";
+            case <= 50 :
+                num = "50m";
                 break;
 
-            case > 50 and < 250:
+            case <= 100:
                 num = "100m";
                 break;
 
-            case >= 250 and < 750:
+            case <= 500:
                 num = "500m";
                 break;
 
-            case >= 750 and < 2500:
+            case <= 1000:
                 num = "1000m";
                 break;
 
-            case >= 2500:
+            case <= 5000:
                 num = "5 km";
+                break;
+            case > 5000:
+                num = "5 km+";
                 break;
         }
         return num;

@@ -1,21 +1,12 @@
 [
   {
-    "Latitude": 41.92877808237806,
-    "Longitude": 15.881702767053735,
-    "Altitude": 103.8826,
-
-    "Nome": "test",
-    "Text": "test",
-    "HasPath": true
-  },
-  {
     "Latitude": 41.92826079237341,
     "Longitude": 15.882000529319999,
-    "Altitude": 100.0,
+    "Altitude": 110.0,
 
     "Nome": "Scuole elementari Rodi",
     "Text": "Queste sono le scuole elementari di Rodi",
-    "HasPath": false
+    "HasPath": true
   },
   {
     "Latitude": 41.928648412962325,
