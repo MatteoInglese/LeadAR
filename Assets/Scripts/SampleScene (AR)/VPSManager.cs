@@ -24,6 +24,7 @@ public class VPSManager : MonoBehaviour
     [SerializeField] private List<Transform> goals = new List<Transform>();
 
     [SerializeField] public static EarthPosition userPosition = new EarthPosition();
+    public GameObject descrizionePrefab;
 
 
     void Update()
@@ -99,7 +100,11 @@ public class VPSManager : MonoBehaviour
                 var earthPosition = obj.EarthPosition;
                 var objAnchor = ARAnchorManagerExtensions.AddAnchor(aRAnchorManager, earthPosition.Latitude, earthPosition.Longitude, earthPosition.Altitude, Quaternion.identity);
 
-                goals.Add(Instantiate(obj.ObjectPrefab, objAnchor.transform).transform);
+                GameObject newGo = Instantiate(obj.ObjectPrefab, objAnchor.transform);
+                goals.Add(newGo.transform);
+
+                GameObject descrizione = Instantiate(descrizionePrefab, newGo.transform); // SEEEGS QUI questa riga è quella che piazza la descrizione
+
             }
         }
 
