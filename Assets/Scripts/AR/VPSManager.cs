@@ -32,19 +32,24 @@ public class VPSManager : MonoBehaviour
 
     void Update()
     {
-        for (int i = 0; i < path.Count - 1; i++)
+        if (showPath)
+        {
+            for (int i = 0; i < path.Count - 1; i++)
         {
             path[i].LookAt(path[(i + 1)]);
             path[i].Rotate(0.0f, -90.0f, 0.0f, Space.Self);
         }
 
-        path[path.Count - 1].LookAt(goals[0]);
-        path[path.Count - 1].Rotate(0.0f, -90.0f, 0.0f, Space.Self);
+            path[path.Count - 1].LookAt(goals[0]);
+            path[path.Count - 1].Rotate(0.0f, -90.0f, 0.0f, Space.Self);
 
-        if (showPath)
-        {
             Text posizione = GameObject.Find("Canvas/Latitude").GetComponent<Text>();
             posizione.text = path[0].position.ToString();
+        }
+        else
+        {
+            Text posizione = GameObject.Find("Canvas/Latitude").GetComponent<Text>();
+            posizione.text = "percorso non istanziato";
         }
 
         Text show = GameObject.Find("Canvas/Longitude").GetComponent<Text>();
