@@ -30,6 +30,15 @@ public class GestoreEntrateInScena : MonoBehaviour
 
     public void ApriEsplorazione()
     {
+        VPSManager.setShowPathFalse();
+        ExitManager.i = ExitManager.i + 1;
+        ExitManager.SceneIndex.Add(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("SampleScene");
+    }
+
+    public void ApriPercorso()
+    {
+        VPSManager.setShowPathTrue();
         ExitManager.i = ExitManager.i + 1;
         ExitManager.SceneIndex.Add(SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene("SampleScene");

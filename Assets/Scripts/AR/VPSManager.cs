@@ -23,31 +23,40 @@ public class VPSManager : MonoBehaviour
     [SerializeField] private List<Transform> path = new List<Transform>();
     [SerializeField] private List<Transform> goals = new List<Transform>();
 
-    [SerializeField] public static EarthPosition userPosition = new EarthPosition();
+    [SerializeField] private static EarthPosition userPosition = new EarthPosition();
+
     public GameObject descrizionePrefab;
+
+    private static bool showPath = false;
 
 
     void Update()
     {
-        userPosition = User.GetUserPosition();
-
         for (int i = 0; i < path.Count - 1; i++)
         {
             path[i].LookAt(path[(i + 1)]);
             path[i].Rotate(0.0f, -90.0f, 0.0f, Space.Self);
         }
 
-        path[3].LookAt(goals[0]);
-        path[3].Rotate(0.0f, -90.0f, 0.0f, Space.Self);
+        path[path.Count - 1].LookAt(goals[0]);
+        path[path.Count - 1].Rotate(0.0f, -90.0f, 0.0f, Space.Self);
 
-        Text posizione = GameObject.Find("Canvas/Latitude").GetComponent<Text>();
-        posizione.text = path[0].position.ToString();
+        if (showPath)
+        {
+            Text posizione = GameObject.Find("Canvas/Latitude").GetComponent<Text>();
+            posizione.text = path[0].position.ToString();
+        }
+
+        Text show = GameObject.Find("Canvas/Longitude").GetComponent<Text>();
+        show.text = showPath.ToString();
+
+        userPosition = User.GetUserPosition();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        userPosition = MenuIniziale.userPosition;
+        userPosition = User.GetUserPosition();
 
         arrowsPositions = JsonConvert.DeserializeObject<List<EarthPosition>>(Resources.Load<TextAsset>("JSON/EarthPosition").ToString());
         interestsPositions = JsonConvert.DeserializeObject<List<Interest>>(Resources.Load<TextAsset>("JSON/interest").ToString());
@@ -66,6 +75,9 @@ public class VPSManager : MonoBehaviour
             arrows.Add(geo);
         }
 
+        Text posizione = GameObject.Find("Canvas/Longitude").GetComponent<Text>();
+        posizione.text = showPath.ToString();
+
         VerifyGeospatialSupport();
     }
 
@@ -76,8 +88,7 @@ public class VPSManager : MonoBehaviour
         {
             case FeatureSupported.Supported:
                 Debug.Log("Ready to use VPS");
-                PlaceInterests();
-                PlacePath();
+                PlaceObjects();
                 break;
             case FeatureSupported.Unknown:
                 Debug.Log("Unknown...");
@@ -89,12 +100,13 @@ public class VPSManager : MonoBehaviour
         }
     }
 
-    private void PlaceInterests()
+    private void PlaceObjects()
     {
         if (earthManager.EarthTrackingState == TrackingState.Tracking)
         {
             var geospatialPose = earthManager.CameraGeospatialPose;
 
+            //piazzo i punti di interesse
             foreach (var obj in interests)
             {
                 var earthPosition = obj.EarthPosition;
@@ -103,21 +115,13 @@ public class VPSManager : MonoBehaviour
                 GameObject newGo = Instantiate(obj.ObjectPrefab, objAnchor.transform);
                 goals.Add(newGo.transform);
 
-                GameObject descrizione = Instantiate(descrizionePrefab, newGo.transform); // SEEEGS QUI questa riga è quella che piazza la descrizione
+                GameObject descrizione = Instantiate(descrizionePrefab, newGo.transform); //questa riga è quella che piazza la descrizione
 
             }
-        }
 
-        else if (earthManager.EarthTrackingState == TrackingState.None)
-        {
-            Invoke("Place Objects", 5.0f);
-        }
-    }
-
-    private void PlacePath()
-    {
-        if (earthManager.EarthTrackingState == TrackingState.Tracking)
-        {
+            //piazzo le frecce del percorso
+            if (showPath)
+            {
                 foreach (var obj in arrows)
                 {
                     var earthPosition = obj.EarthPosition;
@@ -125,29 +129,32 @@ public class VPSManager : MonoBehaviour
 
                     path.Add(Instantiate(obj.ObjectPrefab, objAnchor.transform).transform);
                 }
+            }
+            else
+            {
+                Text posizione = GameObject.Find("Canvas/Latitude").GetComponent<Text>();
+                posizione.text = "percorso non istanziato";
+            }
         }
 
         else if (earthManager.EarthTrackingState == TrackingState.None)
         {
+            Text trackingState = GameObject.Find("Canvas/Latitude").GetComponent<Text>();
+            trackingState.text = earthManager.EarthTrackingState.ToString();
+
+            Text earthState = GameObject.Find("Canvas/Longitude").GetComponent<Text>();
+            earthState.text = earthManager.EarthState.ToString();
             Invoke("Place Objects", 5.0f);
         }
     }
 
-    /*    private void BuildRoute()
-        {
-            if (displayPath)
-            {
-                for (int i = 0; i < path.Count - 1; i++)
-                {
-                    path[i].LookAt(path[(i + 1)]);
-                    path[i].Rotate(0.0f, -90.0f, 0.0f, Space.Self);
-                }
+    public static void setShowPathTrue()
+    {
+        showPath = true;
+    }
 
-                path[3].LookAt(goals[0]);
-                path[3].Rotate(0.0f, -90.0f, 0.0f, Space.Self);
-
-                Text posizione = GameObject.Find("Canvas/Latitude").GetComponent<Text>();
-                posizione.text = path[0].position.ToString();
-            }
-        }*/
+    public static void setShowPathFalse()
+    {
+        showPath = false;
+    }
 }

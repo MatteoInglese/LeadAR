@@ -1,5 +1,23 @@
 [
   {
+    "Latitude": 41.92875279392619,
+    "Longitude": 15.881784566291445,
+    "Altitude": 102.0,
+
+    "Nome": "test",
+    "Text": "test",
+    "HasPath": true
+  },
+  {
+    "Latitude": 41.93007988800553,
+    "Longitude": 15.900784411925892,
+    "Altitude": 53.0,
+
+    "Nome": "Lido CalaParaCuru",
+    "Text": "Lido CalaParaCuru",
+    "HasPath": true
+  },
+  {
     "Latitude": 41.92826079237341,
     "Longitude": 15.882000529319999,
     "Altitude": 110.0,
