@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class GestoreClick3d : MonoBehaviour
 {
-
+    public Interest interest;
     // Start is called before the first frame update
     void Start()
     {
-        
+        TMPro.TextMeshPro[] texts = this.transform.GetChild(0).gameObject.GetComponentsInChildren<TMPro.TextMeshPro>();   //this.GetComponentsInChildren<TMPro.TextMeshPro>();
+        texts[0].text = interest.Nome;
+        texts[1].text = interest.Text;
     }
 
     // Update is called once per frame
@@ -26,6 +28,7 @@ public class GestoreClick3d : MonoBehaviour
                     if (this.transform.GetChild(0).gameObject.activeInHierarchy)
                     {
                         this.transform.GetChild(0).gameObject.SetActive(false);
+
                     }
                     else
                     {
