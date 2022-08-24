@@ -771,7 +771,7 @@ MonoBehaviour:
   arrowsPositions: []
   path: []
   goals: []
-  descrizionePrefab: {fileID: 2664281321894648470, guid: f3612dee96f89194c8cf7aebb730a6fd, type: 3}
+  descrizionePrefab: {fileID: 7847945514657554486, guid: 7e46c003f5519cb4f8e2e95cc107f46c, type: 3}
 --- !u!4 &436293896
 Transform:
   m_ObjectHideFlags: 0
