@@ -36,7 +36,7 @@ public class GestoreEntrateInScena : MonoBehaviour
         SceneManager.LoadScene("SampleScene");
     }
 
-    public void ApriPercorso()
+    public static void ApriPercorso()
     {
         VPSManager.setShowPathTrue();
         ExitManager.i = ExitManager.i + 1;

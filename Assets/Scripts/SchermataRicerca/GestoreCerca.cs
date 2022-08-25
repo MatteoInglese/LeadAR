@@ -39,20 +39,13 @@ public class GestoreCerca : MonoBehaviour
 
             if (interest.Nome.ToLower().Contains(stringa.ToLower()))
             {
-                if (interest.HasPath)
-                {
-                    GameObject newGo = Instantiate(luogoPrefab, genitoreLuogo);
-                    Text[] texts = newGo.GetComponentsInChildren<Text>();
-                    texts[0].text = GestoreDestinazioni.Truncate(interest.Nome, 21);
-                    texts[1].text = GestoreDestinazioni.Arrotonda(distanza);             
-                }
-                else
-                {
-                    GameObject newGura = Instantiate(guraPrefab, genitoreLuogo);
-                    Text[] texts = newGura.GetComponentsInChildren<Text>();
-                    texts[0].text = GestoreDestinazioni.Truncate(interest.Nome, 21);
-                    texts[1].text = GestoreDestinazioni.Arrotonda(distanza);             
-                }
+                GameObject newGo = Instantiate(luogoPrefab, genitoreLuogo);
+                TMPro.TextMeshProUGUI[] texts = newGo.GetComponentsInChildren<TMPro.TextMeshProUGUI>();
+                texts[0].text = interest.Nome;
+                texts[1].text = GestoreDestinazioni.Arrotonda(distanza);
+                newGo.GetComponent<ProprietaBottoni>().nome = interest.Nome;
+                newGo.GetComponent<ProprietaBottoni>().HasPath = interest.HasPath;
+
             }
         }
     }

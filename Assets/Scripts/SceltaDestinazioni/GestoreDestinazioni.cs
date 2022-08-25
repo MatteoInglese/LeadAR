@@ -17,10 +17,6 @@ public class GestoreDestinazioni : MonoBehaviour
         interests = JsonConvert.DeserializeObject<List<Interest>>(Resources.Load<TextAsset>("JSON/Interest").ToString());
     }
 
-    public static string Truncate(string value, int maxChars)
-    {
-        return value.Length <= maxChars ? value : value.Substring(0, maxChars) + "...";
-    }
 
     public static string Arrotonda(double distanza)
     {

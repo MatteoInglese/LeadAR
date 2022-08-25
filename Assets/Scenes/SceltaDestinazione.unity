@@ -243,9 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760ce4676cc32644684607533d737aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oopsie: {fileID: 4533539239620420883, guid: 8f9342e9c4b6c6441b19e98c2f8629ff, type: 3}
   luogoPrefab: {fileID: 1119590749168514837, guid: eb9f2a35c936cbb49a8669ac9690c19d, type: 3}
-  guraPrefab: {fileID: 2528599300792706777, guid: 9e805bf1746b2974894c9691dcb7a563, type: 3}
   genitoreLuogo: {fileID: 428231806}
 --- !u!114 &142863166
 MonoBehaviour:
