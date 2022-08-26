@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SchermataImpostazioni : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class SchermataImpostazioni : MonoBehaviour
     public GameObject m1000;
     public GameObject m5000;
     public static int setting = 100;
+    public static bool Audio = false;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +33,7 @@ public class SchermataImpostazioni : MonoBehaviour
             this.Set5000();
         }
 
-
+        AttivaDisattivaAudio();
     }
 
 
@@ -72,4 +74,18 @@ public class SchermataImpostazioni : MonoBehaviour
         m5000.SetActive(true);
     }
 
+    public void AttivaDisattivaAudio()
+    {
+        Text TestoAudio = GameObject.Find("Canvas/mask/content/AudioOption/testo").GetComponent<Text>();
+        if (Audio == false)
+        {
+            TestoAudio.text = "Disattiva audio";
+            Audio = true;
+        }
+        else
+        {
+            TestoAudio.text = "Attiva audio";
+            Audio = false;
+        }
+    }
 }
