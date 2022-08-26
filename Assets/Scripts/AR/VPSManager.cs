@@ -110,7 +110,9 @@ public class VPSManager : MonoBehaviour
         if (earthManager.EarthTrackingState == TrackingState.Tracking)
         {
             var geospatialPose = earthManager.CameraGeospatialPose;
+
             int i = 0;
+
             //piazzo i punti di interesse
             foreach (var obj in interests)
             {
@@ -121,8 +123,10 @@ public class VPSManager : MonoBehaviour
                 goals.Add(newGo.transform);
 
                 GameObject descrizione = Instantiate(descrizionePrefab, newGo.transform); //questa riga è quella che piazza la descrizione
+                
                 descrizione.GetComponent<GestoreClick3d>().interest = interestsPositions[i];
                 i++;
+
             }
 
             //piazzo le frecce del percorso
