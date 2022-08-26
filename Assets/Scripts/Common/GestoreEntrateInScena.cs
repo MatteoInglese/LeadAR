@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GestoreEntrateInScena : MonoBehaviour
 {
     public static int ExitImpostazioni;
-    
+    public GameObject menu;
 
     // Start is called before the first frame update
     void Start()
@@ -73,6 +73,18 @@ public class GestoreEntrateInScena : MonoBehaviour
             SceneManager.LoadScene(ExitManager.SceneIndex[ExitManager.i - 1]);
             ExitManager.SceneIndex.Remove(ExitManager.i - 1);
             ExitManager.i--;
+        }
+    }
+
+    public void ApriChiudiMenu()
+    {
+        if (menu.activeInHierarchy)
+        {
+            menu.SetActive(false);
+        }
+        else
+        {
+            menu.SetActive(true);
         }
     }
 

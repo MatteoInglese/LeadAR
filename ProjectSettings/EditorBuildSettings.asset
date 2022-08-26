@@ -10,7 +10,7 @@ EditorBuildSettings:
     guid: 4d411ae29bbccd24296da28015ff2c95
   - enabled: 1
     path: Assets/Scenes/SceltaDestinazione.unity
-    guid: 1f9d08758c5327b48b7acb39a0d6e18a
+    guid: 98da7242010fe334cb038396dddae798
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab

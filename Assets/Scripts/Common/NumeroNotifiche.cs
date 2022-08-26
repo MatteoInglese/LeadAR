@@ -21,8 +21,8 @@ public class NumeroNotifiche : MonoBehaviour
     {
         int i = 0;
         double distanza;
-        GameObject obj = GameObject.Find("Canvas/PulsanteDestinazioni/notifiche");
-        GameObject num = GameObject.Find("Canvas/PulsanteDestinazioni/notifiche/NumeroNotifiche");
+        GameObject obj = GameObject.Find("Canvas/BottoneDestinazioni/notifiche");
+        GameObject num = GameObject.Find("Canvas/BottoneDestinazioni/notifiche/NumeroNotifiche");
 
         foreach (var interest in GestoreDestinazioni.interests)
         {

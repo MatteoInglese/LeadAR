@@ -7,7 +7,7 @@ public class ExitManager : MonoBehaviour
 {
     public static List<int> SceneIndex = new List<int>();
     public static int i = 0;
-
+    public GameObject menu;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,10 +20,14 @@ public class ExitManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (i > 0)
+            if (menu != null && menu.activeInHierarchy)
+            {
+                menu.SetActive(false);
+            }
+            else if (i > 0)
             {
                 SceneManager.LoadScene(SceneIndex[i - 1]);
-                SceneIndex.Remove(i-1);
+                SceneIndex.Remove(i - 1);
                 i--;
 
             }
