@@ -11,6 +11,8 @@ public class GestoreClick3d : MonoBehaviour
         TMPro.TextMeshPro[] texts = this.transform.GetChild(0).gameObject.GetComponentsInChildren<TMPro.TextMeshPro>();
         texts[0].text = interest.Nome;
         texts[1].text = interest.Text;
+        texts[2].text = interest.Nome;
+        texts[3].text = interest.Text;
     }
 
     // Update is called once per frame
