@@ -10,6 +10,7 @@ using UnityEngine.Android;
 public class GestoreDestinazioni : MonoBehaviour
 {
     [SerializeField] public static List<Interest> interests = new List<Interest>();
+    [SerializeField] public static List<Interest> nearInterests = new List<Interest>();
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,7 @@ public class GestoreDestinazioni : MonoBehaviour
         string num = "";
         switch (distanza)
         {
-            case <= 50 :
+            case <= 50:
                 num = "50m";
                 break;
 
@@ -49,4 +50,23 @@ public class GestoreDestinazioni : MonoBehaviour
         return num;
     }
 
+    public static List<Interest> UpdateInterests()
+    {
+        double distanza = 0;
+        MenuIniziale.userPosition = User.GetUserPosition();
+
+        foreach (var interest in GestoreDestinazioni.interests)
+        {
+            EarthPosition position = new EarthPosition(interest.Latitude, interest.Longitude, interest.Altitude);
+            distanza = MenuIniziale.userPosition.Distance(MenuIniziale.userPosition, position);
+
+            if (distanza <= SchermataImpostazioni.setting) { nearInterests.Add(interest); }
+
+            else
+            {
+                if (nearInterests.Contains(interest)) { nearInterests.Remove(interest); }
+            }
+        }
+        return nearInterests;
+    }
 }
