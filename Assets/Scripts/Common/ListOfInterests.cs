@@ -9,7 +9,7 @@ public class ListOfInterests : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        listOfInterests = GestoreDestinazioni.UpdateInterests();
+
     }
 
     // Update is called once per frame
