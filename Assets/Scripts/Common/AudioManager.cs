@@ -13,27 +13,24 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(playSound());
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        audioSource = GetComponent<AudioSource>();
+        if (!audioSource.isPlaying)
+        {
+            audioSource = GetComponent<AudioSource>();
+            audioSource.PlayOneShot(audioSource.clip);
+        }
+        StartCoroutine(playSound());
     }
 
     IEnumerator playSound()
     {
-        audioSource = GetComponent<AudioSource>();
-        if (!audioSource.isPlaying)
-        {
-            audioSource.Play();
-            yield return new WaitForSeconds(2);
-        }
-        else if (audioSource.isPlaying)
-        {
-            audioSource.Stop();
-        }
+        yield return new WaitForSeconds(audioSource.clip.length);
     }
 }
 
