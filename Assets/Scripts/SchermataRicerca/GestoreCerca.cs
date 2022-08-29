@@ -8,8 +8,8 @@ public class GestoreCerca : MonoBehaviour
 {
 
     public GameObject luogoPrefab;
-    public GameObject guraPrefab;
     public Transform genitoreLuogo;
+    private Button[] button;
 
     // Start is called before the first frame update
     void Start()
@@ -26,10 +26,12 @@ public class GestoreCerca : MonoBehaviour
     public void Ricerca(string stringa)
     {
         double distanza = 0;
+        MenuIniziale.userPosition = User.GetUserPosition();
+        button = genitoreLuogo.gameObject.GetComponentsInChildren<Button>();
 
-        foreach (Transform interest in genitoreLuogo)
+        for (int i = 0; i < button.Length; i++)
         {
-            Destroy(interest.gameObject);
+            Destroy(button[i].gameObject);
         }
 
         foreach (var interest in GestoreDestinazioni.interests)

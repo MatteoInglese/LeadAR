@@ -97,6 +97,76 @@
     "Longitude": 0,
     "Altitude": 0,
 
+    "Nome": "1",
+    "Text": "Testo del punto di interesse",
+    "HasPath": false
+  },
+  {
+
+    "Latitude": 0,
+    "Longitude": 0,
+    "Altitude": 0,
+
+    "Nome": "6",
+    "Text": "Testo del punto di interesse",
+    "HasPath": false
+  },
+  {
+
+    "Latitude": 0,
+    "Longitude": 0,
+    "Altitude": 0,
+
+    "Nome": "5",
+    "Text": "Testo del punto di interesse",
+    "HasPath": false
+  },
+  {
+
+    "Latitude": 0,
+    "Longitude": 0,
+    "Altitude": 0,
+
+    "Nome": "4",
+    "Text": "Testo del punto di interesse",
+    "HasPath": false
+  },
+  {
+
+    "Latitude": 0,
+    "Longitude": 0,
+    "Altitude": 0,
+
+    "Nome": "3",
+    "Text": "Testo del punto di interesse",
+    "HasPath": false
+  },
+  {
+
+    "Latitude": 0,
+    "Longitude": 0,
+    "Altitude": 0,
+
+    "Nome": "2",
+    "Text": "Testo del punto di interesse",
+    "HasPath": false
+  },
+  {
+
+    "Latitude": 0,
+    "Longitude": 0,
+    "Altitude": 0,
+
+    "Nome": "7",
+    "Text": "Testo del punto di interesse",
+    "HasPath": false
+  },
+  {
+
+    "Latitude": 0,
+    "Longitude": 0,
+    "Altitude": 0,
+
     "Nome": "Ellie",
     "Text": "Testo del punto di interesse",
     "HasPath": false
