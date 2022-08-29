@@ -6,7 +6,7 @@ public class AudioManager : MonoBehaviour
 {
     private AudioSource audioSource;
 
-    private List<Interest> tmp = new List<Interest>();
+    private static List<Interest> tmp = new List<Interest>();
 
 
     // Start is called before the first frame update
@@ -19,11 +19,11 @@ public class AudioManager : MonoBehaviour
     void Update()
     {
         audioSource = GetComponent<AudioSource>();
-        if ((!audioSource.isPlaying) && (tmp != GestoreDestinazioni.UpdateInterests()) && (GestoreDestinazioni.interests.Count > 0))
+        if ((!audioSource.isPlaying) && (tmp != ListOfInterests.listOfInterests) && (GestoreDestinazioni.interests.Count > 0))
         {
             audioSource = GetComponent<AudioSource>();
             audioSource.PlayOneShot(audioSource.clip);
-            tmp = GestoreDestinazioni.UpdateInterests();
+            tmp = ListOfInterests.listOfInterests;
         }
         StartCoroutine(soundDelay());
     }

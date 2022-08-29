@@ -28,10 +28,17 @@ public class VPSManager : MonoBehaviour
     public GameObject descrizionePrefab;
 
     private static bool showPath = false;
+    private bool placeObj = true;
 
 
     void Update()
     {
+        if(earthManager.EarthTrackingState == TrackingState.Tracking && placeObj)
+        {
+            PlaceObjects();
+            placeObj = false;
+        }
+
         if (showPath)
         {
             for (int i = 0; i < path.Count - 1; i++)
@@ -42,18 +49,7 @@ public class VPSManager : MonoBehaviour
 
             path[path.Count - 1].LookAt(goals[0]);
             path[path.Count - 1].Rotate(0.0f, -90.0f, 0.0f, Space.Self);
-
-            Text posizione = GameObject.Find("Canvas/Latitude").GetComponent<Text>();
-            posizione.text = path[0].position.ToString();
         }
-        else
-        {
-            Text posizione = GameObject.Find("Canvas/Latitude").GetComponent<Text>();
-            posizione.text = "percorso non istanziato";
-        }
-
-        Text show = GameObject.Find("Canvas/Longitude").GetComponent<Text>();
-        show.text = showPath.ToString();
 
         userPosition = User.GetUserPosition();
     }
@@ -80,9 +76,6 @@ public class VPSManager : MonoBehaviour
             arrows.Add(geo);
         }
 
-        Text posizione = GameObject.Find("Canvas/Longitude").GetComponent<Text>();
-        posizione.text = showPath.ToString();
-
         VerifyGeospatialSupport();
     }
 
@@ -93,7 +86,6 @@ public class VPSManager : MonoBehaviour
         {
             case FeatureSupported.Supported:
                 Debug.Log("Ready to use VPS");
-                PlaceObjects();
                 break;
             case FeatureSupported.Unknown:
                 Debug.Log("Unknown...");
@@ -139,21 +131,14 @@ public class VPSManager : MonoBehaviour
 
                     path.Add(Instantiate(obj.ObjectPrefab, objAnchor.transform).transform);
                 }
-            }
-            else
-            {
+
                 Text posizione = GameObject.Find("Canvas/Latitude").GetComponent<Text>();
-                posizione.text = "percorso non istanziato";
+                posizione.text = path[0].position.ToString();
             }
         }
 
         else if (earthManager.EarthTrackingState == TrackingState.None)
         {
-            Text trackingState = GameObject.Find("Canvas/Latitude").GetComponent<Text>();
-            trackingState.text = earthManager.EarthTrackingState.ToString();
-
-            Text earthState = GameObject.Find("Canvas/Longitude").GetComponent<Text>();
-            earthState.text = earthManager.EarthState.ToString();
             Invoke("Place Objects", 5.0f);
         }
     }
