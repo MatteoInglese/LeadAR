@@ -5,7 +5,6 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     private AudioSource audioSource;
-    private bool busy = false;
 
     private List<Interest> tmp = new List<Interest>();
 
@@ -20,15 +19,16 @@ public class AudioManager : MonoBehaviour
     void Update()
     {
         audioSource = GetComponent<AudioSource>();
-        if (!audioSource.isPlaying)
+        if ((!audioSource.isPlaying) && (tmp != GestoreDestinazioni.UpdateInterests()) && (GestoreDestinazioni.interests.Count > 0))
         {
             audioSource = GetComponent<AudioSource>();
             audioSource.PlayOneShot(audioSource.clip);
+            tmp = GestoreDestinazioni.UpdateInterests();
         }
-        StartCoroutine(playSound());
+        StartCoroutine(soundDelay());
     }
 
-    IEnumerator playSound()
+    IEnumerator soundDelay()
     {
         yield return new WaitForSeconds(audioSource.clip.length);
     }

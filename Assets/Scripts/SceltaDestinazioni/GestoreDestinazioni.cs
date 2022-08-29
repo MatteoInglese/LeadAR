@@ -53,12 +53,12 @@ public class GestoreDestinazioni : MonoBehaviour
     public static List<Interest> UpdateInterests()
     {
         double distanza = 0;
-        MenuIniziale.userPosition = User.GetUserPosition();
+        User.userPosition = User.GetUserPosition();
 
         foreach (var interest in GestoreDestinazioni.interests)
         {
             EarthPosition position = new EarthPosition(interest.Latitude, interest.Longitude, interest.Altitude);
-            distanza = MenuIniziale.userPosition.Distance(MenuIniziale.userPosition, position);
+            distanza = User.userPosition.Distance(User.userPosition, position);
 
             if (distanza <= SchermataImpostazioni.setting) { nearInterests.Add(interest); }
 
