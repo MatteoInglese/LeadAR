@@ -55,7 +55,7 @@ public class GestoreDestinazioni : MonoBehaviour
         double distanza = 0;
         User.userPosition = User.GetUserPosition();
 
-        foreach (var interest in GestoreDestinazioni.interests)
+        foreach (var interest in interests)
         {
             EarthPosition position = new EarthPosition(interest.Latitude, interest.Longitude, interest.Altitude);
             distanza = User.userPosition.Distance(User.userPosition, position);

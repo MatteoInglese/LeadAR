@@ -70,18 +70,18 @@ extern void AudioManager_soundDelay_m04ED323434D0867D336179CFA1432E40EAF1F30D (v
 extern void AudioManager__ctor_mA793A9DF6B975D03690B7C953972EFE41AE4D5E6 (void);
 // 0x0000001D System.Void AudioManager::.cctor()
 extern void AudioManager__cctor_m0C0807E041C4A944EAD995F94CC08C398D44F393 (void);
-// 0x0000001E System.Void AudioManager/<soundDelay>d__4::.ctor(System.Int32)
-extern void U3CsoundDelayU3Ed__4__ctor_m0D0824616F1D3594AD75906080C991887331AE19 (void);
-// 0x0000001F System.Void AudioManager/<soundDelay>d__4::System.IDisposable.Dispose()
-extern void U3CsoundDelayU3Ed__4_System_IDisposable_Dispose_m72A2DA9C808D669FE56841F54D34E2955D136A54 (void);
-// 0x00000020 System.Boolean AudioManager/<soundDelay>d__4::MoveNext()
-extern void U3CsoundDelayU3Ed__4_MoveNext_mA4825E30226EE16E2CBBC38200DC7092A5FED1F5 (void);
-// 0x00000021 System.Object AudioManager/<soundDelay>d__4::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CsoundDelayU3Ed__4_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD3E682150F1E2E295038C2C55F97A52B67EF385E (void);
-// 0x00000022 System.Void AudioManager/<soundDelay>d__4::System.Collections.IEnumerator.Reset()
-extern void U3CsoundDelayU3Ed__4_System_Collections_IEnumerator_Reset_mB773907C7A24D6C38CEEC9329DE8B9B61E7DE7FB (void);
-// 0x00000023 System.Object AudioManager/<soundDelay>d__4::System.Collections.IEnumerator.get_Current()
-extern void U3CsoundDelayU3Ed__4_System_Collections_IEnumerator_get_Current_m13C8F417D11630C5439B1C6FD60D5C7C72C3B272 (void);
+// 0x0000001E System.Void AudioManager/<soundDelay>d__5::.ctor(System.Int32)
+extern void U3CsoundDelayU3Ed__5__ctor_m414C3587280A8B82DC93F824D235D28EB7B1E9F4 (void);
+// 0x0000001F System.Void AudioManager/<soundDelay>d__5::System.IDisposable.Dispose()
+extern void U3CsoundDelayU3Ed__5_System_IDisposable_Dispose_mCC62B3EFCFC9B622F671A2A4C004E7FC5056B18B (void);
+// 0x00000020 System.Boolean AudioManager/<soundDelay>d__5::MoveNext()
+extern void U3CsoundDelayU3Ed__5_MoveNext_m1C16BD41C0E6B1E9CBBF200D71411B8915FD545A (void);
+// 0x00000021 System.Object AudioManager/<soundDelay>d__5::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CsoundDelayU3Ed__5_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m9A935848CF9D03D3326BF34F5E248FB6763CBBA7 (void);
+// 0x00000022 System.Void AudioManager/<soundDelay>d__5::System.Collections.IEnumerator.Reset()
+extern void U3CsoundDelayU3Ed__5_System_Collections_IEnumerator_Reset_m324E1F6C591BC372B6A673E4CE91F8E5C5149CB0 (void);
+// 0x00000023 System.Object AudioManager/<soundDelay>d__5::System.Collections.IEnumerator.get_Current()
+extern void U3CsoundDelayU3Ed__5_System_Collections_IEnumerator_get_Current_m4B34B1A8E027A08F4B7E869D0CC682F02D1F6A22 (void);
 // 0x00000024 System.Void Caricamento::Start()
 extern void Caricamento_Start_m1E6EA19D3A56F0434A66CB4EF5884C71249AD050 (void);
 // 0x00000025 System.Void Caricamento::Update()
@@ -279,12 +279,12 @@ static Il2CppMethodPointer s_methodPointers[118] =
 	AudioManager_soundDelay_m04ED323434D0867D336179CFA1432E40EAF1F30D,
 	AudioManager__ctor_mA793A9DF6B975D03690B7C953972EFE41AE4D5E6,
 	AudioManager__cctor_m0C0807E041C4A944EAD995F94CC08C398D44F393,
-	U3CsoundDelayU3Ed__4__ctor_m0D0824616F1D3594AD75906080C991887331AE19,
-	U3CsoundDelayU3Ed__4_System_IDisposable_Dispose_m72A2DA9C808D669FE56841F54D34E2955D136A54,
-	U3CsoundDelayU3Ed__4_MoveNext_mA4825E30226EE16E2CBBC38200DC7092A5FED1F5,
-	U3CsoundDelayU3Ed__4_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD3E682150F1E2E295038C2C55F97A52B67EF385E,
-	U3CsoundDelayU3Ed__4_System_Collections_IEnumerator_Reset_mB773907C7A24D6C38CEEC9329DE8B9B61E7DE7FB,
-	U3CsoundDelayU3Ed__4_System_Collections_IEnumerator_get_Current_m13C8F417D11630C5439B1C6FD60D5C7C72C3B272,
+	U3CsoundDelayU3Ed__5__ctor_m414C3587280A8B82DC93F824D235D28EB7B1E9F4,
+	U3CsoundDelayU3Ed__5_System_IDisposable_Dispose_mCC62B3EFCFC9B622F671A2A4C004E7FC5056B18B,
+	U3CsoundDelayU3Ed__5_MoveNext_m1C16BD41C0E6B1E9CBBF200D71411B8915FD545A,
+	U3CsoundDelayU3Ed__5_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m9A935848CF9D03D3326BF34F5E248FB6763CBBA7,
+	U3CsoundDelayU3Ed__5_System_Collections_IEnumerator_Reset_m324E1F6C591BC372B6A673E4CE91F8E5C5149CB0,
+	U3CsoundDelayU3Ed__5_System_Collections_IEnumerator_get_Current_m4B34B1A8E027A08F4B7E869D0CC682F02D1F6A22,
 	Caricamento_Start_m1E6EA19D3A56F0434A66CB4EF5884C71249AD050,
 	Caricamento_Update_m177F6AB93AF4C7CC92E110F615498699753748A4,
 	Caricamento_AttesaPosizione_mDEE8E0244AB36AEA7919AA9A9CD8FD98B417E7E2,

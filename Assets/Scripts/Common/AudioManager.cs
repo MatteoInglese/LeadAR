@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
     private AudioSource audioSource;
 
-    private static List<Interest> tmp = new List<Interest>();
+    private static List<Interest> tmp1 = new List<Interest>();
+    private static List<Interest> tmp2 = new List<Interest>();
 
 
     // Start is called before the first frame update
@@ -19,39 +21,20 @@ public class AudioManager : MonoBehaviour
     void Update()
     {
         audioSource = GetComponent<AudioSource>();
-        if ((!audioSource.isPlaying) && (tmp != ListOfInterests.listOfInterests) && (GestoreDestinazioni.interests.Count > 0))
+        tmp1 = GestoreDestinazioni.UpdateInterests();
+
+        if ((!audioSource.isPlaying) && (tmp1 != tmp2) && (GestoreDestinazioni.UpdateInterests().Count > 0))
         {
             audioSource = GetComponent<AudioSource>();
             audioSource.PlayOneShot(audioSource.clip);
-            tmp = ListOfInterests.listOfInterests;
+
+            tmp2 = tmp1;
         }
         StartCoroutine(soundDelay());
     }
 
     IEnumerator soundDelay()
     {
-        yield return new WaitForSeconds(audioSource.clip.length);
+        yield return new WaitForSeconds(2);
     }
 }
-
-/*if (SchermataImpostazioni.Audio)
-{
-    if ((tmp != GestoreDestinazioni.interests) && (GestoreDestinazioni.interests.Count > 0))
-    {
-        audioSource = GetComponent<AudioSource>();
-        audioSource.Play();
-        tmp = GestoreDestinazioni.UpdateInterests();
-    }
-}*/
-
-/*void Update()
-{
-    if (switchedOn == true && speaker.isPlaying == false)
-    {
-        speaker.Play();
-    }
-    else if (switchedOn == false && speaker.isPlaying == true)
-    {
-        speaker.Stop();
-    }
-}*/

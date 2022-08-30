@@ -51,6 +51,11 @@ public class VPSManager : MonoBehaviour
             path[path.Count - 1].Rotate(0.0f, -90.0f, 0.0f, Space.Self);
         }
 
+        foreach(var goal in goals)
+        {
+            goal.LookAt(Camera.main.transform.position);
+        }
+
         userPosition = User.GetUserPosition();
     }
 
