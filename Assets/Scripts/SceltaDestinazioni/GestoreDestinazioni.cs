@@ -44,7 +44,7 @@ public class GestoreDestinazioni : MonoBehaviour
                 num = "5 km";
                 break;
             case > 5000:
-                num = "5 km+";
+                num = "+5 km";
                 break;
         }
         return num;
@@ -53,12 +53,12 @@ public class GestoreDestinazioni : MonoBehaviour
     public static List<Interest> UpdateInterests()
     {
         double distanza = 0;
-        User.userPosition = User.GetUserPosition();
+        MenuIniziale.userPosition = User.GetUserPosition();
 
         foreach (var interest in interests)
         {
             EarthPosition position = new EarthPosition(interest.Latitude, interest.Longitude, interest.Altitude);
-            distanza = User.userPosition.Distance(User.userPosition, position);
+            distanza = MenuIniziale.userPosition.Distance(MenuIniziale.userPosition, position);
 
             if (distanza <= SchermataImpostazioni.setting) { nearInterests.Add(interest); }
 

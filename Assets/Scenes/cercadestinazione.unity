@@ -1802,7 +1802,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luogoPrefab: {fileID: 1119590749168514837, guid: eb9f2a35c936cbb49a8669ac9690c19d, type: 3}
-  guraPrefab: {fileID: 2528599300792706777, guid: 9e805bf1746b2974894c9691dcb7a563, type: 3}
   genitoreLuogo: {fileID: 1828380252}
 --- !u!1 &1828380251
 GameObject:
