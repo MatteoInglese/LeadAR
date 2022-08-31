@@ -163,6 +163,16 @@
   },
   {
 
+    "Latitude": -0.000021,
+    "Longitude": 0.003772,
+    "Altitude": 0,
+
+    "Nome": "punto 0 un po di fianco",
+    "Text": "Testo del punto di interesse",
+    "HasPath": false
+  },
+  {
+
     "Latitude": 0,
     "Longitude": 0,
     "Altitude": 0,
