@@ -24,7 +24,6 @@ public class Caricamento : MonoBehaviour
         if (MenuIniziale.userPosition.Latitude == 0 && MenuIniziale.userPosition.Longitude == 0 && MenuIniziale.userPosition.Altitude == 0)
         {
             caricamento.SetActive(true);
-            new WaitForSeconds(3);
         }
         else
         {

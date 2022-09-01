@@ -43,7 +43,6 @@ public class GestoreCerca : MonoBehaviour
             {
                 GameObject newGo = Instantiate(luogoPrefab, genitoreLuogo);
                 TMPro.TextMeshProUGUI[] texts = newGo.GetComponentsInChildren<TMPro.TextMeshProUGUI>();
-                texts[0].text = interest.Nome;
                 texts[1].text = GestoreDestinazioni.Arrotonda(distanza);
                 newGo.GetComponent<ProprietaBottoni>().nome = interest.Nome;
                 newGo.GetComponent<ProprietaBottoni>().HasPath = interest.HasPath;

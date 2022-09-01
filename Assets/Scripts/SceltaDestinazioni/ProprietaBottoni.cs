@@ -14,6 +14,8 @@ public class ProprietaBottoni : MonoBehaviour
     {
         Image[] sprite = this.transform.GetChild(0).gameObject.GetComponentsInChildren<Image>();
         sprite[0].sprite = Resources.Load<Sprite>(path);
+        TMPro.TextMeshProUGUI[] texts = this.transform.GetChild(1).gameObject.GetComponentsInChildren<TMPro.TextMeshProUGUI>();
+        texts[0].text = nome;
     }
 
     // Update is called once per frame

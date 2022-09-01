@@ -7,7 +7,7 @@
     "Nome": "test",
     "Text": "test",
     "HasPath": true,
-    "iconapath": "icon/uni"
+    "iconapath": "icon/default"
   },
   {
     "Latitude": 41.93007988800553,
@@ -17,7 +17,7 @@
     "Nome": "Lido CalaParaCuru",
     "Text": "Lido CalaParaCuru",
     "HasPath": true,
-    "iconapath": "icon/uni"
+    "iconapath": "icon/default"
   },
   {
     "Latitude": 41.92826079237341,
@@ -27,7 +27,7 @@
     "Nome": "Scuole elementari Rodi",
     "Text": "Queste sono le scuole elementari di Rodi",
     "HasPath": true,
-    "iconapath": "icon/uni"
+    "iconapath": "icon/default"
   },
   {
     "Latitude": 41.928648412962325,
@@ -37,7 +37,7 @@
     "Nome": "Centro riabilitazione Padre Pio",
     "Text": "Centro riabilitativo. Orari di apertura: // - //",
     "HasPath": true,
-    "iconapath": "icon/uni"
+    "iconapath": "icon/default"
   },
   {
     "Latitude": 41.928190749179585,
@@ -47,7 +47,7 @@
     "Nome": "Piazza Padre Pio",
     "Text": "Piazza Padre Pio",
     "HasPath": true,
-    "iconapath": "icon/uni"
+    "iconapath": "icon/default"
   },
   {
     "Latitude": 41.93073039308028,
@@ -57,7 +57,7 @@
     "Nome": "Porto turistico Rodi Garganico",
     "Text": "Porto turistico Rodi Garganico",
     "HasPath": false,
-    "iconapath": "icon/uni"
+    "iconapath": "icon/default"
   },
   {
     "Latitude": 0,
@@ -110,7 +110,7 @@
     "Nome": "1",
     "Text": "Testo del punto di interesse",
     "HasPath": false,
-    "iconapath": "icon/questionmark"
+    "iconapath": "icon/default"
   },
   {
 
@@ -121,7 +121,7 @@
     "Nome": "6",
     "Text": "Testo del punto di interesse",
     "HasPath": false,
-    "iconapath": "icon/questionmark"
+    "iconapath": "icon/default"
   },
   {
 
@@ -132,7 +132,7 @@
     "Nome": "5",
     "Text": "Testo del punto di interesse",
     "HasPath": false,
-    "iconapath": "icon/uni"
+    "iconapath": "icon/default"
   },
   {
 
@@ -143,7 +143,7 @@
     "Nome": "4",
     "Text": "Testo del punto di interesse",
     "HasPath": false,
-    "iconapath": "icon/questionmark"
+    "iconapath": "icon/default"
   },
   {
 
@@ -154,7 +154,7 @@
     "Nome": "3",
     "Text": "Testo del punto di interesse",
     "HasPath": false,
-    "iconapath": "icon/questionmark"
+    "iconapath": "icon/default"
   },
   {
 
@@ -165,7 +165,7 @@
     "Nome": "2",
     "Text": "Testo del punto di interesse",
     "HasPath": false,
-    "iconapath": "icon/uni"
+    "iconapath": "icon/default"
   },
   {
 
@@ -176,7 +176,7 @@
     "Nome": "7",
     "Text": "Testo del punto di interesse",
     "HasPath": false,
-    "iconapath": "icon/uni"
+    "iconapath": "icon/default"
   },
   {
 
@@ -187,7 +187,7 @@
     "Nome": "punto 0 un po di fianco",
     "Text": "Testo del punto di interesse",
     "HasPath": false,
-    "iconapath": "icon/uni"
+    "iconapath": "icon/default"
   },
   {
 
@@ -198,6 +198,6 @@
     "Nome": "Ellie",
     "Text": "Testo del punto di interesse",
     "HasPath": false,
-    "iconapath": "icon/uni"
+    "iconapath": "icon/default"
   }
 ]

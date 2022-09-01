@@ -39,7 +39,6 @@ public class NumeroNotifiche : MonoBehaviour
             Text Numero = num.GetComponent<Text>();
             Numero.text = i.ToString();
         }
-        new WaitForSeconds(5);
         
     }
 }

@@ -8,11 +8,7 @@ public class GestoreClick3d : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        TMPro.TextMeshPro[] texts = this.transform.GetChild(0).gameObject.GetComponentsInChildren<TMPro.TextMeshPro>();
-        texts[0].text = interest.Nome;
-        texts[1].text = interest.Text;
-        texts[2].text = interest.Nome;
-        texts[3].text = interest.Text;
+
     }
 
     // Update is called once per frame
@@ -35,6 +31,12 @@ public class GestoreClick3d : MonoBehaviour
                     else
                     {
                         this.transform.GetChild(0).gameObject.SetActive(true);
+
+                        TMPro.TextMeshPro[] texts = this.transform.GetChild(0).gameObject.GetComponentsInChildren<TMPro.TextMeshPro>();
+                        texts[0].text = interest.Nome;
+                        texts[1].text = interest.Text;
+                        texts[2].text = interest.Nome;
+                        texts[3].text = interest.Text;
                     }
                 }
             }
