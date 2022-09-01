@@ -137,8 +137,8 @@ public class VPSManager : MonoBehaviour
                     path.Add(Instantiate(obj.ObjectPrefab, objAnchor.transform).transform);
                 }
 
-                Text posizione = GameObject.Find("Canvas/Latitude").GetComponent<Text>();
-                posizione.text = path[0].position.ToString();
+/*                Text posizione = GameObject.Find("Canvas/Latitude").GetComponent<Text>();
+                posizione.text = path[0].position.ToString();*/
             }
         }
 

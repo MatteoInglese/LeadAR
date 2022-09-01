@@ -11,7 +11,7 @@ public class SchermataImpostazioni : MonoBehaviour
     public GameObject m1000;
     public GameObject m5000;
     public static int setting = 100;
-    public static bool Audio = false;
+    public static bool Audio = true;
 
     // Start is called before the first frame update
     void Start()

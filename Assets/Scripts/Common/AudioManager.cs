@@ -120,19 +120,20 @@ public class AudioManager : MonoBehaviour
         updateTmp1();
         updateAudioBool();
 
-        if ((!audioSource.isPlaying) && AudioBool && (tmp1.Count > 0))
+        if ((!audioSource.isPlaying) && AudioBool && (tmp1.Count > 0) && SchermataImpostazioni.Audio)
         {
             audioSource = GetComponent<AudioSource>();
             audioSource.PlayOneShot(audioSource.clip);
+            Handheld.Vibrate();
             updatetmp3();
             AudioBool = false;
         }
 
-        Text posizione1 = GameObject.Find("Canvas/Text1").GetComponent<Text>();
-        posizione1.text = (tmp1 == tmp3).ToString();
-
-        Text posizione2 = GameObject.Find("Canvas/Text2").GetComponent<Text>();
-        posizione2.text = (tmp1.Count > 0).ToString();
+        else if(AudioBool && (tmp1.Count > 0))
+        {
+            Handheld.Vibrate();
+            AudioBool = false;
+        }
     }
     public void updateAudioBool()
     {
