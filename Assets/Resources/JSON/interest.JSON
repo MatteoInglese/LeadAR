@@ -6,7 +6,8 @@
 
     "Nome": "test",
     "Text": "test",
-    "HasPath": true
+    "HasPath": true,
+    "iconapath": "icon/uni"
   },
   {
     "Latitude": 41.93007988800553,
@@ -15,7 +16,8 @@
 
     "Nome": "Lido CalaParaCuru",
     "Text": "Lido CalaParaCuru",
-    "HasPath": true
+    "HasPath": true,
+    "iconapath": "icon/uni"
   },
   {
     "Latitude": 41.92826079237341,
@@ -24,7 +26,8 @@
 
     "Nome": "Scuole elementari Rodi",
     "Text": "Queste sono le scuole elementari di Rodi",
-    "HasPath": true
+    "HasPath": true,
+    "iconapath": "icon/uni"
   },
   {
     "Latitude": 41.928648412962325,
@@ -33,7 +36,8 @@
 
     "Nome": "Centro riabilitazione Padre Pio",
     "Text": "Centro riabilitativo. Orari di apertura: // - //",
-    "HasPath": true
+    "HasPath": true,
+    "iconapath": "icon/uni"
   },
   {
     "Latitude": 41.928190749179585,
@@ -42,7 +46,8 @@
 
     "Nome": "Piazza Padre Pio",
     "Text": "Piazza Padre Pio",
-    "HasPath": true
+    "HasPath": true,
+    "iconapath": "icon/uni"
   },
   {
     "Latitude": 41.93073039308028,
@@ -51,35 +56,39 @@
 
     "Nome": "Porto turistico Rodi Garganico",
     "Text": "Porto turistico Rodi Garganico",
-    "HasPath": false
+    "HasPath": false,
+    "iconapath": "icon/uni"
   },
   {
-    "Latitude": 40.366884,
-    "Longitude": 16.697480,
-    "Altitude": 142.8826,
+    "Latitude": 0,
+    "Longitude": 0,
+    "Altitude": 0,
 
     "Nome": "Università degli studi di Bari - Dipartimento di Informatica",
     "Text": "Testo del punto di interesse",
-    "HasPath": true
+    "HasPath": true,
+    "iconapath": "icon/uni"
   },
   {
-    "Latitude": 40.366855,
-    "Longitude": 16.697437,
-    "Altitude": 142.8826,
+    "Latitude": 0,
+    "Longitude": 0,
+    "Altitude": 0,
 
     "Nome": "Gawr Gura",
     "Text": "A descendant of the Lost City of Atlantis, who swam to Earth while saying, <<It's so boring down there LOLOLOL!>> She bought her clothes (and her shark hat) in the human world and she really loves them. In her spare time, she enjoys talking to marine life.",
-    "HasPath": false
+    "HasPath": false,
+    "iconapath": "icon/smolgura"
   },
   {
 
-    "Latitude": 41.122467,
-    "Longitude": 16.871316,
-    "Altitude": 142.8826,
+    "Latitude": 0,
+    "Longitude": 0,
+    "Altitude": 0,
 
     "Nome": "Ina",
     "Text": "Testo del punto di interesse",
-    "HasPath": false
+    "HasPath": false,
+    "iconapath": "icon/ina"
   },
   {
 
@@ -89,7 +98,8 @@
 
     "Nome": "fauna",
     "Text": "Testo del punto di interesse",
-    "HasPath": false
+    "HasPath": false,
+    "iconapath": "icon/fauna"
   },
   {
 
@@ -99,7 +109,8 @@
 
     "Nome": "1",
     "Text": "Testo del punto di interesse",
-    "HasPath": false
+    "HasPath": false,
+    "iconapath": "icon/questionmark"
   },
   {
 
@@ -109,7 +120,8 @@
 
     "Nome": "6",
     "Text": "Testo del punto di interesse",
-    "HasPath": false
+    "HasPath": false,
+    "iconapath": "icon/questionmark"
   },
   {
 
@@ -119,7 +131,8 @@
 
     "Nome": "5",
     "Text": "Testo del punto di interesse",
-    "HasPath": false
+    "HasPath": false,
+    "iconapath": "icon/uni"
   },
   {
 
@@ -129,7 +142,8 @@
 
     "Nome": "4",
     "Text": "Testo del punto di interesse",
-    "HasPath": false
+    "HasPath": false,
+    "iconapath": "icon/questionmark"
   },
   {
 
@@ -139,7 +153,8 @@
 
     "Nome": "3",
     "Text": "Testo del punto di interesse",
-    "HasPath": false
+    "HasPath": false,
+    "iconapath": "icon/questionmark"
   },
   {
 
@@ -149,7 +164,8 @@
 
     "Nome": "2",
     "Text": "Testo del punto di interesse",
-    "HasPath": false
+    "HasPath": false,
+    "iconapath": "icon/uni"
   },
   {
 
@@ -159,7 +175,8 @@
 
     "Nome": "7",
     "Text": "Testo del punto di interesse",
-    "HasPath": false
+    "HasPath": false,
+    "iconapath": "icon/uni"
   },
   {
 
@@ -169,7 +186,8 @@
 
     "Nome": "punto 0 un po di fianco",
     "Text": "Testo del punto di interesse",
-    "HasPath": false
+    "HasPath": false,
+    "iconapath": "icon/uni"
   },
   {
 
@@ -179,6 +197,7 @@
 
     "Nome": "Ellie",
     "Text": "Testo del punto di interesse",
-    "HasPath": false
+    "HasPath": false,
+    "iconapath": "icon/uni"
   }
 ]

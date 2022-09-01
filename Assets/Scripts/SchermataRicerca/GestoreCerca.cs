@@ -47,6 +47,7 @@ public class GestoreCerca : MonoBehaviour
                 texts[1].text = GestoreDestinazioni.Arrotonda(distanza);
                 newGo.GetComponent<ProprietaBottoni>().nome = interest.Nome;
                 newGo.GetComponent<ProprietaBottoni>().HasPath = interest.HasPath;
+                newGo.GetComponent<ProprietaBottoni>().path = interest.iconapath;
 
             }
         }

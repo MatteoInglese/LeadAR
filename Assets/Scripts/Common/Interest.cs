@@ -11,6 +11,8 @@ public class Interest
     [SerializeField] public string Nome { get; set; }
     [SerializeField] public string Text { get; set; }
     [SerializeField] public bool HasPath { get; set; }
+    [SerializeField] public string iconapath { get; set; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +25,7 @@ public class Interest
         
     }
 
-    public Interest(double lat, double lon, double alt, string name, string txt, bool hasPath)
+    public Interest(double lat, double lon, double alt, string name, string txt, bool hasPath, string iconapath)
     {
         Latitude = lat;
         Longitude = lon;
@@ -31,5 +33,6 @@ public class Interest
         Nome = name;
         Text = txt;
         HasPath = hasPath;
+        this.iconapath = iconapath;
     }
 }

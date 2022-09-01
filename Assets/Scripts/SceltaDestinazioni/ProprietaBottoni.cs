@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ProprietaBottoni : MonoBehaviour
 {
     public GameObject oopsie;
     public bool HasPath;
     public string nome;
+    public string path;
     // Start is called before the first frame update
     void Start()
     {
-
+        Image[] sprite = this.transform.GetChild(0).gameObject.GetComponentsInChildren<Image>();
+        sprite[0].sprite = Resources.Load<Sprite>(path);
     }
 
     // Update is called once per frame

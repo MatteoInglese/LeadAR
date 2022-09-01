@@ -9,48 +9,24 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] public static List<string> tmp1 = new List<string>();
     [SerializeField] public static List<string> tmp3 = new List<string>();
-    public static bool a = false;
+    public static bool AudioBool = false;
 
     // Start is called before the first frame update
     void Start()
     {
- //       assignNames(tmp1);
+
     }
 
     // Update is called once per frame
     void Update()
     {
         suona();
-        //audioSource = GetComponent<AudioSource>();
-        //assignNames(tmp1);
-        //updateaudiolist();
 
-        //if ((!audioSource.isPlaying) && (tmp1 != tmp2) && (tmp1.Count > 0))
-        //{
-        //    audioSource = GetComponent<AudioSource>();
-        //    audioSource.PlayOneShot(audioSource.clip);
-
-        //    tmp2 = tmp1;
-        //}
-
-        //Text posizione1 = GameObject.Find("Canvas/Text1").GetComponent<Text>();
-        //posizione1.text = (tmp1 == tmp2).ToString();
-
-        //Text posizione2 = GameObject.Find("Canvas/Text2").GetComponent<Text>();
-        //posizione2.text = (tmp1.Count > 0).ToString();
     }
 
-    //private void assignNames(List<string> l)
-    //{
-    //    foreach(var interest in GestoreDestinazioni.UpdateInterests())
-    //    {
-    //        l.Add(interest.Nome);
-    //    }
-    //}
-
-    public void updateaudiolist()
+    public void updateTmp1() // questo modo di aggiornare la lista l'ho fatto solo perche questo ero sicuro funzionasse
     {
-        bool audio = true;
+        bool audio = true;   // variabile locale
         double distanza = 0;
         MenuIniziale.userPosition = User.GetUserPosition();
 
@@ -92,29 +68,11 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void suona()
-    {
-        audioSource = GetComponent<AudioSource>();
-        updateaudiolist();
-        updateA();
-        if ((!audioSource.isPlaying) && a && (tmp1.Count > 0))
-        {
-            audioSource = GetComponent<AudioSource>();
-            audioSource.PlayOneShot(audioSource.clip);
-            updatetmp3();
-            a = false;
-        }
 
-        Text posizione1 = GameObject.Find("Canvas/Text1").GetComponent<Text>();
-        posizione1.text = (tmp1 == tmp3).ToString();
-
-        Text posizione2 = GameObject.Find("Canvas/Text2").GetComponent<Text>();
-        posizione2.text = (tmp1.Count > 0).ToString();
-    }
 
     public void updatetmp3()
     {
-        bool audio = true;
+        bool audio = true; // variabile locale
         double distanza = 0;
         MenuIniziale.userPosition = User.GetUserPosition();
 
@@ -156,13 +114,33 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void updateA()
+    public void suona()
+    {
+        audioSource = GetComponent<AudioSource>();
+        updateTmp1();
+        updateAudioBool();
+
+        if ((!audioSource.isPlaying) && AudioBool && (tmp1.Count > 0))
+        {
+            audioSource = GetComponent<AudioSource>();
+            audioSource.PlayOneShot(audioSource.clip);
+            updatetmp3();
+            AudioBool = false;
+        }
+
+        Text posizione1 = GameObject.Find("Canvas/Text1").GetComponent<Text>();
+        posizione1.text = (tmp1 == tmp3).ToString();
+
+        Text posizione2 = GameObject.Find("Canvas/Text2").GetComponent<Text>();
+        posizione2.text = (tmp1.Count > 0).ToString();
+    }
+    public void updateAudioBool()
     {
         foreach(string s in tmp1)
         {
             if (!tmp3.Contains(s))
             {
-                a = true;
+                AudioBool = true;
             }
         }
     }
