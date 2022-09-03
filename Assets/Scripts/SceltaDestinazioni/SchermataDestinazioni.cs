@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using Newtonsoft.Json;
@@ -19,18 +20,32 @@ public class SchermataDestinazioni : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        BUTTonUpdate();
+        buttonUpdate();
     }
 
 
 
-    public void BUTTonUpdate()
+    public void buttonUpdate()
     {
         bool crea = true;
         double distanza = 0;
         MenuIniziale.userPosition = User.GetUserPosition();
 
-        foreach (var interest in GestoreDestinazioni.interests)
+        List<InterestWithDistance> orderedInterests = new List<InterestWithDistance>();
+        foreach(var interest in GestoreDestinazioni.interests)
+        {
+            orderedInterests.Add(new InterestWithDistance(interest));
+        }
+
+        orderedInterests = orderedInterests.OrderBy(x => x.distance).ToList();
+
+        List<Interest> renderInterests = new List<Interest>();
+        foreach(var interest in orderedInterests)
+        {
+            renderInterests.Add(interest.interest);
+        }
+
+        foreach (var interest in renderInterests)
         {
             button = genitoreLuogo.gameObject.GetComponentsInChildren<Button>();
             EarthPosition position = new EarthPosition(interest.Latitude, interest.Longitude, interest.Altitude);
@@ -58,6 +73,7 @@ public class SchermataDestinazioni : MonoBehaviour
                 }
                 crea = true;
             }
+
             else
             {
                 for (int i = 0; i < button.Length; i++)
@@ -71,12 +87,20 @@ public class SchermataDestinazioni : MonoBehaviour
                     {
                         Destroy(button[i].gameObject);
                     }
-
                 }
             }
-
-
         }
+    }
 
+    private struct InterestWithDistance
+    {
+        public Interest interest { get; set; }
+        public double distance { get; set; }
+
+        public InterestWithDistance(Interest interest) : this()
+        {
+            this.interest = interest;
+            distance = MenuIniziale.userPosition.Distance(MenuIniziale.userPosition, new EarthPosition(interest.Latitude, interest.Longitude, interest.Altitude));
+        }
     }
 }

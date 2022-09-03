@@ -1,11 +1,11 @@
 [
   {
-    "Latitude": 41.92875279392619,
-    "Longitude": 15.881784566291445,
-    "Altitude": 102.0,
+    "Latitude": 41.928752883915095,
+    "Longitude": 15.88161050728608,
+    "Altitude": 93.0,
 
-    "Nome": "test",
-    "Text": "test",
+    "Nome": "Casa di Matt",
+    "Text": "Questa e la casa di Matt.\nNon e chissache ma e casa.",
     "HasPath": true,
     "iconapath": "icon/default"
   },

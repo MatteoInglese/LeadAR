@@ -132,6 +132,7 @@ public class AudioManager : MonoBehaviour
         else if(AudioBool && (tmp1.Count > 0))
         {
             Handheld.Vibrate();
+            updatetmp3();
             AudioBool = false;
         }
     }
