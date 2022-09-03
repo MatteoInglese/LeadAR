@@ -39,6 +39,10 @@ public class NumeroNotifiche : MonoBehaviour
             Text Numero = num.GetComponent<Text>();
             Numero.text = i.ToString();
         }
+        else if(i <= 0 && obj.activeInHierarchy)
+        {
+            obj.SetActive(false);
+        }
         
     }
 }
