@@ -7,10 +7,16 @@ using Newtonsoft.Json;
 using System;
 using UnityEngine.Android;
 
+
+/*
+ * script in cui viene avvalorata la lista degli interessi globali
+ * con i metodi relativi al suo utilizzo
+ */
 public class GestoreDestinazioni : MonoBehaviour
 {
-    [SerializeField] public static List<Interest> interests = new List<Interest>();
-    [SerializeField] public static List<Interest> nearInterests = new List<Interest>();
+    [SerializeField] public static List<Interest> interests = new List<Interest>(); // lista dei punti di interesse globale
+
+    [SerializeField] public static List<Interest> nearInterests = new List<Interest>(); // lista dei punti di interesse vicini
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +24,9 @@ public class GestoreDestinazioni : MonoBehaviour
         interests = JsonConvert.DeserializeObject<List<Interest>>(Resources.Load<TextAsset>("JSON/Interest").ToString());
     }
 
-
+    /*
+     * metodo che arrotonda la distanza dal punto di interesse all'utente
+     */
     public static string Arrotonda(double distanza)
     {
         string num = "";
@@ -50,6 +58,10 @@ public class GestoreDestinazioni : MonoBehaviour
         return num;
     }
 
+
+    /*
+     * metodo che aggiorna la nearInterest con i punti di interesse vicini e la restituisce
+     */
     public static List<Interest> UpdateInterests()
     {
         double distanza = 0;

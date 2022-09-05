@@ -5,11 +5,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using Newtonsoft.Json;
 
+
+/*
+ * script che gestisce i bottoni nella schermata di scelta dei luoghi nelle vicinanze
+ */
 public class SchermataDestinazioni : MonoBehaviour
 {
-    public GameObject luogoPrefab;
-    public Transform genitoreLuogo;
-    private Button[] button;
+    public GameObject luogoPrefab; // prefab del bottone relativo al punto di interesse
+    public Transform genitoreLuogo; // riferimento al contenitore in cui verranno inseriti i bottoni
+    private Button[] button;           // lista dei bottoni correnti
     public EarthPosition PositionTemp = new EarthPosition();
 
     // Start is called before the first frame update
@@ -24,7 +28,12 @@ public class SchermataDestinazioni : MonoBehaviour
     }
 
 
-
+    /*
+     * metodo che ordina la lista dei punti di interesse globale in base alla distanza
+     * quindi in base alla distanza massima impostata crea i bottoni e gli vengono assegnate le informazioni relative al punto di interesse,
+     * 
+     * se il punto di interesse non rientra più nella distanza massima viene distrutto
+     */
     public void buttonUpdate()
     {
         bool crea = true;

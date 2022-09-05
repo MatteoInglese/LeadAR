@@ -4,12 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using Newtonsoft.Json;
 
+/*
+ * script che gestisce l'istanzazione dei bottoni in base alla ricerca effettuata
+ */
 public class GestoreCerca : MonoBehaviour
 {
 
-    public GameObject luogoPrefab;
-    public Transform genitoreLuogo;
-    private Button[] button;
+    public GameObject luogoPrefab; // prefab del bottone relativo al punto di interesse
+    public Transform genitoreLuogo;// riferimento al contenitore in cui verranno inseriti i bottoni
+    private Button[] button;  // lista dei bottoni correnti
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +26,12 @@ public class GestoreCerca : MonoBehaviour
         
     }
 
+    /*
+     * 
+     * metodo che istanzia i bottoni in base alla stringa passata come parametro, e gli vengono assegnate le informazioni 
+     * del punto di interesse
+     * 
+     */
     public void Ricerca(string stringa)
     {
         double distanza = 0;

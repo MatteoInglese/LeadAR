@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ * script che gestisce il suono e la vibrazione in caso ci sia un nuovo luogo di interesse nelle vicinanze
+ */
+
 public class AudioManager : MonoBehaviour
 {
     private AudioSource audioSource;
 
-    [SerializeField] public static List<string> tmp1 = new List<string>();
+    [SerializeField] public static List<string> tmp1 = new List<string>(); // lista dei luoghi di interesse vicini
     [SerializeField] public static List<string> tmp3 = new List<string>();
-    public static bool AudioBool = false;
+
+    public static bool AudioBool = false; //booleano che indica se deve è presente un nuovo luogo nelle vicinanze
 
     // Start is called before the first frame update
     void Start()
@@ -23,10 +28,13 @@ public class AudioManager : MonoBehaviour
         suona();
 
     }
-
-    public void updateTmp1() // questo modo di aggiornare la lista l'ho fatto solo perche questo ero sicuro funzionasse
+    
+    /*
+     * metodo che aggiorna la lista tmp1 con i luoghi di interesse nelle vicinanze
+     */
+    public void updateTmp1()
     {
-        bool audio = true;   // variabile locale
+        bool audio = true;
         double distanza = 0;
         MenuIniziale.userPosition = User.GetUserPosition();
 
@@ -69,7 +77,9 @@ public class AudioManager : MonoBehaviour
     }
 
 
-
+    /*
+     * metodo che aggiorna la lista tmp3 con i luoghi di interesse nelle vicinanze
+     */
     public void updatetmp3()
     {
         bool audio = true; // variabile locale
@@ -114,6 +124,9 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    /*
+     * metodo che gestisce il suono e la vibrazion
+     */
     public void suona()
     {
         audioSource = GetComponent<AudioSource>();
@@ -136,6 +149,11 @@ public class AudioManager : MonoBehaviour
             AudioBool = false;
         }
     }
+
+    /*
+     * metodo che controlla se nella lista tmp1 è presente un nuovo punto di interesse
+     * e aggiorna il booleano AudioBool di conseguenza
+     */
     public void updateAudioBool()
     {
         foreach(string s in tmp1)

@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Caricamento : MonoBehaviour
 {
-    public GameObject caricamento;
+    // gameobject relativi alla schermata di caricamento
+    public GameObject caricamento;  
     public GameObject iconarotante;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,11 @@ public class Caricamento : MonoBehaviour
         AttesaPosizione();
     }
 
+
+    /*
+     * se la posizione non è aggiornata in alcun modo, viene attivato la "schermata" di caricamento
+     * e disattivata non appena la posizione è avvalorata
+     */
     void AttesaPosizione()
     {
 
@@ -31,7 +38,7 @@ public class Caricamento : MonoBehaviour
             enabled = false;
         }
 
-        iconarotante.transform.rotation *= Quaternion.Euler(0f, 0f, 0.4f);
+        iconarotante.transform.rotation *= Quaternion.Euler(0f, 0f, 0.4f); // metodo per far girare l'cona di caricamento
     }
 
 }

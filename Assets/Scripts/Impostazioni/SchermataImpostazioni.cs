@@ -6,14 +6,17 @@ using UnityEngine.UI;
 
 public class SchermataImpostazioni : MonoBehaviour
 {
-    public GameObject m100;
-    public GameObject m500;
-    public GameObject m1000;
-    public GameObject m5000;
-    public static int setting = 100;
-    public static bool Audio = true;
+    public GameObject m100; // riferimento all'icona che indica la distanza massima a 100m
+    public GameObject m500; // riferimento all'icona che indica la distanza massima a 500m
+    public GameObject m1000;// riferimento all'icona che indica la distanza massima a 1000m
+    public GameObject m5000;// riferimento all'icona che indica la distanza massima a 5000m
+
+    public static int setting = 100; //distanza massima corrente
+    public static bool Audio = true; //booleano che indica se l'audio è attivo o disattivo
 
     // Start is called before the first frame update
+
+    //In base alla distanza massima corrente attiva l'icona corrispondente
     void Start()
     {
         if(setting == 100)
@@ -37,7 +40,10 @@ public class SchermataImpostazioni : MonoBehaviour
     }
 
 
-
+    /*
+     * metodo che imposta la distanza massima a 100m, 
+     * attiva l'icona corrispondente e disattiva le altre
+     */
     public void Set100()
     {
         setting = 100;
@@ -47,6 +53,10 @@ public class SchermataImpostazioni : MonoBehaviour
         m5000.SetActive(false);
     }
 
+    /*
+     * metodo che imposta la distanza massima a 500m, 
+     * attiva l'icona corrispondente e disattiva le altre
+     */
     public void Set500()
     {
         setting= 500;
@@ -56,6 +66,10 @@ public class SchermataImpostazioni : MonoBehaviour
         m5000.SetActive(false);
     }
 
+    /*
+     * metodo che imposta la distanza massima a 100m, 
+     * attiva l'icona corrispondente e disattiva le altre
+     */
     public void Set1000()
     {
         setting = 1000;
@@ -65,6 +79,10 @@ public class SchermataImpostazioni : MonoBehaviour
         m5000.SetActive(false);
     }
 
+    /*
+     * metodo che imposta la distanza massima a 5000m, 
+     * attiva l'icona corrispondente e disattiva le altre
+     */
     public void Set5000()
     {
         setting = 5000;
@@ -74,6 +92,10 @@ public class SchermataImpostazioni : MonoBehaviour
         m5000.SetActive(true);
     }
 
+    /*
+     * metodo che cambia il booleano audio se viene attivato o disattivato l'audio, e cambia
+     * la scritta che lo indica
+     */
     public void AttivaDisattivaAudio()
     {
         Text TestoAudio = GameObject.Find("Canvas/mask/content/AudioOption/testo").GetComponent<Text>();

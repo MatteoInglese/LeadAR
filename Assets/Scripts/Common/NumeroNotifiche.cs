@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
+/*
+ * classe che gestisce l'icona che indica il numero di luoghi nelle vicinanze
+ */
 public class NumeroNotifiche : MonoBehaviour
 {
     
@@ -17,6 +21,11 @@ public class NumeroNotifiche : MonoBehaviour
         AggiornaNotifiche();
     }
 
+
+    /*
+     * conta il numero di luoghi nelle vicinanze e in caso sono > 0, attiva l'icona
+     * che ne notifica il numero, e scrive ne scrive il numero, altrimenti se <= 0 disattiva l'icona
+     */
     public void AggiornaNotifiche()
     {
         int i = 0;

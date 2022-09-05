@@ -25,7 +25,7 @@ public class VPSManager : MonoBehaviour
 
     [SerializeField] private static EarthPosition userPosition = new EarthPosition();
 
-    public GameObject descrizionePrefab;
+    public GameObject descrizionePrefab;    //prefab della descrizione, avvalorato dall'interfaccia di unity
 
     private static bool showPath = false;
     private bool placeObj = true;
@@ -108,7 +108,7 @@ public class VPSManager : MonoBehaviour
         {
             var geospatialPose = earthManager.CameraGeospatialPose;
 
-            int i = 0;
+            int i = 0; //contatore usato per assegnare le giuste informazioni al punto di interesse corrispondente
 
             //piazzo i punti di interesse
             foreach (var obj in interests)
@@ -119,9 +119,9 @@ public class VPSManager : MonoBehaviour
                 GameObject newGo = Instantiate(obj.ObjectPrefab, objAnchor.transform);
                 goals.Add(newGo.transform);
 
-                GameObject descrizione = Instantiate(descrizionePrefab, newGo.transform); //questa riga è quella che piazza la descrizione
+                GameObject descrizione = Instantiate(descrizionePrefab, newGo.transform); // viene creato l'oggetto descrizione come figlio del punto di interesse
                 
-                descrizione.GetComponent<GestoreClick3d>().interest = interestsPositions[i];
+                descrizione.GetComponent<GestoreClick3d>().interest = interestsPositions[i]; // vengono passate le informazioni del punto di interesse
                 i++;
 
             }
