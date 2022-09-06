@@ -6,6 +6,13 @@ public class GeospatialObject
 {
     [SerializeField] public GameObject ObjectPrefab;
     [SerializeField] public EarthPosition EarthPosition;
+
+    public GeospatialObject(EarthPosition pos)
+    {
+        ObjectPrefab = null;
+        EarthPosition = pos;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +23,5 @@ public class GeospatialObject
     void Update()
     {
         
-    }
-
-    public GeospatialObject(EarthPosition pos)
-    {
-        ObjectPrefab = null;
-        EarthPosition = pos;
     }
 }

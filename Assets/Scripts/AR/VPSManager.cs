@@ -30,37 +30,46 @@ public class VPSManager : MonoBehaviour
     private static bool showPath = false;
     private bool placeObj = true;
 
-
+    // Update is called every frame
+    /*Controllo ad ogni frame se lo stato del tracking è attivo finché non lo è.
+    Se è stato selezionato un percorso valido, questo viene mostrato. */
     void Update()
     {
+        //Controllo il tracking state
         if(earthManager.EarthTrackingState == TrackingState.Tracking && placeObj)
         {
             PlaceObjects();
             placeObj = false;
         }
 
+        //Verifico se devo mostrare o meno il percorso
         if (showPath)
         {
+            //Ruoto le frecce in modo che seguano il percorso fino al punto di interesse
             for (int i = 0; i < path.Count - 1; i++)
         {
             path[i].LookAt(path[(i + 1)]);
             path[i].Rotate(0.0f, -90.0f, 0.0f, Space.Self);
         }
-
+            //Di default, il punto di interesse indicato come fine percorso è il primo nel JSON
             path[path.Count - 1].LookAt(goals[0]);
             path[path.Count - 1].Rotate(0.0f, -90.0f, 0.0f, Space.Self);
         }
 
+        //Ruoto gli oggetti che rappresentano i punti di interesse in modo che siano sempre rivolti verso l'utente
         foreach(var goal in goals)
         {
             goal.LookAt(Camera.main.transform.position);
         }
 
+        //Prendo la posizione dell'utente
         userPosition = User.GetUserPosition();
     }
 
     // Start is called before the first frame update
-    void Start()
+/*    Carico gli oggetti geolocalizzati dai JSON e gli assegno l'opportuno prefab.
+ *    Verifico che il dispositivo supporti ARCore e, in quel caso, istanzio gli oggetti nel mondo virtuale.
+*/    void Start()
     {
         userPosition = User.GetUserPosition();
 
@@ -84,6 +93,7 @@ public class VPSManager : MonoBehaviour
         VerifyGeospatialSupport();
     }
 
+    /*Verifico che il dispositivo supporti ARCore e, in quel caso, istanzio gli oggetti nel mondo virtuale.*/
     private void VerifyGeospatialSupport()
     {
         var result = earthManager.IsGeospatialModeSupported(GeospatialMode.Enabled);
@@ -102,6 +112,7 @@ public class VPSManager : MonoBehaviour
         }
     }
 
+    /*Istanzio gli oggetti nel mondo virtuale.*/
     private void PlaceObjects()
     {
         if (earthManager.EarthTrackingState == TrackingState.Tracking)
@@ -136,9 +147,6 @@ public class VPSManager : MonoBehaviour
 
                     path.Add(Instantiate(obj.ObjectPrefab, objAnchor.transform).transform);
                 }
-
-/*                Text posizione = GameObject.Find("Canvas/Latitude").GetComponent<Text>();
-                posizione.text = path[0].position.ToString();*/
             }
         }
 
