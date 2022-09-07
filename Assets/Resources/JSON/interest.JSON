@@ -1,12 +1,52 @@
 [
   {
-    "Latitude": 41.928752883915095,
-    "Longitude": 15.88161050728608,
+    "Latitude": 41.10954920822081,
+    "Longitude": 16.88160725907842,
+    "Altitude": 55.0,
+
+    "Nome": "Dipartimento di Informatica",
+    "Text": "Testo del punto di interesse",
+    "HasPath": true,
+    "iconapath": "icon/uni"
+  },
+  {
+    "Latitude": 41.10852483640453,
+    "Longitude": 16.88166763171201,
+    "Altitude": 55.0,
+
+    "Nome": "Dipartimento di Farmacia",
+    "Text": "Testo del punto di interesse",
+    "HasPath": false,
+    "iconapath": "icon/uni"
+  },
+  {
+    "Latitude": 41.10846764018883,
+    "Longitude": 16.88050157784364,
+    "Altitude": 55.0,
+
+    "Nome": "Dipartimento di Matematica",
+    "Text": "Testo del punto di interesse",
+    "HasPath": false,
+    "iconapath": "icon/uni"
+  },
+  {
+    "Latitude": 41.10859817761645,
+    "Longitude": 16.883773741667387,
+    "Altitude": 55.0,
+
+    "Nome": "Dipartimento di Fisica",
+    "Text": "Testo del punto di interesse",
+    "HasPath": false,
+    "iconapath": "icon/uni"
+  },
+  {
+    "Latitude": 41.928666978354855,
+    "Longitude": 15.88195825216487,
     "Altitude": 93.0,
 
-    "Nome": "Casa di Matt",
-    "Text": "Questa e la casa di Matt.\nNon e chissache ma e casa.",
-    "HasPath": true,
+    "Nome": "Centro riabilitazione Padre Pio",
+    "Text": "Orari di apertura:\nLun-Ven: 9:30 - 19:00\nSab: 9:30 - 15:00\nDom: Chius\nNumero di telefono 0884965911",
+    "HasPath": false,
     "iconapath": "icon/default"
   },
   {
@@ -16,7 +56,7 @@
 
     "Nome": "Lido CalaParaCuru",
     "Text": "Lido CalaParaCuru",
-    "HasPath": true,
+    "HasPath": false,
     "iconapath": "icon/default"
   },
   {
@@ -26,17 +66,7 @@
 
     "Nome": "Scuole elementari Rodi",
     "Text": "Queste sono le scuole elementari di Rodi",
-    "HasPath": true,
-    "iconapath": "icon/default"
-  },
-  {
-    "Latitude": 41.928648412962325,
-    "Longitude": 15.88195542244733,
-    "Altitude": 100.0,
-
-    "Nome": "Centro riabilitazione Padre Pio",
-    "Text": "Centro riabilitativo. Orari di apertura: // - //",
-    "HasPath": true,
+    "HasPath": false,
     "iconapath": "icon/default"
   },
   {
@@ -46,7 +76,7 @@
 
     "Nome": "Piazza Padre Pio",
     "Text": "Piazza Padre Pio",
-    "HasPath": true,
+    "HasPath": false,
     "iconapath": "icon/default"
   },
   {
@@ -56,147 +86,6 @@
 
     "Nome": "Porto turistico Rodi Garganico",
     "Text": "Porto turistico Rodi Garganico",
-    "HasPath": false,
-    "iconapath": "icon/default"
-  },
-  {
-    "Latitude": 0,
-    "Longitude": 0,
-    "Altitude": 0,
-
-    "Nome": "Università degli studi di Bari - Dipartimento di Informatica",
-    "Text": "Testo del punto di interesse",
-    "HasPath": true,
-    "iconapath": "icon/uni"
-  },
-  {
-    "Latitude": 0,
-    "Longitude": 0,
-    "Altitude": 0,
-
-    "Nome": "Gawr Gura",
-    "Text": "A descendant of the Lost City of Atlantis, who swam to Earth while saying, <<It's so boring down there LOLOLOL!>> She bought her clothes (and her shark hat) in the human world and she really loves them. In her spare time, she enjoys talking to marine life.",
-    "HasPath": false,
-    "iconapath": "icon/smolgura"
-  },
-  {
-
-    "Latitude": 0,
-    "Longitude": 0,
-    "Altitude": 0,
-
-    "Nome": "Ina",
-    "Text": "Testo del punto di interesse",
-    "HasPath": false,
-    "iconapath": "icon/ina"
-  },
-  {
-
-    "Latitude": 0,
-    "Longitude": 0,
-    "Altitude": 0,
-
-    "Nome": "fauna",
-    "Text": "Testo del punto di interesse",
-    "HasPath": false,
-    "iconapath": "icon/fauna"
-  },
-  {
-
-    "Latitude": 0,
-    "Longitude": 0,
-    "Altitude": 0,
-
-    "Nome": "1",
-    "Text": "Testo del punto di interesse",
-    "HasPath": false,
-    "iconapath": "icon/default"
-  },
-  {
-
-    "Latitude": 0,
-    "Longitude": 0,
-    "Altitude": 0,
-
-    "Nome": "6",
-    "Text": "Testo del punto di interesse",
-    "HasPath": false,
-    "iconapath": "icon/default"
-  },
-  {
-
-    "Latitude": 0,
-    "Longitude": 0,
-    "Altitude": 0,
-
-    "Nome": "5",
-    "Text": "Testo del punto di interesse",
-    "HasPath": false,
-    "iconapath": "icon/default"
-  },
-  {
-
-    "Latitude": 0,
-    "Longitude": 0,
-    "Altitude": 0,
-
-    "Nome": "4",
-    "Text": "Testo del punto di interesse",
-    "HasPath": false,
-    "iconapath": "icon/default"
-  },
-  {
-
-    "Latitude": 0,
-    "Longitude": 0,
-    "Altitude": 0,
-
-    "Nome": "3",
-    "Text": "Testo del punto di interesse",
-    "HasPath": false,
-    "iconapath": "icon/default"
-  },
-  {
-
-    "Latitude": 0,
-    "Longitude": 0,
-    "Altitude": 0,
-
-    "Nome": "2",
-    "Text": "Testo del punto di interesse",
-    "HasPath": false,
-    "iconapath": "icon/default"
-  },
-  {
-
-    "Latitude": 0,
-    "Longitude": 0,
-    "Altitude": 0,
-
-    "Nome": "7",
-    "Text": "Testo del punto di interesse",
-    "HasPath": false,
-    "iconapath": "icon/default"
-  },
-  {
-
-    "Latitude": -0.000021,
-    "Longitude": 0.003772,
-    "Altitude": 0,
-
-    "Nome": "punto 0 un po di fianco",
-    "Text": "Testo del punto di interesse",
-    "HasPath": false,
-    "iconapath": "icon/default"
-  },
-  {
-
-    "Latitude": 0,
-    "Longitude": 0,
-    "Altitude": 0,
-
-    "Nome": "Ellie",
-    "Text": "Testo del punto di interesse",
     "HasPath": false,
     "iconapath": "icon/default"
   }
