@@ -5,7 +5,7 @@
     "Altitude": 55.0,
 
     "Nome": "Dipartimento di Informatica",
-    "Text": "Testo del punto di interesse",
+    "Text": "Orari di apertura:\nLun-Ven: 8:00 - 18:00\nSab - Dom: Chiuso\nNumero di telefono: 0805443275",
     "HasPath": true,
     "iconapath": "icon/uni"
   },
@@ -15,9 +15,9 @@
     "Altitude": 55.0,
 
     "Nome": "Dipartimento di Farmacia",
-    "Text": "Testo del punto di interesse",
+    "Text": "Orari di apertura:\nLun-Ven: 8:00 - 19:00\nSab - Dom: Chiuso",
     "HasPath": false,
-    "iconapath": "icon/uni"
+    "iconapath": "icon/farmacia"
   },
   {
     "Latitude": 41.10846764018883,
@@ -25,9 +25,9 @@
     "Altitude": 55.0,
 
     "Nome": "Dipartimento di Matematica",
-    "Text": "Testo del punto di interesse",
+    "Text": "Orari di apertura:\nLun-Ven: 8:00 - 20:00\nSab - Dom: Chiuso\nNumero di telefono: 0805442710",
     "HasPath": false,
-    "iconapath": "icon/uni"
+    "iconapath": "icon/matematica"
   },
   {
     "Latitude": 41.10859817761645,
@@ -35,9 +35,9 @@
     "Altitude": 55.0,
 
     "Nome": "Dipartimento di Fisica",
-    "Text": "Testo del punto di interesse",
+    "Text": "Orari di apertura:\nLun-Ven: 8:00 - 20:00\nSab - Dom: Chiuso\nNumero di telefono: 0805443203",
     "HasPath": false,
-    "iconapath": "icon/uni"
+    "iconapath": "icon/default"
   },
   {
     "Latitude": 41.928666978354855,
@@ -45,7 +45,7 @@
     "Altitude": 93.0,
 
     "Nome": "Centro riabilitazione Padre Pio",
-    "Text": "Orari di apertura:\nLun-Ven: 9:30 - 19:00\nSab: 9:30 - 15:00\nDom: Chius\nNumero di telefono 0884965911",
+    "Text": "Orari di apertura:\nLun-Ven: 9:30 - 19:00\nSab: 9:30 - 15:00\nDom: Chiuso\nNumero di telefono 0884965911",
     "HasPath": false,
     "iconapath": "icon/default"
   },
