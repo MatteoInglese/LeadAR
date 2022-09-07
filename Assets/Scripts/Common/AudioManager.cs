@@ -82,7 +82,7 @@ public class AudioManager : MonoBehaviour
      */
     public void updatetmp3()
     {
-        bool audio = true; // variabile locale
+        bool audio = true;
         double distanza = 0;
         MenuIniziale.userPosition = User.GetUserPosition();
 
@@ -125,7 +125,12 @@ public class AudioManager : MonoBehaviour
     }
 
     /*
-     * metodo che gestisce il suono e la vibrazion
+     * metodo che gestisce il suono e la vibrazione
+     * 
+     * se l'opzione audio è attiva e ci sono dei nuovi punti di interesse,
+     * viene emesso il suono
+     * la vibrazione invece non dipende dall'opzione dell'audio, quindi se 
+     * presente un nuovo punto di interesse vibra indipendentemente se l'audio è attivo o no
      */
     public void suona()
     {

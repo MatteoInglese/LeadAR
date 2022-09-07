@@ -85,10 +85,10 @@
     "Longitude": 0,
     "Altitude": 0,
 
-    "Nome": "Ina",
+    "Nome": "Dipartimento di matematica",
     "Text": "Testo del punto di interesse",
     "HasPath": false,
-    "iconapath": "icon/ina"
+    "iconapath": "icon/matematica"
   },
   {
 
@@ -96,88 +96,13 @@
     "Longitude": 0,
     "Altitude": 0,
 
-    "Nome": "fauna",
+    "Nome": "Dipartimento di farmacia",
     "Text": "Testo del punto di interesse",
     "HasPath": false,
-    "iconapath": "icon/fauna"
+    "iconapath": "icon/farmacia"
   },
-  {
 
-    "Latitude": 0,
-    "Longitude": 0,
-    "Altitude": 0,
 
-    "Nome": "1",
-    "Text": "Testo del punto di interesse",
-    "HasPath": false,
-    "iconapath": "icon/default"
-  },
-  {
-
-    "Latitude": 0,
-    "Longitude": 0,
-    "Altitude": 0,
-
-    "Nome": "6",
-    "Text": "Testo del punto di interesse",
-    "HasPath": false,
-    "iconapath": "icon/default"
-  },
-  {
-
-    "Latitude": 0,
-    "Longitude": 0,
-    "Altitude": 0,
-
-    "Nome": "5",
-    "Text": "Testo del punto di interesse",
-    "HasPath": false,
-    "iconapath": "icon/default"
-  },
-  {
-
-    "Latitude": 0,
-    "Longitude": 0,
-    "Altitude": 0,
-
-    "Nome": "4",
-    "Text": "Testo del punto di interesse",
-    "HasPath": false,
-    "iconapath": "icon/default"
-  },
-  {
-
-    "Latitude": 0,
-    "Longitude": 0,
-    "Altitude": 0,
-
-    "Nome": "3",
-    "Text": "Testo del punto di interesse",
-    "HasPath": false,
-    "iconapath": "icon/default"
-  },
-  {
-
-    "Latitude": 0,
-    "Longitude": 0,
-    "Altitude": 0,
-
-    "Nome": "2",
-    "Text": "Testo del punto di interesse",
-    "HasPath": false,
-    "iconapath": "icon/default"
-  },
-  {
-
-    "Latitude": 0,
-    "Longitude": 0,
-    "Altitude": 0,
-
-    "Nome": "7",
-    "Text": "Testo del punto di interesse",
-    "HasPath": false,
-    "iconapath": "icon/default"
-  },
   {
 
     "Latitude": -0.000021,
@@ -185,17 +110,6 @@
     "Altitude": 0,
 
     "Nome": "punto 0 un po di fianco",
-    "Text": "Testo del punto di interesse",
-    "HasPath": false,
-    "iconapath": "icon/default"
-  },
-  {
-
-    "Latitude": 0,
-    "Longitude": 0,
-    "Altitude": 0,
-
-    "Nome": "Ellie",
     "Text": "Testo del punto di interesse",
     "HasPath": false,
     "iconapath": "icon/default"
