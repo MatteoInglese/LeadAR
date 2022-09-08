@@ -6065,7 +6065,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioManager_updatetmp3_m1D1F199A3BFC387
 	memset((&V_4), 0, sizeof(V_4));
 	String_t* V_5 = NULL;
 	{
-		// bool audio = true; // variabile locale
+		// bool audio = true;
 		V_0 = (bool)1;
 		// MenuIniziale.userPosition = User.GetUserPosition();
 		il2cpp_codegen_runtime_class_init_inline(User_t830E70FAB67A96176D2C105CB5BBDA86733559AB_il2cpp_TypeInfo_var);
