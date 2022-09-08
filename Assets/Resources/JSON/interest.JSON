@@ -1,71 +1,21 @@
 [
   {
-    "Latitude": 41.10954920822081,
-    "Longitude": 16.88160725907842,
-    "Altitude": 55.0,
-
-    "Nome": "Dipartimento di Informatica",
-    "Text": "Orari di apertura:\nLun-Ven: 8:00 - 18:00\nSab - Dom: Chiuso\nNumero di telefono: 0805443275",
-    "HasPath": true,
-    "iconapath": "icon/uni"
-  },
-  {
-    "Latitude": 41.10852483640453,
-    "Longitude": 16.88166763171201,
-    "Altitude": 55.0,
-
-    "Nome": "Dipartimento di Farmacia",
-    "Text": "Orari di apertura:\nLun-Ven: 8:00 - 19:00\nSab - Dom: Chiuso",
-    "HasPath": false,
-    "iconapath": "icon/farmacia"
-  },
-  {
-    "Latitude": 41.10846764018883,
-    "Longitude": 16.88050157784364,
-    "Altitude": 55.0,
-
-    "Nome": "Dipartimento di Matematica",
-    "Text": "Orari di apertura:\nLun-Ven: 8:00 - 20:00\nSab - Dom: Chiuso\nNumero di telefono: 0805442710",
-    "HasPath": false,
-    "iconapath": "icon/matematica"
-  },
-  {
-    "Latitude": 41.10859817761645,
-    "Longitude": 16.883773741667387,
-    "Altitude": 55.0,
-
-    "Nome": "Dipartimento di Fisica",
-    "Text": "Orari di apertura:\nLun-Ven: 8:00 - 20:00\nSab - Dom: Chiuso\nNumero di telefono: 0805443203",
-    "HasPath": false,
-    "iconapath": "icon/default"
-  },
-  {
-    "Latitude": 41.928666978354855,
-    "Longitude": 15.88195825216487,
-    "Altitude": 93.0,
-
-    "Nome": "Centro riabilitazione Padre Pio",
-    "Text": "Orari di apertura:\nLun-Ven: 9:30 - 19:00\nSab: 9:30 - 15:00\nDom: Chiuso\nNumero di telefono 0884965911",
-    "HasPath": false,
-    "iconapath": "icon/default"
-  },
-  {
     "Latitude": 41.93007988800553,
     "Longitude": 15.900784411925892,
     "Altitude": 53.0,
 
     "Nome": "Lido CalaParaCuru",
-    "Text": "Lido CalaParaCuru",
+    "Text": "Posti disponibili: 7/30\nOrari ristorante\nTutti i giorni: 12:30 - 23:00",
     "HasPath": false,
     "iconapath": "icon/default"
   },
   {
-    "Latitude": 41.92826079237341,
-    "Longitude": 15.882000529319999,
-    "Altitude": 110.0,
+    "Latitude": 41.92775902551397,
+    "Longitude": 15.88085964757586,
+    "Altitude": 101.0,
 
-    "Nome": "Scuole elementari Rodi",
-    "Text": "Queste sono le scuole elementari di Rodi",
+    "Nome": "Santuario Madonna della Libera",
+    "Text": "Orari Sante Messe\nLun - Ven: 19:00\nSab - Dom: 10:30 - 19:00",
     "HasPath": false,
     "iconapath": "icon/default"
   },
@@ -82,7 +32,7 @@
   {
     "Latitude": 41.93073039308028,
     "Longitude": 15.886991834140513,
-    "Altitude": 100.0,
+    "Altitude": 51.0,
 
     "Nome": "Porto turistico Rodi Garganico",
     "Text": "Porto turistico Rodi Garganico",
