@@ -17,7 +17,7 @@
     "Nome": "Santuario Madonna della Libera",
     "Text": "Orari Sante Messe\nLun - Ven: 19:00\nSab - Dom: 10:30 - 19:00",
     "HasPath": false,
-    "iconapath": "icon/default"
+    "iconapath": "icon/santuario"
   },
   {
     "Latitude": 41.928190749179585,
@@ -27,7 +27,7 @@
     "Nome": "Piazza Padre Pio",
     "Text": "Piazza Padre Pio",
     "HasPath": false,
-    "iconapath": "icon/default"
+    "iconapath": "icon/PiazzaPadrePio"
   },
   {
     "Latitude": 41.93073039308028,
@@ -37,6 +37,6 @@
     "Nome": "Porto turistico Rodi Garganico",
     "Text": "Porto turistico Rodi Garganico",
     "HasPath": false,
-    "iconapath": "icon/default"
+    "iconapath": "icon/porto"
   }
 ]
